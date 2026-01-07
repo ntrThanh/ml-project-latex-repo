@@ -1,0 +1,1431 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.7)  7 JAN 2026 17:15
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/home/trong-thanh/Downloads/Project_Machine_Learning/main.tex
+(/home/trong-thanh/Downloads/Project_Machine_Learning/main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+(/home/trong-thanh/.miktex/texmfs/install/tex/latex/base/report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(/home/trong-thanh/.miktex/texmfs/install/tex/latex/base/size12.clo
+File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count275
+\c@chapter=\count276
+\c@section=\count277
+\c@subsection=\count278
+\c@subsubsection=\count279
+\c@paragraph=\count280
+\c@subparagraph=\count281
+\c@figure=\count282
+\c@table=\count283
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen148
+) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (/home/trong-thanh/.miktex/texmfs/install/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count284
+\Gm@cntv=\count285
+\c@Gm@tempcnt=\count286
+\Gm@bindingoffset=\dimen149
+\Gm@wd@mp=\dimen150
+\Gm@odd@mp=\dimen151
+\Gm@even@mp=\dimen152
+\Gm@layoutwidth=\dimen153
+\Gm@layoutheight=\dimen154
+\Gm@layouthoffset=\dimen155
+\Gm@layoutvoffset=\dimen156
+\Gm@dimlist=\toks18
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/geometry/geometry.cfg)) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+\f@nch@headwidth=\skip51
+\f@nch@offset@elh=\skip52
+\f@nch@offset@erh=\skip53
+\f@nch@offset@olh=\skip54
+\f@nch@offset@orh=\skip55
+\f@nch@offset@elf=\skip56
+\f@nch@offset@erf=\skip57
+\f@nch@offset@olf=\skip58
+\f@nch@offset@orf=\skip59
+\f@nch@height=\skip60
+\f@nch@footalignment=\skip61
+\f@nch@widthL=\skip62
+\f@nch@widthC=\skip63
+\f@nch@widthR=\skip64
+\@temptokenb=\toks19
+) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/lastpage/lastpage.sty
+Package: lastpage 2025/08/14 v2.1h lastpage: 2.09 or 2e? (HMM)
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/lastpage/lastpage2e.sty
+Package: lastpage2e 2025/08/14 v2.1h Decide which 2e lastpage version to use (HMM)
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/lastpage/lastpagemodern.sty
+Package: lastpagemodern 2025-08-14 v2.1h Refers to last page's name (HMM; JPG)
+\c@lastpagecount=\count287
+) 
+)) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/base/inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks20
+\inpenc@posthook=\toks21
+) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/base/fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/vntex/t5enc.def
+File: t5enc.def 2006/11/21 v1.4 Vietnamese T5 encoding
+Now handling font encoding T5 ...
+... processing UTF-8 mapping file for font encoding T5
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/vntex/t5enc.dfu
+File: t5enc.dfu 2006/08/19 v1.1 UTF8 support for Vietnamese
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0128 (decimal 296)
+   defining Unicode char U+0129 (decimal 297)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0168 (decimal 360)
+   defining Unicode char U+0169 (decimal 361)
+   defining Unicode char U+01A0 (decimal 416)
+   defining Unicode char U+01A1 (decimal 417)
+   defining Unicode char U+01AF (decimal 431)
+   defining Unicode char U+01B0 (decimal 432)
+   defining Unicode char U+1EA0 (decimal 7840)
+   defining Unicode char U+1EA1 (decimal 7841)
+   defining Unicode char U+1EA2 (decimal 7842)
+   defining Unicode char U+1EA3 (decimal 7843)
+   defining Unicode char U+1EA4 (decimal 7844)
+   defining Unicode char U+1EA5 (decimal 7845)
+   defining Unicode char U+1EA6 (decimal 7846)
+   defining Unicode char U+1EA7 (decimal 7847)
+   defining Unicode char U+1EA8 (decimal 7848)
+   defining Unicode char U+1EA9 (decimal 7849)
+   defining Unicode char U+1EAA (decimal 7850)
+   defining Unicode char U+1EAB (decimal 7851)
+   defining Unicode char U+1EAC (decimal 7852)
+   defining Unicode char U+1EAD (decimal 7853)
+   defining Unicode char U+1EAE (decimal 7854)
+   defining Unicode char U+1EAF (decimal 7855)
+   defining Unicode char U+1EB0 (decimal 7856)
+   defining Unicode char U+1EB1 (decimal 7857)
+   defining Unicode char U+1EB2 (decimal 7858)
+   defining Unicode char U+1EB3 (decimal 7859)
+   defining Unicode char U+1EB4 (decimal 7860)
+   defining Unicode char U+1EB5 (decimal 7861)
+   defining Unicode char U+1EB6 (decimal 7862)
+   defining Unicode char U+1EB7 (decimal 7863)
+   defining Unicode char U+1EB8 (decimal 7864)
+   defining Unicode char U+1EB9 (decimal 7865)
+   defining Unicode char U+1EBA (decimal 7866)
+   defining Unicode char U+1EBB (decimal 7867)
+   defining Unicode char U+1EBC (decimal 7868)
+   defining Unicode char U+1EBD (decimal 7869)
+   defining Unicode char U+1EBE (decimal 7870)
+   defining Unicode char U+1EBF (decimal 7871)
+   defining Unicode char U+1EC0 (decimal 7872)
+   defining Unicode char U+1EC1 (decimal 7873)
+   defining Unicode char U+1EC2 (decimal 7874)
+   defining Unicode char U+1EC3 (decimal 7875)
+   defining Unicode char U+1EC4 (decimal 7876)
+   defining Unicode char U+1EC5 (decimal 7877)
+   defining Unicode char U+1EC6 (decimal 7878)
+   defining Unicode char U+1EC7 (decimal 7879)
+   defining Unicode char U+1EC8 (decimal 7880)
+   defining Unicode char U+1EC9 (decimal 7881)
+   defining Unicode char U+1ECA (decimal 7882)
+   defining Unicode char U+1ECB (decimal 7883)
+   defining Unicode char U+1ECC (decimal 7884)
+   defining Unicode char U+1ECD (decimal 7885)
+   defining Unicode char U+1ECE (decimal 7886)
+   defining Unicode char U+1ECF (decimal 7887)
+   defining Unicode char U+1ED0 (decimal 7888)
+   defining Unicode char U+1ED1 (decimal 7889)
+   defining Unicode char U+1ED2 (decimal 7890)
+   defining Unicode char U+1ED3 (decimal 7891)
+   defining Unicode char U+1ED4 (decimal 7892)
+   defining Unicode char U+1ED5 (decimal 7893)
+   defining Unicode char U+1ED6 (decimal 7894)
+   defining Unicode char U+1ED7 (decimal 7895)
+   defining Unicode char U+1ED8 (decimal 7896)
+   defining Unicode char U+1ED9 (decimal 7897)
+   defining Unicode char U+1EDA (decimal 7898)
+   defining Unicode char U+1EDB (decimal 7899)
+   defining Unicode char U+1EDC (decimal 7900)
+   defining Unicode char U+1EDD (decimal 7901)
+   defining Unicode char U+1EDE (decimal 7902)
+   defining Unicode char U+1EDF (decimal 7903)
+   defining Unicode char U+1EE0 (decimal 7904)
+   defining Unicode char U+1EE1 (decimal 7905)
+   defining Unicode char U+1EE2 (decimal 7906)
+   defining Unicode char U+1EE3 (decimal 7907)
+   defining Unicode char U+1EE4 (decimal 7908)
+   defining Unicode char U+1EE5 (decimal 7909)
+   defining Unicode char U+1EE6 (decimal 7910)
+   defining Unicode char U+1EE7 (decimal 7911)
+   defining Unicode char U+1EE8 (decimal 7912)
+   defining Unicode char U+1EE9 (decimal 7913)
+   defining Unicode char U+1EEA (decimal 7914)
+   defining Unicode char U+1EEB (decimal 7915)
+   defining Unicode char U+1EEC (decimal 7916)
+   defining Unicode char U+1EED (decimal 7917)
+   defining Unicode char U+1EEE (decimal 7918)
+   defining Unicode char U+1EEF (decimal 7919)
+   defining Unicode char U+1EF0 (decimal 7920)
+   defining Unicode char U+1EF1 (decimal 7921)
+   defining Unicode char U+1EF2 (decimal 7922)
+   defining Unicode char U+1EF3 (decimal 7923)
+   defining Unicode char U+1EF4 (decimal 7924)
+   defining Unicode char U+1EF5 (decimal 7925)
+   defining Unicode char U+1EF6 (decimal 7926)
+   defining Unicode char U+1EF7 (decimal 7927)
+   defining Unicode char U+1EF8 (decimal 7928)
+   defining Unicode char U+1EF9 (decimal 7929)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+))) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen157
+\captionmargin=\dimen158
+\caption@leftmargin=\dimen159
+\caption@rightmargin=\dimen160
+\caption@width=\dimen161
+\caption@indent=\dimen162
+\caption@parindent=\dimen163
+\caption@hangindent=\dimen164
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count288
+\c@continuedfloat=\count289
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/babel/babel.sty
+Package: babel 2025/12/11 v25.17 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
+\babel@savecnt=\count290
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2068.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2070.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2072.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2073.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2074.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2076.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2101.
+\U@D=\dimen165
+\l@unhyphenated=\language1
+ (/home/trong-thanh/.miktex/texmfs/install/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count291
+Package babel Info: Configuration files are deprecated, as
+(babel)             they can break document portability.
+(babel)             Reported on input line 4196.
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(/home/trong-thanh/.miktex/texmfs/install/tex/latex/arabi/bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/babel/locale/vi/babel-vietnamese.tex)
+Package babel Info: Importing font and identification data for vietnamese
+(babel)             from babel-vi.ini. Reported on input line 4320.
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/babel-vietnamese/vietnamese.ldf
+Language: vietnamese 
+
+
+Package babel Warning: No hyphenation patterns were preloaded for
+(babel)                the language 'Vietnamese' into the format.
+(babel)                Please, configure your TeX system to add them and
+(babel)                rebuild the format. Now I will use the patterns
+(babel)                preloaded for \language=0 instead on input line 36.
+
+Loading definitions for the Vietnamese font encoding (/home/trong-thanh/.miktex/texmfs/install/tex/latex/vntex/t5enc.def
+File: t5enc.def 2006/11/21 v1.4 Vietnamese T5 encoding
+LaTeX Font Info:    Redeclaring font encoding T5 on input line 75.
+LaTeX Encoding Info:    Redeclaring text command \` (encoding T5) on input line 79.
+LaTeX Encoding Info:    Redeclaring text command \' (encoding T5) on input line 80.
+LaTeX Encoding Info:    Redeclaring text command \^ (encoding T5) on input line 81.
+LaTeX Encoding Info:    Redeclaring text command \~ (encoding T5) on input line 82.
+LaTeX Encoding Info:    Redeclaring text command \" (encoding T5) on input line 83.
+LaTeX Encoding Info:    Redeclaring text command \r (encoding T5) on input line 84.
+LaTeX Encoding Info:    Redeclaring text command \v (encoding T5) on input line 85.
+LaTeX Encoding Info:    Redeclaring text command \u (encoding T5) on input line 86.
+LaTeX Encoding Info:    Redeclaring text command \= (encoding T5) on input line 87.
+LaTeX Encoding Info:    Redeclaring text command \. (encoding T5) on input line 88.
+LaTeX Encoding Info:    Redeclaring text command \b (encoding T5) on input line 90.
+LaTeX Encoding Info:    Redeclaring text command \c (encoding T5) on input line 94.
+LaTeX Encoding Info:    Redeclaring text command \d (encoding T5) on input line 98.
+LaTeX Encoding Info:    Redeclaring text command \h (encoding T5) on input line 103.
+LaTeX Encoding Info:    Redeclaring text symbol \quotesinglbase (encoding T5) on input line 105.
+LaTeX Encoding Info:    Redeclaring text symbol \guilsinglleft (encoding T5) on input line 106.
+LaTeX Encoding Info:    Redeclaring text symbol \guilsinglright (encoding T5) on input line 107.
+LaTeX Encoding Info:    Redeclaring text symbol \textquotedblleft (encoding T5) on input line 108.
+LaTeX Encoding Info:    Redeclaring text symbol \textquotedblright (encoding T5) on input line 109.
+LaTeX Encoding Info:    Redeclaring text symbol \quotedblbase (encoding T5) on input line 110.
+LaTeX Encoding Info:    Redeclaring text symbol \guillemotleft (encoding T5) on input line 111.
+LaTeX Encoding Info:    Redeclaring text symbol \guillemotright (encoding T5) on input line 112.
+LaTeX Encoding Info:    Redeclaring text symbol \textendash (encoding T5) on input line 113.
+LaTeX Encoding Info:    Redeclaring text symbol \textemdash (encoding T5) on input line 114.
+LaTeX Encoding Info:    Redeclaring text symbol \textcompwordmark (encoding T5) on input line 115.
+LaTeX Encoding Info:    Redeclaring text command \textperthousand (encoding T5) on input line 117.
+LaTeX Encoding Info:    Redeclaring text command \textpertenthousand (encoding T5) on input line 118.
+LaTeX Encoding Info:    Redeclaring text symbol \i (encoding T5) on input line 119.
+LaTeX Encoding Info:    Redeclaring text symbol \textvisiblespace (encoding T5) on input line 121.
+LaTeX Encoding Info:    Redeclaring text symbol \textquotedbl (encoding T5) on input line 122.
+LaTeX Encoding Info:    Redeclaring text symbol \textdollar (encoding T5) on input line 123.
+LaTeX Encoding Info:    Redeclaring text symbol \textquoteright (encoding T5) on input line 124.
+LaTeX Encoding Info:    Redeclaring text symbol \textless (encoding T5) on input line 125.
+LaTeX Encoding Info:    Redeclaring text symbol \textgreater (encoding T5) on input line 126.
+LaTeX Encoding Info:    Redeclaring text symbol \textbackslash (encoding T5) on input line 127.
+LaTeX Encoding Info:    Redeclaring text symbol \textasciicircum (encoding T5) on input line 128.
+LaTeX Encoding Info:    Redeclaring text symbol \textunderscore (encoding T5) on input line 129.
+LaTeX Encoding Info:    Redeclaring text symbol \textquoteleft (encoding T5) on input line 130.
+LaTeX Encoding Info:    Redeclaring text symbol \textbraceleft (encoding T5) on input line 131.
+LaTeX Encoding Info:    Redeclaring text symbol \textbar (encoding T5) on input line 132.
+LaTeX Encoding Info:    Redeclaring text symbol \textbraceright (encoding T5) on input line 133.
+LaTeX Encoding Info:    Redeclaring text symbol \textasciitilde (encoding T5) on input line 134.
+LaTeX Encoding Info:    Redeclaring text command \horn (encoding T5) on input line 137.
+LaTeX Encoding Info:    Redeclaring text symbol \DJ (encoding T5) on input line 306.
+LaTeX Encoding Info:    Redeclaring text symbol \dj (encoding T5) on input line 307.
+LaTeX Encoding Info:    Redeclaring text symbol \Acircumflex (encoding T5) on input line 312.
+LaTeX Encoding Info:    Redeclaring text symbol \Abreve (encoding T5) on input line 319.
+LaTeX Encoding Info:    Redeclaring text symbol \Ecircumflex (encoding T5) on input line 326.
+LaTeX Encoding Info:    Redeclaring text symbol \Ocircumflex (encoding T5) on input line 333.
+LaTeX Encoding Info:    Redeclaring text symbol \Ohorn (encoding T5) on input line 340.
+LaTeX Encoding Info:    Redeclaring text symbol \Uhorn (encoding T5) on input line 347.
+LaTeX Encoding Info:    Redeclaring text symbol \acircumflex (encoding T5) on input line 354.
+LaTeX Encoding Info:    Redeclaring text symbol \abreve (encoding T5) on input line 361.
+LaTeX Encoding Info:    Redeclaring text symbol \ecircumflex (encoding T5) on input line 368.
+LaTeX Encoding Info:    Redeclaring text symbol \ocircumflex (encoding T5) on input line 375.
+LaTeX Encoding Info:    Redeclaring text symbol \ohorn (encoding T5) on input line 382.
+LaTeX Encoding Info:    Redeclaring text symbol \uhorn (encoding T5) on input line 389.
+LaTeX Encoding Info:    Redeclaring text symbol \ACIRCUMFLEX (encoding T5) on input line 397.
+LaTeX Encoding Info:    Redeclaring text symbol \ABREVE (encoding T5) on input line 404.
+LaTeX Encoding Info:    Redeclaring text symbol \ECIRCUMFLEX (encoding T5) on input line 411.
+LaTeX Encoding Info:    Redeclaring text symbol \OCIRCUMFLEX (encoding T5) on input line 418.
+LaTeX Encoding Info:    Redeclaring text symbol \OHORN (encoding T5) on input line 425.
+LaTeX Encoding Info:    Redeclaring text symbol \UHORN (encoding T5) on input line 432.
+)
+Package babel Info: Making " an active character on input line 147.
+)) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/graphics/graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen166
+\Gin@req@width=\dimen167
+) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/setspace/setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/pgf/frontendlayer/tikz.sty (/home/trong-thanh/.miktex/texmfs/install/tex/latex/pgf/basiclayer/pgf.sty (/home/trong-thanh/.miktex/texmfs/install/tex/latex/pgf/utilities/pgfrcs.sty (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks22
+\pgfutil@tempdima=\dimen168
+\pgfutil@tempdimb=\dimen169
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box53
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfrcs.code.tex (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
+))
+Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/pgf/basiclayer/pgfcore.sty (/home/trong-thanh/.miktex/texmfs/install/tex/latex/pgf/systemlayer/pgfsys.sty (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
+ (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks23
+\pgfkeys@temptoks=\toks24
+ (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks25
+))
+\pgf@x=\dimen170
+\pgf@y=\dimen171
+\pgf@xa=\dimen172
+\pgf@ya=\dimen173
+\pgf@xb=\dimen174
+\pgf@yb=\dimen175
+\pgf@xc=\dimen176
+\pgf@yc=\dimen177
+\pgf@xd=\dimen178
+\pgf@yd=\dimen179
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count292
+\c@pgf@countb=\count293
+\c@pgf@countc=\count294
+\c@pgf@countd=\count295
+\t@pgf@toka=\toks26
+\t@pgf@tokb=\toks27
+\t@pgf@tokc=\toks28
+\pgf@sys@id@count=\count296
+ (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
+ (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
+))) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfsyssoftpath@smallbuffer@items=\count297
+\pgfsyssoftpath@bigbuffer@items=\count298
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
+ (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/math/pgfmath.code.tex (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathutil.code.tex) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen180
+\pgfmath@count=\count299
+\pgfmath@box=\box54
+\pgfmath@toks=\toks29
+\pgfmath@stack@operand=\toks30
+\pgfmath@stack@operation=\toks31
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathcalc.code.tex) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count300
+)) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/math/pgfint.code.tex) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@picminx=\dimen181
+\pgf@picmaxx=\dimen182
+\pgf@picminy=\dimen183
+\pgf@picmaxy=\dimen184
+\pgf@pathminx=\dimen185
+\pgf@pathmaxx=\dimen186
+\pgf@pathminy=\dimen187
+\pgf@pathmaxy=\dimen188
+\pgf@xx=\dimen189
+\pgf@xy=\dimen190
+\pgf@yx=\dimen191
+\pgf@yy=\dimen192
+\pgf@zx=\dimen193
+\pgf@zy=\dimen194
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@path@lastx=\dimen195
+\pgf@path@lasty=\dimen196
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@shorten@end@additional=\dimen197
+\pgf@shorten@start@additional=\dimen198
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfpic=\box55
+\pgf@hbox=\box56
+\pgf@layerbox@main=\box57
+\pgf@picture@serial@count=\count301
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgflinewidth=\dimen199
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@pt@x=\dimen256
+\pgf@pt@y=\dimen257
+\pgf@pt@temp=\dimen258
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowsep=\dimen259
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@max=\dimen260
+\pgf@sys@shading@range@num=\count302
+\pgf@shadingcount=\count303
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfexternal@startupbox=\box58
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfnodeparttextbox=\box59
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@nodesepstart=\dimen261
+\pgf@nodesepend=\dimen262
+) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
+)) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/pgf/utilities/pgffor.sty (/home/trong-thanh/.miktex/texmfs/install/tex/latex/pgf/utilities/pgfkeys.sty (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/pgf/math/pgfmath.sty (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/math/pgfmath.code.tex)) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
+\pgffor@iter=\dimen263
+\pgffor@skip=\dimen264
+\pgffor@stack=\toks32
+\pgffor@toks=\toks33
+)) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
+ (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@plot@mark@count=\count304
+\pgfplotmarksize=\dimen265
+)
+\tikz@lastx=\dimen266
+\tikz@lasty=\dimen267
+\tikz@lastxsaved=\dimen268
+\tikz@lastysaved=\dimen269
+\tikz@lastmovetox=\dimen270
+\tikz@lastmovetoy=\dimen271
+\tikzleveldistance=\dimen272
+\tikzsiblingdistance=\dimen273
+\tikz@figbox=\box60
+\tikz@figbox@bg=\box61
+\tikz@tempbox=\box62
+\tikz@tempbox@bg=\box63
+\tikztreelevel=\count305
+\tikznumberofchildren=\count306
+\tikznumberofcurrentchild=\count307
+\tikz@fig@count=\count308
+ (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfmatrixcurrentrow=\count309
+\pgfmatrixcurrentcolumn=\count310
+\pgf@matrix@numberofcolumns=\count311
+)
+\tikz@expandcount=\count312
+ (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/koma-script/scrextend.sty
+Package: scrextend 2025/12/01 v3.49 KOMA-Script package (extend other classes with features of KOMA-Script classes)
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2025/12/01 v3.49 KOMA-Script package (KOMA-Script-dependent basics and keyval usage)
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2025/12/01 v3.49 KOMA-Script package (KOMA-Script-independent basics and keyval usage)
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2025/12/01 v3.49 KOMA-Script package (file load hooks)
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/koma-script/scrlfile-hook.sty
+Package: scrlfile-hook 2025/12/01 v3.49 KOMA-Script package (using LaTeX hooks)
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/koma-script/scrlogo.sty
+Package: scrlogo 2025/12/01 v3.49 KOMA-Script package (logo)
+)))
+Applying: [2021/05/01] Usage of raw or classic option list on input line 254.
+Already applied: [0000/00/00] Usage of raw or classic option list on input line 370.
+))) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/tools/indentfirst.sty
+Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2025/07/09 v2.17z AMS math features
+\@mathmargin=\skip65
+
+For additional information on amsmath, use the `?' option.
+(/home/trong-thanh/.miktex/texmfs/install/tex/latex/amsmath/amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks34
+\ex@=\dimen274
+)) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen275
+) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count313
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count314
+\leftroot@=\count315
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count316
+\DOTSCASE@=\count317
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box64
+\strutbox@=\box65
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen276
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count318
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count319
+\dotsspace@=\muskip17
+\c@parentequation=\count320
+\dspbrk@lvl=\count321
+\tag@help=\toks35
+\row@=\count322
+\column@=\count323
+\maxfields@=\count324
+\andhelp@=\toks36
+\eqnshift@=\dimen277
+\alignsep@=\dimen278
+\tagshift@=\dimen279
+\tagwidth@=\dimen280
+\totwidth@=\dimen281
+\lineht@=\dimen282
+\@envbody=\toks37
+\multlinegap=\skip66
+\multlinetaggap=\skip67
+\mathdisplay@stack=\toks38
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
+) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen283
+\lightrulewidth=\dimen284
+\cmidrulewidth=\dimen285
+\belowrulesep=\dimen286
+\belowbottomsep=\dimen287
+\aboverulesep=\dimen288
+\abovetopsep=\dimen289
+\cmidrulesep=\dimen290
+\cmidrulekern=\dimen291
+\defaultaddspace=\dimen292
+\@cmidla=\count325
+\@cmidlb=\count326
+\@aboverulesep=\dimen293
+\@belowrulesep=\dimen294
+\@thisruleclass=\count327
+\@lastruleclass=\count328
+\@thisrulewidth=\dimen295
+) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/listings/listings.sty
+\lst@mode=\count329
+\lst@gtempboxa=\box66
+\lst@token=\toks39
+\lst@length=\count330
+\lst@currlwidth=\dimen296
+\lst@column=\count331
+\lst@pos=\count332
+\lst@lostspace=\dimen297
+\lst@width=\dimen298
+\lst@newlines=\count333
+\lst@lineno=\count334
+\lst@maxwidth=\dimen299
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
+) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
+\c@lstnumber=\count335
+\lst@skipnumbers=\count336
+\lst@framebox=\box67
+) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/listings/listings.cfg
+File: listings.cfg 2025/11/14 1.11b listings configuration
+))
+Package: listings 2025/11/14 1.11b (Carsten Heinz)
+
+==> First Aid for listings.sty no longer applied!
+    Expected:
+        2024/09/23 1.10c (Carsten Heinz)
+    but found:
+        2025/11/14 1.11b (Carsten Heinz)
+    so I'm assuming it got fixed.
+(/home/trong-thanh/.miktex/texmfs/install/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen300
+\WF@size=\dimen301
+\c@WF@wrappedlines=\count337
+\WF@box=\box68
+\WF@everypar=\toks40
+Package: wrapfig 2003/01/31  v 3.6
+) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count338
+\float@exts=\toks41
+\float@box=\box69
+\@float@everytoks=\toks42
+\@floatcapt=\box70
+) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/tools/longtable.sty
+Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
+\LTleft=\skip68
+\LTright=\skip69
+\LTpre=\skip70
+\LTpost=\skip71
+\LTchunksize=\count339
+\LTcapwidth=\dimen302
+\LT@head=\box71
+\LT@firsthead=\box72
+\LT@foot=\box73
+\LT@lastfoot=\box74
+\LT@gbox=\box75
+\LT@cols=\count340
+\LT@rows=\count341
+\c@LT@tables=\count342
+\c@LT@chunks=\count343
+\LT@p@ftn=\toks43
+) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/tools/array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen303
+\ar@mcellbox=\box76
+\extrarowheight=\dimen304
+\NC@list=\toks44
+\extratabsurround=\skip72
+\backup@length=\skip73
+\ar@cellbox=\box77
+) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/xurl/xurl.sty
+Package: xurl 2022/01/09 v 0.10 modify URL breaks
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+ (/home/trong-thanh/.miktex/texmfs/install/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (/home/trong-thanh/.miktex/texmfs/install/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/hyperref/nameref.sty
+Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count344
+) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count345
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+\@linkdim=\dimen305
+\Hy@linkcounter=\count346
+\Hy@pagecounter=\count347
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (/home/trong-thanh/.miktex/texmfs/install/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count348
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/hyperref/puenc.def
+File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4195.
+Package hyperref Info: Link nesting OFF on input line 4200.
+Package hyperref Info: Hyper index ON on input line 4203.
+Package hyperref Info: Plain pages OFF on input line 4210.
+Package hyperref Info: Backreferencing OFF on input line 4215.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4462.
+\c@Hy@tempcnt=\count349
+LaTeX Info: Redefining \url on input line 4801.
+\XeTeXLinkMargin=\dimen306
+ (/home/trong-thanh/.miktex/texmfs/install/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (/home/trong-thanh/.miktex/texmfs/install/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count350
+\Field@Width=\dimen307
+\Fld@charsize=\dimen308
+Package hyperref Info: Hyper figures OFF on input line 6078.
+Package hyperref Info: Link nesting OFF on input line 6083.
+Package hyperref Info: Hyper index ON on input line 6086.
+Package hyperref Info: backreferencing OFF on input line 6093.
+Package hyperref Info: Link coloring OFF on input line 6098.
+Package hyperref Info: Link coloring with OCG OFF on input line 6103.
+Package hyperref Info: PDF/A mode OFF on input line 6108.
+\Hy@abspage=\count351
+\c@Item=\count352
+\c@Hfootnote=\count353
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
+\Fld@listcount=\count354
+\c@bookmark@seq@number=\count355
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+ (/home/trong-thanh/.miktex/texmfs/install/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
+)
+\Hy@SectionHShift=\skip74
+) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2025/11/14 1.11b listings language file
+) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count356
+) (main.aux
+LaTeX Font Info:    Trying to load font information for T5+cmr on input line 9.
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/vntex/t5cmr.fd
+File: t5cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
+(babel)             Reported on input line 9.
+
+
+LaTeX Warning: Label `fig:hinh_3.9' multiply defined.
+
+
+LaTeX Warning: Label `fig:hinh_3.9' multiply defined.
+
+
+LaTeX Warning: Label `fig:hinh_3.9' multiply defined.
+
+
+LaTeX Warning: Label `fig:hinh_3.9' multiply defined.
+
+
+LaTeX Warning: Label `fig:hinh_3.9' multiply defined.
+
+
+LaTeX Warning: Label `fig:hinh_3.9' multiply defined.
+
+
+LaTeX Warning: Label `fig:hinh_3.9' multiply defined.
+
+
+LaTeX Warning: Label `fig:hinh_3.10' multiply defined.
+
+
+LaTeX Warning: Label `fig:hinh_3.10' multiply defined.
+
+
+LaTeX Warning: Label `fig:hinh_3.10' multiply defined.
+
+
+LaTeX Warning: Label `fig:hinh_3.10' multiply defined.
+
+
+LaTeX Warning: Label `fig:hinh_3.10' multiply defined.
+
+
+LaTeX Warning: Label `fig:hinh_3.10' multiply defined.
+
+
+LaTeX Warning: Label `fig:hinh_3.10' multiply defined.
+
+
+LaTeX Warning: Label `fig:hinh_3.10' multiply defined.
+
+
+LaTeX Warning: Label `fig:hinh_3.10' multiply defined.
+
+
+LaTeX Warning: Label `fig:hinh_3.10' multiply defined.
+
+
+LaTeX Warning: Label `fig:hinh_3.10' multiply defined.
+
+
+LaTeX Warning: Label `fig:hinh_3.10' multiply defined.
+
+
+LaTeX Warning: Label `fig:hinh_3.10' multiply defined.
+
+)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(71.13188pt, 469.47049pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 717.00946pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=469.47049pt
+* \textheight=717.00946pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-52.36449pt
+* \headheight=28.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=12.59996pt plus 5.59938pt minus 2.80058pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+(/home/trong-thanh/.miktex/texmfs/install/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: scrextend package is loaded.
+\caption@addmargin@hsize=\dimen309
+\caption@addmargin@linewidth=\dimen310
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
+ (/home/trong-thanh/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count357
+\scratchdimen=\dimen311
+\scratchbox=\box78
+\nofMPsegments=\count358
+\nofMParguments=\count359
+\everyMPshowfont=\toks45
+\MPscratchCnt=\count360
+\MPscratchDim=\dimen312
+\MPnumerator=\count361
+\makeMPintoPDFobject=\count362
+\everyMPtoPDFconversion=\toks46
+) (/home/trong-thanh/.miktex/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+\c@lstlisting=\count363
+Package hyperref Info: Link coloring OFF on input line 98.
+ (main.out) (main.out)
+\@outlinefile=\write4
+\openout4 = `main.out'.
+
+<logo-hus-inkythuatso-inkythuatso-01-25-16-37-09.jpg, id=309, 414.79968pt x 552.56438pt>
+File: logo-hus-inkythuatso-inkythuatso-01-25-16-37-09.jpg Graphic file (type jpg)
+<use logo-hus-inkythuatso-inkythuatso-01-25-16-37-09.jpg>
+Package pdftex.def Info: logo-hus-inkythuatso-inkythuatso-01-25-16-37-09.jpg  used on input line 133.
+(pdftex.def)             Requested size: 124.44086pt x 165.77058pt.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 164.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 164.
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 164.
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+{/home/trong-thanh/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map} <./logo-hus-inkythuatso-inkythuatso-01-25-16-37-09.jpg>]
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.184 \chapter
+              *{L·ªúI M·ªû ƒê·∫¶U} [1] [2
+
+] [3] (main.toc [4
+
+] [5])
+\tf@toc=\write5
+\openout5 = `main.toc'.
+
+ [6] (main.lof [7
+
+])
+\tf@lof=\write6
+\openout6 = `main.lof'.
+
+ [8] (main.lot)
+\tf@lot=\write7
+\openout7 = `main.lot'.
+
+ [9
+
+]
+Ch\uhorn \ohorn ng 1.
+[10
+
+] [11]
+Ch\uhorn \ohorn ng 2.
+[12
+
+] [13] [14]
+Overfull \hbox (3.78188pt too wide) in paragraph at lines 344--345
+[]\T5/cmr/bx/n/14 K-Nearest Neighbors (KNN) \T5/cmr/m/n/14 l† mÎt trong nh˙ng thu™t to°n \T5/cmr/bx/n/14 Supervised
+ []
+
+[15]
+<Map1NN.png, id=598, 453.94594pt x 298.86656pt>
+File: Map1NN.png Graphic file (type png)
+<use Map1NN.png>
+Package pdftex.def Info: Map1NN.png  used on input line 370.
+(pdftex.def)             Requested size: 375.57782pt x 247.2748pt.
+ [16 <./Map1NN.png>]
+<activation.png, id=607, 387.1263pt x 93.4692pt>
+File: activation.png Graphic file (type png)
+<use activation.png>
+Package pdftex.def Info: activation.png  used on input line 397.
+(pdftex.def)             Requested size: 375.57782pt x 90.6807pt.
+<ex1_lr.png, id=609, 402.7848pt x 101.178pt>
+File: ex1_lr.png Graphic file (type png)
+<use ex1_lr.png>
+Package pdftex.def Info: ex1_lr.png  used on input line 407.
+(pdftex.def)             Requested size: 375.57782pt x 94.34311pt.
+ [17 <./activation.png> <./ex1_lr.png>] [18] [19]
+<decision_tree_example.png, id=638, 688.82344pt x 305.64188pt>
+File: decision_tree_example.png Graphic file (type png)
+<use decision_tree_example.png>
+Package pdftex.def Info: decision_tree_example.png  used on input line 497.
+(pdftex.def)             Requested size: 422.52057pt x 187.48126pt.
+ [20] [21 <./decision_tree_example.png>] [22]
+<mlp_architecture.png, id=668, 1725.44624pt x 1196.47pt>
+File: mlp_architecture.png Graphic file (type png)
+<use mlp_architecture.png>
+Package pdftex.def Info: mlp_architecture.png  used on input line 578.
+(pdftex.def)             Requested size: 375.57782pt x 260.43094pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[23] [24 <./mlp_architecture.png>]
+Overfull \hbox (19.20409pt too wide) in paragraph at lines 605--606
+[]\T5/cmr/m/n/14 Support Vector Machine (SVM) l† mÎt thu™t to°n hÂc m°y gi°m s°t (Supervised
+ []
+
+
+Overfull \hbox (3.46165pt too wide) in paragraph at lines 624--626
+[]\T5/cmr/m/n/14 Gi£ s˚ chÛng ta c‚ t™p d˙ liªu training: $\OMS/cmsy/m/n/14.4 D \OT1/cmr/m/n/14.4 = \OMS/cmsy/m/n/14.4 f\OT1/cmr/m/n/14.4 (\OT1/cmr/bx/n/14.4 x[]\OML/cmm/m/it/14.4 ; y[]\OT1/cmr/m/n/14.4 )\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 (\OT1/cmr/bx/n/14.4 x[]\OML/cmm/m/it/14.4 ; y[]\OT1/cmr/m/n/14.4 )\OML/cmm/m/it/14.4 ; [] ; \OT1/cmr/m/n/14.4 (\OT1/cmr/bx/n/14.4 x[]\OML/cmm/m/it/14.4 ; y[]\OT1/cmr/m/n/14.4 )\OMS/cmsy/m/n/14.4 g$\T5/cmr/m/n/14 ,
+ []
+
+[25] [26] [27] [28] [29]
+
+LaTeX Warning: Citation `k-means' on page 30 undefined on input line 781.
+
+[30]
+Overfull \hbox (6.51814pt too wide) in paragraph at lines 799--800
+[]\T5/cmr/bx/n/14 Khi t§o: \T5/cmr/m/n/14 ChÂn ng®u nhi∂n $\OML/cmm/m/it/14.4 K$ \T5/cmr/m/n/14 ^^_i∫m l†m t•m c°c cˆm ban ^^_¶u $\OT1/cmr/bx/n/14.4 m[]\OML/cmm/m/it/14.4 ; [] ; \OT1/cmr/bx/n/14.4 m[]$\T5/cmr/m/n/14 . 
+ []
+
+[31] [32] [33]
+LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 871.
+ (/home/trong-thanh/.miktex/texmfs/install/tex/latex/vntex/t5cmtt.fd
+File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `T5/cmtt/bx/n' in size <14> not available
+(Font)              Font shape `T5/cmtt/m/n' tried instead on input line 871.
+ [34] [35] [36] [37]
+<pca_procedure.png, id=837, 613.54219pt x 491.58656pt>
+File: pca_procedure.png Graphic file (type png)
+<use pca_procedure.png>
+Package pdftex.def Info: pca_procedure.png  used on input line 1237.
+(pdftex.def)             Requested size: 375.57782pt x 300.925pt.
+ [38] [39 <./pca_procedure.png>] [40] [41] [42] [43] [44] [45]
+Ch\uhorn \ohorn ng 3.
+
+Overfull \hbox (21.91795pt too wide) in alignment at lines 1531--1538
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (21.91795pt too wide) in alignment at lines 1538--1546
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (21.91795pt too wide) in alignment at lines 1546--1550
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (21.91795pt too wide) in alignment at lines 1550--1554
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (21.91795pt too wide) in alignment at lines 1554--1707
+ [] [] [] [] [] 
+ []
+
+/home/trong-thanh/Downloads/Project_Machine_Learning/main.tex:1707: ignored error: Infinite glue shrinkage found in box being split [46
+
+]
+/home/trong-thanh/Downloads/Project_Machine_Learning/main.tex:1707: ignored error: Infinite glue shrinkage found in box being split [47]
+/home/trong-thanh/Downloads/Project_Machine_Learning/main.tex:1707: ignored error: Infinite glue shrinkage found in box being split [48]
+/home/trong-thanh/Downloads/Project_Machine_Learning/main.tex:1707: ignored error: Infinite glue shrinkage found in box being split [49]
+<OverTime.png, id=939, 463.7325pt x 275.52937pt>
+File: OverTime.png Graphic file (type png)
+<use OverTime.png>
+Package pdftex.def Info: OverTime.png  used on input line 1714.
+(pdftex.def)             Requested size: 422.52057pt x 251.04742pt.
+ [50 <./OverTime.png>] [51]
+<EnvironmentSatisfaction.png, id=951, 461.47406pt x 274.02374pt>
+File: EnvironmentSatisfaction.png Graphic file (type png)
+<use EnvironmentSatisfaction.png>
+Package pdftex.def Info: EnvironmentSatisfaction.png  used on input line 1728.
+(pdftex.def)             Requested size: 422.52057pt x 250.89233pt.
+ [52 <./EnvironmentSatisfaction.png>]
+<JobSatisfaction.png, id=958, 462.22687pt x 275.52937pt>
+File: JobSatisfaction.png Graphic file (type png)
+<use JobSatisfaction.png>
+Package pdftex.def Info: JobSatisfaction.png  used on input line 1743.
+(pdftex.def)             Requested size: 422.52057pt x 251.86305pt.
+ [53 <./JobSatisfaction.png>]
+<MonthlyIncome.png, id=965, 408.02437pt x 258.21469pt>
+File: MonthlyIncome.png Graphic file (type png)
+<use MonthlyIncome.png>
+Package pdftex.def Info: MonthlyIncome.png  used on input line 1757.
+(pdftex.def)             Requested size: 422.52057pt x 267.4022pt.
+<Attrition.png, id=966, 573.8238pt x 403.9893pt>
+File: Attrition.png Graphic file (type png)
+<use Attrition.png>
+Package pdftex.def Info: Attrition.png  used on input line 1771.
+(pdftex.def)             Requested size: 375.57782pt x 264.42075pt.
+ [54 <./MonthlyIncome.png>] [55 <./Attrition.png>]
+<X_continuous.png, id=980, 861.9703pt x 380.17032pt>
+File: X_continuous.png Graphic file (type png)
+<use X_continuous.png>
+Package pdftex.def Info: X_continuous.png  used on input line 1806.
+(pdftex.def)             Requested size: 469.47049pt x 207.064pt.
+ [56]
+<array_X_continous.png, id=988, 550.30594pt x 212.29312pt>
+File: array_X_continous.png Graphic file (type png)
+<use array_X_continous.png>
+Package pdftex.def Info: array_X_continous.png  used on input line 1813.
+(pdftex.def)             Requested size: 469.47049pt x 181.11406pt.
+<df_X_continous.png, id=989, 858.95906pt x 380.17032pt>
+File: df_X_continous.png Graphic file (type png)
+<use df_X_continous.png>
+Package pdftex.def Info: df_X_continous.png  used on input line 1820.
+(pdftex.def)             Requested size: 469.47049pt x 207.78911pt.
+ [57 <./X_continuous.png> <./array_X_continous.png>]
+<describe_X_continous_std.png, id=997, 853.68938pt x 314.67563pt>
+File: describe_X_continous_std.png Graphic file (type png)
+<use describe_X_continous_std.png>
+Package pdftex.def Info: describe_X_continous_std.png  used on input line 1833.
+(pdftex.def)             Requested size: 469.47049pt x 173.05292pt.
+<download (3).png, id=998, 755.9442pt x 467.5869pt>
+File: download (3).png Graphic file (type png)
+<use download (3).png>
+Package pdftex.def Info: download (3).png  used on input line 1844.
+(pdftex.def)             Requested size: 469.47049pt x 290.38605pt.
+ [58 <./df_X_continous.png> <./describe_X_continous_std.png>]
+<download (2).png, id=1006, 1146.2022pt x 1727.253pt>
+File: download (2).png Graphic file (type png)
+<use download (2).png>
+Package pdftex.def Info: download (2).png  used on input line 1859.
+(pdftex.def)             Requested size: 375.57782pt x 565.96283pt.
+ [59 <./download (3).png>] [60 <./download (2).png>]
+<download (1).png, id=1021, 1146.9249pt x 1727.253pt>
+File: download (1).png Graphic file (type png)
+<use download (1).png>
+Package pdftex.def Info: download (1).png  used on input line 1869.
+(pdftex.def)             Requested size: 375.57782pt x 565.62021pt.
+ [61 <./download (1).png>]
+Overfull \hbox (25.26907pt too wide) in paragraph at lines 1885--1890
+[]\T5/cmr/m/n/14 ^^^Ëi vÓi c°c bi∏n sË li∂n tˆc, nhi∑u bi∏n nh˜ \T5/cmtt/m/n/14 MonthlyIncome\T5/cmr/m/n/14 , \T5/cmtt/m/n/14 TotalWorkingYears\T5/cmr/m/n/14 ,
+ []
+
+<download (4).png, id=1029, 820.2645pt x 719.8092pt>
+File: download (4).png Graphic file (type png)
+<use download (4).png>
+Package pdftex.def Info: download (4).png  used on input line 1895.
+(pdftex.def)             Requested size: 422.52057pt x 370.77727pt.
+[62]
+Overfull \hbox (17.6642pt too wide) in paragraph at lines 1905--1906
+[]\T5/cmr/m/n/14 C°c tr˜Ìng \T5/cmtt/m/n/14 YearsAtCompany\T5/cmr/m/n/14 , \T5/cmtt/m/n/14 YearsInCurrentRole \T5/cmr/m/n/14 v† \T5/cmtt/m/n/14 YearsWithCurrManager
+ []
+
+[63 <./download (4).png>]
+<download (5).png, id=1041, 1076.1003pt x 1438.173pt>
+File: download (5).png Graphic file (type png)
+<use download (5).png>
+Package pdftex.def Info: download (5).png  used on input line 1913.
+(pdftex.def)             Requested size: 422.52057pt x 564.68166pt.
+ [64]
+<download (6).png, id=1048, 570.933pt x 354.123pt>
+File: download (6).png Graphic file (type png)
+<use download (6).png>
+Package pdftex.def Info: download (6).png  used on input line 1922.
+(pdftex.def)             Requested size: 422.52057pt x 262.07932pt.
+ [65 <./download (5).png>]
+<download (7).png, id=1055, 503.7219pt x 341.1144pt>
+File: download (7).png Graphic file (type png)
+<use download (7).png>
+Package pdftex.def Info: download (7).png  used on input line 1937.
+(pdftex.def)             Requested size: 422.52057pt x 286.12292pt.
+ [66 <./download (6).png>] [67 <./download (7).png>] [68] [69]
+<img_2.png, id=1095, 742.775pt x 627.34375pt>
+File: img_2.png Graphic file (type png)
+<use img_2.png>
+Package pdftex.def Info: img_2.png  used on input line 2013.
+(pdftex.def)             Requested size: 469.47049pt x 396.52094pt.
+ [70 <./img_2.png>] [71]
+Ch\uhorn \ohorn ng 4.
+<download (11).png, id=1112, 581.0508pt x 172.7253pt>
+File: download (11).png Graphic file (type png)
+<use download (11).png>
+Package pdftex.def Info: download (11).png  used on input line 2126.
+(pdftex.def)             Requested size: 469.47049pt x 139.55882pt.
+[72
+
+]
+<download (18).png, id=1120, 426.393pt x 426.393pt>
+File: download (18).png Graphic file (type png)
+<use download (18).png>
+Package pdftex.def Info: download (18).png  used on input line 2135.
+(pdftex.def)             Requested size: 328.6279pt x 328.63591pt.
+<Pasted image (9).png, id=1121, 1084.05pt x 640.3925pt>
+File: Pasted image (9).png Graphic file (type png)
+<use Pasted image (9).png>
+Package pdftex.def Info: Pasted image (9).png  used on input line 2143.
+(pdftex.def)             Requested size: 328.6279pt x 194.13217pt.
+ [73 <./download (11).png> <./download (18).png>]
+<download (8).png, id=1130, 425.6703pt x 328.8285pt>
+File: download (8).png Graphic file (type png)
+<use download (8).png>
+Package pdftex.def Info: download (8).png  used on input line 2168.
+(pdftex.def)             Requested size: 328.6279pt x 253.87108pt.
+ [74 <./Pasted image (9).png>]
+<download (9).png, id=1138, 442.2924pt x 339.669pt>
+File: download (9).png Graphic file (type png)
+<use download (9).png>
+Package pdftex.def Info: download (9).png  used on input line 2184.
+(pdftex.def)             Requested size: 328.6279pt x 252.38252pt.
+ [75 <./download (8).png>]
+Overfull \hbox (28.41757pt too wide) in paragraph at lines 2195--2220
+ [] 
+ []
+
+<download (10).png, id=1145, 570.933pt x 281.853pt>
+File: download (10).png Graphic file (type png)
+<use download (10).png>
+Package pdftex.def Info: download (10).png  used on input line 2227.
+(pdftex.def)             Requested size: 328.6279pt x 162.24054pt.
+[76 <./download (9).png>]
+File: download (11).png Graphic file (type png)
+<use download (11).png>
+Package pdftex.def Info: download (11).png  used on input line 2235.
+(pdftex.def)             Requested size: 328.6279pt x 97.69011pt.
+<download (12).png, id=1155, 426.393pt x 426.393pt>
+File: download (12).png Graphic file (type png)
+<use download (12).png>
+Package pdftex.def Info: download (12).png  used on input line 2244.
+(pdftex.def)             Requested size: 328.6279pt x 328.63591pt.
+ [77 <./download (10).png>]
+<download (13).png, id=1162, 414.1071pt x 426.393pt>
+File: download (13).png Graphic file (type png)
+<use download (13).png>
+Package pdftex.def Info: download (13).png  used on input line 2253.
+(pdftex.def)             Requested size: 328.6279pt x 338.38225pt.
+ [78 <./download (12).png>] [79 <./download (13).png>] [80]
+LaTeX Font Info:    Calculating math sizes for size <12.77509> on input line 2425.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <12.77509> not available
+(Font)              size <12> substituted on input line 2425.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <12.77509> not available
+(Font)              size <12> substituted on input line 2425.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <12.77509> not available
+(Font)              size <12> substituted on input line 2425.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <12.77509> not available
+(Font)              size <12> substituted on input line 2425.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<download (24).png, id=1184, 859.2903pt x 860.013pt>
+File: download (24).png Graphic file (type png)
+<use download (24).png>
+Package pdftex.def Info: download (24).png  used on input line 2584.
+(pdftex.def)             Requested size: 422.52057pt x 422.86668pt.
+[81] [82 <./download (24).png>]
+<download (26).png, id=1199, 714.7503pt x 996.6033pt>
+File: download (26).png Graphic file (type png)
+<use download (26).png>
+Package pdftex.def Info: download (26).png  used on input line 2603.
+(pdftex.def)             Requested size: 422.52057pt x 589.14659pt.
+ [83] [84 <./download (26).png>]
+<download (25).png, id=1214, 859.2903pt x 498.663pt>
+File: download (25).png Graphic file (type png)
+<use download (25).png>
+Package pdftex.def Info: download (25).png  used on input line 2621.
+(pdftex.def)             Requested size: 422.52057pt x 245.19159pt.
+ [85 <./download (25).png>]
+<download (23).png, id=1224, 859.2903pt x 859.2903pt>
+File: download (23).png Graphic file (type png)
+<use download (23).png>
+Package pdftex.def Info: download (23).png  used on input line 2653.
+(pdftex.def)             Requested size: 422.52057pt x 422.51132pt.
+ [86]
+Overfull \hbox (9.50842pt too wide) in paragraph at lines 2660--2661
+[]\T5/cmr/m/n/14 MÊ hºnh \T5/cmr/bx/n/14 SVM \T5/cmr/m/n/14 (Linear Kernel, $\OML/cmm/m/it/14.4 C \OT1/cmr/m/n/14.4 = 1000$\T5/cmr/m/n/14 ) tr∂n d˙ liªu Onehot & Normalized
+ []
+
+[87 <./download (23).png>] [88]
+Ch\uhorn \ohorn ng 5.
+
+Overfull \hbox (53.97818pt too wide) in paragraph at lines 2681--2682
+[]\T5/cmr/m/n/14 Trong qu° trºnh ti∑n x˚ l˛, mÎt sË bi∏n khÊng c¶n thi∏t nh˜ Over18, EmployeeNumber,
+ []
+
+[89
+
+] [90] [91
+
+] [92] 
+enddocument/afterlastpage (AED): lastpage setting LastPage.
+(main.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+ ***********
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.77509pt have occurred.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 5FCB8ADC633B30CDF1CB3D0354EC0C01;15226.
+ ) 
+Here is how much of TeX's memory you used:
+ 27876 strings out of 469808
+ 508088 string characters out of 5469887
+ 1138009 words of memory out of 5000000
+ 55619 multiletter control sequences out of 15000+600000
+ 658344 words of font info for 104 fonts, out of 8000000 for 9000
+ 0 hyphenation exceptions out of 8191
+ 108i,12n,107p,851b,633s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </home/trong-thanh/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1440.pk></home/trong-thanh/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/trong-thanh/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/trong-thanh/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/trong-thanh/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/trong-thanh/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi12.pfb></home/trong-thanh/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/trong-thanh/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmib10.pfb></home/trong-thanh/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/trong-thanh/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/trong-thanh/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/trong-thanh/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr9.pfb></home/trong-thanh/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/trong-thanh/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb></home/trong-thanh/.miktex/texmfs/install/fonts/type1/public/amsfonts/symbols/msam10.pfb></home/trong-thanh/.miktex/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb></home/trong-thanh/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnbx12.pfb></home/trong-thanh/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnbxti10.pfb></home/trong-thanh/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnr10.pfb></home/trong-thanh/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnr12.pfb></home/trong-thanh/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnr7.pfb></home/trong-thanh/.miktex/texmfs/install/fonts/type1/vntex/vnr/vnti12.pfb></home/trong-thanh/.miktex/texmfs/install/fonts/type1/vntex/vnr/vntt12.pfb>
+Output written on main.pdf (93 pages, 4021841 bytes).
+PDF statistics:
+ 1470 PDF objects out of 1728 (max. 8388607)
+ 423 named destinations out of 1000 (max. 500000)
+ 801 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,2756 @@
+% --- SỬ DỤNG LỚP 'REPORT' VÌ BẠN DÙNG '\chapter' ---
+\documentclass[12pt, a4paper]{report}
+
+% --- THÊM PHẦN NÀY ĐỂ HEADER CÂN ĐỐI ---
+% 1. Căn lề lại (Quan trọng nhất): Giúp header dài ra sát mép giấy
+\usepackage[left=2.5cm, right=2cm, top=2cm, bottom=2.5cm]{geometry}
+
+% 2. Gói Header và Font (nếu cần tiếng Việt)
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+% --- CẤU HÌNH HEADER ---
+\pagestyle{fancy}
+\fancyhf{} % Xóa mặc định
+
+% Tăng chiều cao header (tránh lỗi warning)
+\setlength{\headheight}{28pt}
+
+% Header trái: Tên trường
+\lhead{Môn Học Máy}
+
+% Header phải: Tên môn học 
+\rhead{\textit{Nhóm 23}}
+
+% Footer: Số trang
+\cfoot{Trang \thepage \ / \pageref{LastPage}}
+
+% Đường kẻ header
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt} % Không kẻ dưới (cho thoáng)
+% --- GÓI TIẾNG VIỆT CHUẨN ---
+\usepackage[utf8]{inputenc}
+\usepackage[T5,T1]{fontenc}
+\usepackage{caption}
+\usepackage[vietnamese]{babel}
+
+% % --- GÓI CĂN LỀ (ĐÃ GỘP LẠI) ---
+% \usepackage[margin=2.5cm]{geometry} 
+
+% --- GÓI HỖ TRỢ ---
+\usepackage{graphicx} 
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{tikz} 
+\usepackage{scrextend} % Dùng cho \changefontsizes
+\usepackage{indentfirst} % Thụt đầu dòng đoạn đầu tiên
+\usetikzlibrary{calc}
+\usepackage{amsmath} % Gói toán học
+% \usepackage{hyperref} % Tạo link
+\usepackage{booktabs} % Bảng đẹp
+\usepackage{listings} % Chèn code
+% \usepackage{parskip} % Xuống dòng giữa các đoạn
+\usepackage{amssymb}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{longtable} % Bắt buộc cho bảng dài
+\usepackage{array}     % Để định dạng cột
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+
+% --- TÙY CHỈNH CODE LISTING ---
+\lstset{
+    language=Python,                % Ngôn ngữ
+    basicstyle=\ttfamily\small,     % Font chữ
+    keywordstyle=\color{blue},      % Màu keyword
+    stringstyle=\color{red},        % Màu chuỗi
+    commentstyle=\color{green},     % Màu comment
+    showstringspaces=false,
+    breaklines=true,                % Tự động ngắt dòng
+    frame=single,                   % Khung
+    numbers=left,                   % Đánh số dòng
+    numberstyle=\tiny\color{gray}   % Kiểu số dòng
+}
+
+% --- CÀI ĐẶT ---
+\setstretch{1.3} % Giãn dòng 1.3
+\changefontsizes{14pt} % Đổi cỡ chữ toàn văn bản
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% --- BẮT ĐẦU TÀI LIỆU ---
+\begin{document}
+
+% --- TRANG BÌA ---
+\begin{titlepage}
+\begin{tikzpicture}[remember picture,overlay,inner sep=0,outer sep=0]
+    % --- Khung viền ---
+    \draw[blue!70!black,line width=4pt] 
+        ([xshift=-1.5cm,yshift=-2cm]current page.north east) coordinate (A)
+        --([xshift=1.5cm,yshift=-2cm]current page.north west) coordinate(B)
+        --([xshift=1.5cm,yshift=2cm]current page.south west) coordinate (C)
+        --([xshift=-1.5cm,yshift=2cm]current page.south east) coordinate(D)--cycle;
+
+    % --- Các họa tiết viền (Mã của bạn) ---
+    \draw ([yshift=0.5cm,xshift=-0.5cm]A)-- ([yshift=0.5cm,xshift=0.5cm]B)--
+        ([yshift=-0.5cm,xshift=0.5cm]B) --([yshift=-0.5cm,xshift=-0.5cm]B)--([yshift=0.5cm,xshift=-0.5cm]C)--([yshift=0.5cm,xshift=0.5cm]C)--([yshift=-0.5cm,xshift=0.5cm]C)-- ([yshift=-0.5cm,xshift=-0.5cm]D)--([yshift=0.5cm,xshift=-0.5cm]D)--([yshift=0.5cm,xshift=0.5cm]D)--([yshift=-0.5cm,xshift=0.5cm]A)--([yshift=-0.5cm,xshift=-0.5cm]A)--([yshift=0.5cm,xshift=-0.5cm]A);
+
+    \draw ([yshift=-0.3cm,xshift=0.3cm]A)-- ([yshift=-0.3cm,xshift=-0.3cm]B)--
+        ([yshift=0.3cm,xshift=-0.3cm]B) --([yshift=0.3cm,xshift=0.3cm]B)--([yshift=-0.3cm,xshift=0.3cm]C)--([yshift=-0.3cm,xshift=-0.3cm]C)--([yshift=0.3cm,xshift=-0.3cm]C)-- ([yshift=0.3cm,xshift=0.3cm]D)--([yshift=-0.3cm,xshift=0.3cm]D)--([yshift=-0.3cm,xshift=-0.3cm]D)--([yshift=0.3cm,xshift=-0.3cm]A)--([yshift=0.3cm,xshift=0.3cm]A)--([yshift=-0.3cm,xshift=0.3cm]A);
+\end{tikzpicture}
+
+% --- Nội dung trang bìa ---
+\begin{center}
+    \vspace{7pt} 
+    \textbf{TRƯỜNG ĐẠI HỌC KHOA HỌC TỰ NHIÊN}
+ 
+    \vspace{7pt}
+    \textbf{KHOA TOÁN - CƠ - TIN HỌC}
+
+    \vspace{7pt}
+    \textbf{NHÓM 23}
+
+    \vspace{10pt}
+    % --- LƯU Ý VỀ LOGO ---
+    % Đảm bảo bạn có tệp tin "logo-hus-inkythuatso-inkythuatso-01-25-16-37-09.jpg"
+    % nằm cùng thư mục với tệp .tex này
+    \includegraphics[scale=0.3]{logo-hus-inkythuatso-inkythuatso-01-25-16-37-09.jpg}
+ 
+    \vspace{10pt}
+    \fontsize{18pt}{17pt}\selectfont 
+    \textbf{BÁO CÁO} 
+ 
+    \vspace{7pt}
+    \textbf{MÔN: HỌC MÁY}
+\end{center}
+
+% \begin{flushleft}
+%     \fontsize{14pt}{17pt}\selectfont 
+%     \textbf{\textsl{ĐỀ TÀI}}
+% \end{flushleft}
+
+\begin{center}
+    \fontsize{18pt}{17pt}\selectfont 
+    \textbf{\textrm{DỰ BÁO VỀ KHẢ NĂNG NGHỈ VIỆC CỦA NHÂN VIÊN
+    CÔNG TY IBM TẠI MỸ BẰNG MÔ HÌNH HỌC MÁY}}
+\end{center}
+ 
+\begin{center}
+\textbf{GV Bộ Môn: Cao Văn Chung}
+\end{center}
+
+\begin{center}
+\textbf{Nhóm sinh viên thực hiện:}
+\end{center}
+
+\vspace{2pt}
+\begin{center}
+\begin{tabular}{lll}
+    \textit{\textbf{Họ và tên}} & \textit{\textbf{MSSV}} & \textit{\textbf{Lớp}} \\
+    \textbf{Nguyễn Trọng Thành (TN)} & \textbf{23001934} & \textbf{K68A4} \\
+    \textbf{Nguyễn Văn Thắng} & \textbf{23001938} & \textbf{K68A4} \\
+    \textbf{Đinh Bá Thi} & \textbf{23001942} & \textbf{K68A4}
+\end{tabular}
+\end{center}
+
+\vspace{10pt}
+\begin{center}
+    % --- ĐÃ SỬA LẠI NĂM ---
+    \textbf{Hà Nội, 2026}
+\end{center}
+\end{titlepage}
+
+
+\newpage
+\thispagestyle{empty}
+\null
+% --- SỬ DỤNG \chapter* ĐỂ KHÔNG BỊ ĐÁNH SỐ "Chương 1" ---
+\chapter*{LỜI MỞ ĐẦU}
+% Thêm vào mục lục nhưng không đánh số
+\addcontentsline{toc}{chapter}{Lời mở đầu} 
+
+% Ẩn số trang cho trang Lời mở đầu
+\thispagestyle{empty}
+
+Trong bối cảnh cạnh tranh toàn cầu hiện nay, nguồn nhân lực được xem là tài sản vô giá và là yếu tố then chốt quyết định sự thành công bền vững của một doanh nghiệp. Vấn đề giữ chân nhân tài và giảm tỷ lệ nghỉ việc (employee attrition) luôn là một trong những ưu tiên hàng đầu của bộ phận quản trị nhân sự (HR). Chi phí cho việc tuyển dụng, đào tạo nhân viên mới và những gián đoạn trong công việc do "chảy máu chất xám" gây ra là vô cùng tốn kém.
+
+Đối với một tập đoàn công nghệ hàng đầu như IBM, việc hiểu rõ lý do tại sao nhân viên rời đi và dự đoán sớm những cá nhân có nguy cơ nghỉ việc mang một ý nghĩa chiến lược quan trọng. Nó cho phép công ty đưa ra các chính sách can thiệp kịp thời, cải thiện môi trường làm việc và tối ưu hóa chiến lược giữ chân nhân tài.
+
+Với sự bùng nổ của khoa học dữ liệu, các kỹ thuật Học máy (Machine Learning) đã mở ra một phương pháp tiếp cận mới, hiệu quả hơn trong việc phân tích và dự báo các xu hướng nhân sự. Thay vì dựa trên cảm tính, chúng ta có thể xây dựng các mô hình dự báo dựa trên dữ liệu thực tế để tìm ra các yếu tố cốt lõi ảnh hưởng đến quyết định của nhân viên.
+
+Chính vì lý do đó, chúng tôi đã chọn đề tài: \textbf{"Dự báo về khả năng nghỉ việc của nhân viên công ty IBM tại Mỹ bằng mô hình Học máy"} cho bài tiểu luận/dự án môn Học máy.
+
+Mục tiêu của bài làm là áp dụng các kiến thức đã học để xây dựng, huấn luyện và đánh giá các mô hình phân loại khác nhau (như Logistic Regression, Naive Bayes, KNN, Decision Tree, SVM...). Đồng thời, bài làm cũng tập trung vào việc tiền xử lý dữ liệu, bao gồm các kỹ thuật {chuẩn hóa}, xử lý {mất cân bằng} và {giảm chiều dữ liệu (PCA/LDA/Feature Selection)}, để tìm ra mô hình dự báo tối ưu nhất. Quan trọng hơn, nghiên cứu này mong muốn xác định được những yếu tố then chốt (như mức lương, số năm kinh nghiệm, sự hài lòng công việc...) có ảnh hưởng lớn nhất đến khả năng nghỉ việc tại IBM.
+
+Để hoàn thành bài tiểu luận này, chúng tôi xin gửi lời cảm ơn chân thành và sâu sắc nhất đến giảng viên – \textbf{Thầy Cao Văn Chung}. Thầy đã tận tình giảng dạy, định hướng và cung cấp những kiến thức quý báu trong suốt học phần, giúp chúng tôi có đủ nền tảng để thực hiện chủ đề này.
+
+Chúng tôi xin chân thành cảm ơn!
+
+\newpage
+\renewcommand{\contentsname}{MỤC LỤC}
+\tableofcontents
+\newpage
+
+\newpage
+\renewcommand{\listfigurename}{MỤC LỤC HÌNH ẢNH} %Fbangr 1. Đổi tên mặc định thành tiếng Việt in hoa
+\listoffigures % 3. Lệnh in danh sách
+\newpage
+
+\newpage
+% --- CẤU HÌNH DANH SÁCH BẢNG ---
+\renewcommand{\listtablename}{DANH SÁCH BẢNG} % Đổi tên tiêu đề thành tiếng Việt
+
+\listoftables % Lệnh in ra danh sách bảng
+\newpage
+
+\chapter{ Mở đầu}
+\section{ Đặt vấn đề}
+Trong bối cảnh cạnh tranh nhân tài khốc liệt hiện nay, quản lý nhân sự (Human Resource Management - HRM) không chỉ đơn thuần là các công tác hành chính, mà đã trở thành một bộ phận chiến lược, trực tiếp ảnh hưởng đến sự thành công của doanh nghiệp. Một trong những thách thức lớn nhất và tốn kém nhất mà bộ phận HRM phải đối mặt chính là tình trạng nhân viên nghỉ việc, hay còn gọi là "chảy máu chất xám".
+
+Việc một nhân viên rời đi không chỉ tạo ra một khoảng trống về nhân sự mà nó còn kéo theo hàng loạt tác hại và chi phí khổng lồ: chi phí tuyển dụng mới, chi phí đào tạo nhân viên thay thế, thời gian để nhân viên mới đạt được năng suất tối đa, và sự gián đoạn trong các dự án đang vận hành. Đối với các tập đoàn công nghệ lớn như IBM, việc mất đi các kỹ sư và chuyên gia có kinh nghiệm còn có thể ảnh hưởng đến khả năng đổi mới và năng lực cạnh tranh.   
+
+Trước đây, các doanh nghiệp thường chỉ can thiệp "bị động" khi nhân viên đã nộp đơn xin nghỉ. Tuy nhiên, với sự phát triển của khoa học dữ liệu, một hướng tiếp cận mới, "chủ động"\  hơn đã ra đời. Bằng cách áp dụng các mô hình Học Máy (Machine Learning), chúng ta hiện có khả năng phân tích các dữ liệu nhân sự (như mức lương, thâm niên, sự hài lòng, số dự án...) để dự báo sớm những trường hợp có nguy cơ nghỉ việc cao.
+
+Chính vì vậy, đề tài này thực hiện việc "Dự báo về khả năng nghỉ việc của nhân viên Công ty IBM tại Mỹ"\  nhằm mục tiêu xây dựng một mô hình dự báo hiệu quả. Mô hình này có thể giúp bộ phận HR của IBM xác định đúng các yếu tố then chốt dẫn đến việc nghỉ việc, từ đó đưa ra các chính sách can thiệp và giữ chân nhân tài kịp thời, giảm thiểu chi phí và ổn định tổ chức.
+
+\section{ Mục tiêu nghiên cứu}
+
+Đề tài nghiên cứu này tập trung vào các giải quyết các vấn đề như sau:
+
+\begin{enumerate}
+    \item Xây dựng và đánh giá các mô hình học máy để dự đoán khả năng nghỉ việc của nhân viên dựa trên dataset của IBM.
+    \item Áp dụng các kỹ thuật chuẩn hóa dữ liệu và giảm chiều để cải thiện hiệu suất mô hình và phân tích ảnh hưởng của chúng.
+\end{enumerate}
+\section{ Cấu trúc của bài tiểu luận}
+Bài tiểu luận được tổ chức gồm năm chương chính như sau:
+
+ \textbf{Chương 1 – Mở đầu}: Trình bày bối cảnh, đặt vấn đề, mục tiêu nghiên cứu và phạm vi của đề tài, đồng thời phác thảo hướng tiếp cận tổng quan.
+    
+    \textbf{Chương 2 – Cơ sở lý thuyết}: Giới thiệu các khái niệm và kiến thức nền tảng bao gồm bài toán phân loại, các mô hình học máy sử dụng (Naive Bayes, KNN, Logistic Regression, Decision Tree, SVM), các kỹ thuật tiền xử lý dữ liệu, giảm chiều (PCA, LDA, Feature Selection), xử lý mất cân bằng dữ liệu và các thước đo đánh giá mô hình.
+    
+     \textbf{Chương 3 – Phương pháp và Quy trình thực nghiệm}: Trình bày bộ dữ liệu, quy trình tiền xử lý, quy trình thực nghiệm và phương pháp đánh giá mô hình.
+    
+    \textbf{Chương 4 – Kết quả và Thảo luận}: Cung cấp kết quả thử nghiệm của các mô hình, so sánh ưu nhược điểm, phân tích và lý giải hiệu suất của từng mô hình.
+    
+   \textbf{Chương 5 – Kết luận}: Tổng kết lại toàn bộ nội dung nghiên cứu, nêu các hạn chế của đề tài và đề xuất các hướng phát triển trong tương lai.
+
+
+\chapter{ Cơ sở lý thuyết}
+\section{ Tổng quan về bài toán phân loại}
+\subsection{ Phân loại là gì?}
+
+Phân loại là một dạng bài toán học có giám sát (Supervised Learning). Mục tiêu của nó là dự đoán một nhãn lớp rời rạc cho một đối tượng đầu vào dựa trên các đặc trưng (features) của đối tượng đó.
+
+Ví dụ: Dựa vào nội dung email (đặc trưng), mô hình dự đoán email đó thuộc nhóm "Thư rác"\  (Spam) hay "Không phải thư rác" \ (Not spam).
+
+\subsection{ Các loại bài toán phân loại}
+Bài toán phân loại được chia thành ba dạng chính dựa trên số lượng và tính chất của các nhãn lớp:
+
+\subsubsection{Phân loại nhị phân (Binary Classification)}
+Đây là dạng bài toán cơ bản nhất, trong đó tập nhãn lớp chỉ bao gồm {hai lớp} (ví dụ: $Y = \{0, 1\}$ hoặc $Y = \{-1, 1\}$). Các lớp này thường mang tính đối lập hoặc loại trừ lẫn nhau.
+
+ \textbf{Ví dụ 1:} Chẩn đoán y tế (Bệnh / Không bệnh).
+
+   \textbf{Ví dụ 2:} Phát hiện giao dịch gian lận (Gian lận / Không gian lận).
+
+\subsubsection{Phân loại đa lớp (Multiclass Classification)}
+ Bài toán mà tập nhãn có {nhiều hơn hai lớp} (ví dụ: $Y = \{A, B, C\}$), và mỗi mẫu dữ liệu đầu vào chỉ thuộc về {duy nhất một lớp} trong số đó.
+
+\textbf{Ví dụ 1:} Nhận dạng chữ số viết tay (các lớp là \{0, 1, 2, ..., 9\}).
+
+\subsubsection{Phân loại đa nhãn (Multilabel Classification)}
+Đây là dạng bài toán phức tạp hơn, trong đó mỗi mẫu dữ liệu đầu vào có thể được gán {một hoặc nhiều nhãn} cùng một lúc. Các nhãn không nhất thiết phải loại trừ lẫn nhau.
+
+\textbf{Ví dụ 1:} Gán thể loại cho một bộ phim (có thể là \{Hành động, Hài hước, Lãng mạn\} cùng lúc).
+ 
+  \textbf{Ví dụ 2:} Phân loại chủ đề cho một tài liệu khoa học (có thể thuộc cả \{Học máy\} và \{Y sinh\}).
+
+\subsection{ Các thuật toán phân loại phổ biến}
+\begin{enumerate}
+    \item Naive Bayes
+    \item K-Nearest Neighbors
+    \item Hồi quy Logistic (Logistic Regression)
+    \item Máy Vector hỗ trợ (Support Vector Machine - SVM)
+    \item Cây quyết định (Decision Tree)
+    \item Rừng ngẫu nhiên (Random Forest)
+    \item Mạng nơ-ron (Neural Networks)
+    \item Và một số thuật toán khác ...
+\end{enumerate}
+
+\section{ Các mô hình học máy được sử dụng}
+
+
+\subsection{ Naive Bayes}
+
+% \renewcommand{\theequation}{\arabic{equation}}
+% --- BẮT ĐẦU TÀI LIỆU ---
+\subsubsection*{Naive Bayes Classifier}
+
+Naive Bayes Classifier (NBC) là thuật toán phân loại dựa trên định lý Bayes và giả định độc lập có điều kiện giữa các đặc trưng. Mục tiêu là tìm nhãn lớp $c$ sao cho xác suất hậu nghiệm $p(c|\mathbf{x})$ là lớn nhất \cite{NB}.
+
+Giả thuyết "ngây ngô" (Naive) cốt lõi của thuật toán cho rằng: Nếu biết trước nhãn lớp $c$, các thành phần $x_1, \dots, x_d$ của dữ liệu đầu vào hoàn toàn độc lập với nhau:
+\begin{equation}
+    p(\mathbf{x}|c) = \prod_{i=1}^d p(x_i|c)
+\end{equation}
+
+Dựa trên quy tắc Bayes và giả thuyết độc lập, nhãn của điểm dữ liệu $\mathbf{x}$ được xác định bởi:
+\begin{equation}
+    c = \arg\max_{c \in \{1, \dots, C\}} p(c) \prod_{i=1}^d p(x_i|c)
+\end{equation}
+Để tránh sai số tính toán khi nhân nhiều số xác suất quá nhỏ (underflow), ta chuyển sang không gian Logarit (hàm log đồng biến nên không ảnh hưởng kết quả tối ưu):
+\begin{equation}
+    c = \arg\max_{c \in \{1, \dots, C\}} \left( \log(p(c)) + \sum_{i=1}^d \log(p(x_i|c)) \right)
+\end{equation}
+Trong đó:
+\begin{itemize}
+    \item $p(c)$: Xác suất tiên nghiệm (Prior), tính bằng tần suất xuất hiện của lớp $c$.
+    \item $p(x_i|c)$: Xác suất có điều kiện (Likelihood), phụ thuộc vào loại dữ liệu.
+\end{itemize}
+
+\subsubsection*{Gaussian Naive Bayes}
+Áp dụng cho dữ liệu liên tục. Giả định $x_i$ tuân theo phân phối chuẩn $\mathcal{N}(\mu_{ci}, \sigma^2_{ci})$:
+\begin{equation}
+    p(x_i|c) = \frac{1}{\sqrt{2\pi\sigma^2_{ci}}} \exp\left( -\frac{(x_i - \mu_{ci})^2}{2\sigma^2_{ci}} \right)
+\end{equation}
+Các tham số trung bình $\mu_{ci}$ và phương sai $\sigma^2_{ci}$ được ước lượng từ dữ liệu huấn luyện.
+
+\subsubsection*{Bernoulli Naive Bayes}
+Áp dụng cho dữ liệu nhị phân (0 hoặc 1), ví dụ như sự xuất hiện của từ trong văn bản (có/không):
+\begin{equation}
+    p(x_i|c) = p(i|c)^{x_i} (1 - p(i|c))^{1-x_i}
+\end{equation}
+
+NBC có tốc độ huấn luyện và kiểm thử cực nhanh, hoạt động hiệu quả trên dữ liệu lớn (large-scale) và đặc biệt tốt trong các bài toán phân loại văn bản (spam filtering), mặc dù giả thuyết độc lập hiếm khi đúng trong thực tế.
+
+\subsection{ K Nearest Neighbors (KNN)}
+
+\subsubsection*{Giới thiệu}
+\textbf{K-Nearest Neighbors (KNN)} là một trong những thuật toán \textbf{Supervised Learning} đơn giản nhất \cite{KNN}.
+
+Thuật toán này thuộc loại "{học lười}"\  (lazy learning), tức là nó {không học bất cứ điều gì trong giai đoạn training}. Thay vào đó, nó lưu trữ toàn bộ dữ liệu training.
+
+Mọi tính toán (chủ yếu là tính khoảng cách) chỉ được thực hiện khi cần dự đoán kết quả cho một điểm dữ liệu mới.
+
+KNN có thể được áp dụng cho cả bài toán {classification} (phân loại) và {regression} (hồi quy).
+% \begin{itemize}
+%     \item Thuật toán này thuộc loại "{học lười}"\  (lazy learning), tức là nó {không học bất cứ điều gì trong giai đoạn training}. Thay vào đó, nó lưu trữ toàn bộ dữ liệu training.
+%     \item Mọi tính toán (chủ yếu là tính khoảng cách) chỉ được thực hiện khi cần dự đoán kết quả cho một điểm dữ liệu mới.
+%     \item KNN có thể được áp dụng cho cả bài toán {classification} (phân loại) và {regression} (hồi quy).
+% \end{itemize}
+
+\subsubsection*{Cách hoạt động}
+Với classification: Nhãn của một điểm dữ liệu mới được quyết định dựa trên {K} điểm lân cận gần nó nhất trong tập training. Quyết định này thường dựa trên "bầu chọn theo đa số" \ (majority voting).
+
+Với regression: Đầu ra của điểm mới thường là giá trị trung bình (hoặc trung bình có trọng số) của đầu ra của K điểm lân cận gần nhất.
+% \begin{itemize}
+%     \item {Với classification:} Nhãn của một điểm dữ liệu mới được quyết định dựa trên {K} điểm lân cận gần nó nhất trong tập training. Quyết định này thường dựa trên "bầu chọn theo đa số" \ (majority voting).
+%     \item {Với regression:} Đầu ra của điểm mới thường là giá trị trung bình (hoặc trung bình có trọng số) của đầu ra của K điểm lân cận gần nhất.
+% \end{itemize}
+
+KNN chỉ dựa vào thông tin của K lân cận, bất kể việc một vài điểm trong đó có thể là nhiễu.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Map1NN.png}
+    \caption{Minh họa KNN với K=1 cho bài toán 3 lớp. Các vùng nhỏ xen kẽ (như vùng Lục) có thể là nhiễu, dễ gây dự đoán sai.}
+\end{figure}
+
+\textbf{Về khoảng cách:} "Khoảng cách"\  trong KNN có thể được định nghĩa bằng nhiều hàm số khác nhau (ví dụ: khoảng cách Euclidean, Manhattan, v.v.).
+
+\subsection{ Logistic Regression}
+
+\subsubsection*{Giới thiệu}
+Các mô hình tuyến tính (linear models) có dạng chung $y = f(\mathbf{w}^T\mathbf{x})$.
+\begin{itemize}
+    \item \textbf{Linear Regression:} $f(s) = s$. Đầu ra là số thực không bị chặn.
+    \item \textbf{PLA:} $f(s) = \text{sgn}(s)$. Đầu ra là $\{-1, 1\}$.
+    \item \textbf{Logistic Regression:} Cung cấp đầu ra dạng xác suất, bị chặn trong khoảng $[0, 1]$. Mặc dù có tên \textit{regression}, mô hình này thường được dùng cho bài toán \textit{classification} \cite{LR}.
+\end{itemize}
+
+\subsubsection*{Mô hình Logistic Regression}
+
+Đầu ra dự đoán có dạng:
+$$
+    f(\mathbf{x}) = \theta(\mathbf{w}^T\mathbf{x})
+$$
+Trong đó $\theta$ là \textit{logistic function}.
+
+% --- Môi trường cho Hình 2 ---
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{activation.png}
+    \caption{Các activation function khác nhau.}
+\end{figure}
+
+Linear regression (đường vàng) không phù hợp cho bài toán phân loại nhị phân vì nó không bị chặn và bị ảnh hưởng bởi các điểm dữ liệu ngoại lai (outliers), làm lệch ngưỡng quyết định.
+
+% --- Môi trường cho Hình 3 (từ ảnh 'image_7e4f4b.png') ---
+\begin{figure}[H]
+    \centering
+    % Bạn cần thay "ten_file_hinh_3.png" bằng tên file ảnh thực tế của bạn
+    \includegraphics[width=0.8\textwidth]{ex1_lr.png}
+    \caption{Tại sao Linear Regression không phù hợp?}
+    % \label{fig:lr_fail} % (Tùy chọn: thêm label để tham chiếu)
+\end{figure}
+
+Chúng ta cần một hàm \textit{mượt} (smooth, có đạo hàm) và bị chặn, ví dụ như các đường màu xanh.
+
+\subsubsection*{Sigmoid function}
+
+Hàm được sử dụng nhiều nhất là hàm \textit{sigmoid}:
+$$
+f(s) = \frac{1}{1 + e^{-s}} \triangleq \sigma(s)
+$$
+Hàm này bị chặn trong khoảng $(0, 1)$ và có một tính chất đặc biệt về đạo hàm:
+\begin{align*}
+\sigma'(s) &= \frac{e^{-s}}{(1 + e^{-s})^2} \\
+           &= \sigma(s) (1 - \sigma(s))
+\end{align*}
+Công thức đạo hàm đơn giản này rất hữu ích cho việc tối ưu.
+
+\subsubsection*{Xây dựng hàm mất mát}
+
+Ta diễn giải đầu ra của mô hình là xác suất:
+\begin{align}
+    P(y_i = 1 | \mathbf{x}_i; \mathbf{w}) &= \sigma(\mathbf{w}^T\mathbf{x}_i) \triangleq z_i \\
+    P(y_i = 0 | \mathbf{x}_i; \mathbf{w}) &= 1 - \sigma(\mathbf{w}^T\mathbf{x}_i) = 1 - z_i
+\end{align}
+Hai biểu thức trên có thể viết gộp thành:
+$$
+P(y_i | \mathbf{x}_i; \mathbf{w}) = z_i^{y_i} (1 - z_i)^{1-y_i}
+$$
+Chúng ta muốn tìm $\mathbf{w}$ để tối đa hóa xác suất này trên toàn bộ tập dữ liệu (bài toán \textit{Maximum Likelihood Estimation - MLE}). Giả sử các điểm dữ liệu là độc lập:
+$$
+P(\mathbf{y} | \mathbf{X}; \mathbf{w}) = \prod_{i=1}^N P(y_i | \mathbf{x}_i; \mathbf{w}) = \prod_{i=1}^N z_i^{y_i} (1 - z_i)^{1-y_i}
+$$
+Để đơn giản hóa việc tính toán (biến phép nhân thành phép cộng) và tránh lỗi số học, ta lấy \textit{negative log-likelihood} và coi đó là hàm mất mát $J(\mathbf{w})$ cần tối ưu (minimize). Hàm này còn gọi là \textit{Cross Entropy}:
+\begin{align*}
+    J(\mathbf{w}) &= - \log P(\mathbf{y} | \mathbf{X}; \mathbf{w}) \\
+                  &= - \sum_{i=1}^N (y_i \log z_i + (1 - y_i) \log(1 - z_i))
+\end{align*}
+
+\subsubsection*{Tối ưu hàm mất mát}
+
+Chúng ta sử dụng \textit{Stochastic Gradient Descent} (SGD). Xét hàm mất mát với 1 điểm dữ liệu $(\mathbf{x}_i, y_i)$:
+$$
+J_i(\mathbf{w}) = -(y_i \log z_i + (1 - y_i) \log(1 - z_i))
+$$
+Ta cần tính đạo hàm $\nabla_{\mathbf{w}} J_i(\mathbf{w})$.
+$$
+\frac{\partial J_i}{\partial \mathbf{w}} = \frac{\partial J_i}{\partial z_i} \frac{\partial z_i}{\partial s_i} \frac{\partial s_i}{\partial \mathbf{w}}
+$$
+với $s_i = \mathbf{w}^T\mathbf{x}_i$ và $z_i = \sigma(s_i)$.
+\begin{itemize}
+    \item $\frac{\partial J_i}{\partial z_i} = - \left( \frac{y_i}{z_i} - \frac{1 - y_i}{1 - z_i} \right) = -\frac{y_i - z_i}{z_i(1 - z_i)}$
+    \item $\frac{\partial z_i}{\partial s_i} = \sigma'(s_i) = z_i(1 - z_i)$ (tính chất đặc biệt của sigmoid)
+    \item $\frac{\partial s_i}{\partial \mathbf{w}} = \mathbf{x}_i$
+\end{itemize}
+Kết hợp lại, đạo hàm được rút gọn rất đẹp:
+$$
+\frac{\partial J_i}{\partial \mathbf{w}} = -\frac{y_i - z_i}{z_i(1 - z_i)} \cdot (z_i(1 - z_i)) \cdot \mathbf{x}_i = -(y_i - z_i)\mathbf{x}_i = (z_i - y_i)\mathbf{x}_i
+$$
+Công thức cập nhật (theo SGD) cho Logistic Regression là:
+$$
+\mathbf{w} \leftarrow \mathbf{w} - \eta (z_i - y_i)\mathbf{x}_i 
+\text{ (hoặc } \mathbf{w} \leftarrow \mathbf{w} + \eta (y_i - z_i)\mathbf{x}_i \text{)}
+$$
+
+\subsubsection*{Tính chất: Boundary tuyến tính}
+
+Logistic Regression được dùng cho classification. Ta dự đoán $y=1$ nếu $P(y = 1|\mathbf{x}; \mathbf{w}) > 0.5$.
+\begin{align*}
+    P(y = 1|\mathbf{x}; \mathbf{w}) &> 0.5 \\
+    \Leftrightarrow \frac{1}{1 + e^{-\mathbf{w}^T\mathbf{x}}} &> 0.5 \\
+    \Leftrightarrow 1 &> 0.5 (1 + e^{-\mathbf{w}^T\mathbf{x}}) \\
+    \Leftrightarrow 2 &> 1 + e^{-\mathbf{w}^T\mathbf{x}} \\
+    \Leftrightarrow 1 &> e^{-\mathbf{w}^T\mathbf{x}} \\
+    \Leftrightarrow e^0 &> e^{-\mathbf{w}^T\mathbf{x}} \\
+    \Leftrightarrow 0 &> -\mathbf{w}^T\mathbf{x} \\
+    \Leftrightarrow \mathbf{w}^T\mathbf{x} &> 0
+\end{align*}
+Đường ranh giới (boundary) phân chia hai lớp là siêu mặt phẳng $\mathbf{w}^T\mathbf{x} = 0$. Đây là một boundary có dạng {tuyến tính}.
+
+\subsection{ Decision Tree}
+
+\subsubsection*{Giới thiệu}
+
+Decision Tree là thuật toán học có giám sát dạng cây, có thể giải quyết cả bài toán regression (hồi quy) và classification (phân loại) \cite{DT}. Decision Tree hoạt động bằng cách chia dữ liệu thành các tập con thuần nhất hơn dựa trên các thuộc tính đầu vào. Ví dụ, như với dữ liệu Titanic, thuật toán Decision Tree sẽ học ra mô hình dạng cây như thế này.
+
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=0.9\textwidth]{decision_tree_example.png}}
+    \caption{Sơ đồ cây quyết định với dữ liệu Titanic}
+    \label{fig:hinh_2.4}
+\end{figure}
+
+\begin{itemize}
+    \item \textbf{Nút gốc (Root node)}: chứa toàn bộ tập dữ liệu.
+    \item \textbf{Nút nội bộ (Internal nodes)}: đại diện cho các quyết định dựa trên thuộc tính.
+    \item \textbf{Nhánh (Branches)}: đại diện cho kết quả của quyết định.
+    \item \textbf{Nút lá (Leaf nodes)}: chứa nhãn dự đoán cuối cùng.
+\end{itemize}
+
+\subsubsection*{Tiêu chí phân tách (Độ không thuần khiết - Impurity)}
+
+Quá trình xây dựng cây quyết định liên quan đến việc tối ưu hóa một hàm mất mát, thường là giảm thiểu độ không thuần khiết (impurity) của các nút. Mục tiêu là chọn thuộc tính và ngưỡng phân tách để tạo ra các nút con thuần khiết nhất.
+
+\subsubsection*{Chỉ số Gini (Gini Impurity)}
+
+Chỉ số Gini là một cách để đo độ không thuần khiết của một nút. Một nút thuần khiết (tất cả các mẫu đều thuộc một lớp) sẽ có chỉ số Gini bằng 0.
+\begin{equation}
+    Gini(t) = 1 - \sum_{i=1}^{C} p_i^2
+\end{equation}
+
+Trong đó:
+\begin{itemize}
+    \item $p_i$ là xác suất của việc một mẫu thuộc lớp $i$ tại nút $t$.
+    \item $C$ là tổng số lớp.
+\end{itemize}
+
+\subsubsection*{Entropy}
+
+Entropy là một thước đo khác về độ không thuần khiết, đo mức độ hỗn loạn hoặc không chắc chắn của một tập hợp các mẫu.
+\begin{equation}
+    Entropy(t) = - \sum_{i=1}^{C} p_i \log_2(p_i)
+\end{equation}
+Tương tự như chỉ số Gini, Entropy đạt giá trị nhỏ nhất khi nút hoàn toàn thuần khiết.
+
+\subsubsection*{Giảm độ không thuần khiết (Information Gain)}
+
+Khi một đặc trưng được chọn để phân tách, mục tiêu là làm giảm độ không thuần khiết của các nút con so với nút cha. Sự giảm này được gọi là Information Gain (đối với Entropy) hoặc Gini Gain (đối với chỉ số Gini).
+\begin{equation}
+    Information Gain = Impurity(t) - \sum_{k \in \{\text{trái, phải}\}} \frac{N_k}{N} Impurity(t_k)
+\end{equation}
+Trong đó:
+\begin{itemize}
+    \item $Impurity(t)$ là độ không thuần khiết tại nút cha.
+    \item $Impurity(t_k)$ là độ không thuần khiết tại các nút con $k$ sau khi phân tách.
+    \item $N$ là số lượng mẫu tại nút cha, và $N_k$ là số lượng mẫu tại nút con $k$.
+\end{itemize}
+Cây quyết định sẽ chọn thuộc tính mang lại $\text{Information Gain}$ lớn nhất.
+
+\subsection{ Multi-Layer Perceptron (MLP)}
+
+\subsubsection*{Giới thiệu}
+Các mô hình tuyến tính đơn giản (như Perceptron Learning Algorithm - PLA hay Logistic Regression) chỉ giải quyết được các bài toán phân biệt tuyến tính. Chúng thất bại trước các dữ liệu phân bố phức tạp, ví dụ điển hình là bài toán XOR (không thể kẻ một đường thẳng để chia cắt hai lớp).
+
+\textbf{Multi-Layer Perceptron (MLP)}, hay còn gọi là mạng nơ-ron truyền thẳng (Feedforward Neural Network), khắc phục nhược điểm này bằng cách ghép nhiều tầng (layer) các nơ-ron lại với nhau, tạo nên các đường phân chia phi tuyến tính phức tạp \cite{MLP}.
+
+\subsubsection*{Cấu trúc của MLP}
+Một mạng MLP cơ bản bao gồm 3 thành phần chính:
+\begin{enumerate}
+    \item \textbf{Input Layer (Lớp đầu vào):} Nhận dữ liệu đầu vào $\mathbf{x}$.
+    \item \textbf{Hidden Layers (Các lớp ẩn):} Nằm giữa đầu vào và đầu ra. Tại đây các phép biến đổi phi tuyến diễn ra. Một mạng có thể có một hoặc nhiều lớp ẩn.
+    \item \textbf{Output Layer (Lớp đầu ra):} Trả về kết quả dự đoán (class score hoặc giá trị hồi quy).
+\end{enumerate}
+
+Quá trình tính toán tại mỗi nơ-ron diễn ra theo 2 bước:
+\begin{itemize}
+    \item \textbf{Tổng hợp tuyến tính:} Tính tổng có trọng số của các đầu vào cộng với bias.
+    \begin{equation}
+        \mathbf{z}^{(l)} = \mathbf{W}^{(l)}\mathbf{a}^{(l-1)} + \mathbf{b}^{(l)}
+    \end{equation}
+    \item \textbf{Kích hoạt phi tuyến:} Áp dụng hàm kích hoạt (activation function) lên kết quả vừa tính.
+    \begin{equation}
+        \mathbf{a}^{(l)} = f(\mathbf{z}^{(l)})
+    \end{equation}
+\end{itemize}
+Trong đó $\mathbf{W}^{(l)}, \mathbf{b}^{(l)}$ là ma trận trọng số và bias tại lớp thứ $l$, $\mathbf{a}^{(l-1)}$ là đầu ra của lớp trước đó.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{mlp_architecture.png}
+    \caption{MLP với hai hidden layers (các biases đã bị ẩn)}
+    \label{fig:mlp_structure}
+\end{figure}
+
+\subsubsection*{Hàm kích hoạt (Activation Functions)}
+
+Hàm kích hoạt là thành phần quan trọng nhất giúp MLP có khả năng học các quan hệ phi tuyến. Nếu không có hàm này, MLP dù có bao nhiêu lớp cũng chỉ tương đương với một hàm tuyến tính đơn giản. Các hàm phổ biến gồm:
+\begin{itemize}
+    \item \textbf{Sigmoid:} $f(z) = \frac{1}{1 + e^{-z}}$ (đưa giá trị về khoảng $(0, 1)$).
+    \item \textbf{Tanh:} $f(z) = \tanh(z)$ (đưa giá trị về khoảng $(-1, 1)$).
+    \item \textbf{ReLU (Rectified Linear Unit):} $f(z) = \max(0, z)$. Đây là hàm được sử dụng phổ biến nhất hiện nay do tính toán đơn giản và hạn chế triệt tiêu đạo hàm (vanishing gradient).
+\end{itemize}
+
+\subsubsection*{Huấn luyện mô hình (Backpropagation)}
+Quá trình huấn luyện MLP dựa trên việc tối thiểu hóa hàm mất mát (Loss Function), ví dụ như Cross Entropy cho bài toán phân loại. Thuật toán chính được sử dụng là \textbf{Lan truyền ngược (Backpropagation)}.
+
+Cơ chế:
+\begin{itemize}
+    \item \textbf{Feedforward:} Tính toán output dự đoán từ input.
+    \item \textbf{Tính Loss:} So sánh dự đoán với nhãn thực tế.
+    \item \textbf{Backpropagation:} Sử dụng quy tắc chuỗi (Chain Rule) để tính đạo hàm (gradient) của hàm mất mát theo từng trọng số từ lớp cuối cùng ngược về lớp đầu tiên.
+    \item \textbf{Cập nhật trọng số:} Sử dụng Gradient Descent để điều chỉnh $\mathbf{W}$ và $\mathbf{b}$ nhằm giảm thiểu sai số.
+\end{itemize}
+
+\subsection{ Support Vector Machine (SVM)}
+\subsubsection*{Giới thiệu}
+Support Vector Machine (SVM) là một thuật toán học máy giám sát (Supervised Learning) được sử dụng cho bài toán phân lớp (classification) hoặc hồi quy (regression). Ý tưởng cốt lõi của SVM là tìm một không gian phân chia (siêu mặt phẳng - hyperplane) sao cho khoảng cách giữa các điểm dữ liệu gần nhất của các lớp khác nhau tới mặt phẳng này là lớn nhất. Khoảng cách này được gọi là {Margin} (lề) \cite{SVM}.
+
+\subsubsection*{Khoảng cách từ một điểm tới một siêu mặt phẳng}
+Trong không gian $d$ chiều, một siêu mặt phẳng được định nghĩa bởi phương trình:
+\begin{equation}
+    \mathbf{w}^T\mathbf{x} + b = 0
+\end{equation}
+Trong đó:
+\begin{itemize}
+    \item $\mathbf{w} \in \mathbb{R}^d$ là vector pháp tuyến của siêu mặt phẳng.
+    \item $b \in \mathbb{R}$ là bias (độ lệch).
+\end{itemize}
+
+Khoảng cách từ một điểm $\mathbf{x}_0$ bất kỳ tới siêu mặt phẳng này được tính theo công thức:
+\begin{equation}
+    d(\mathbf{x}_0, \text{Hyperplane}) = \frac{|\mathbf{w}^T\mathbf{x}_0 + b|}{||\mathbf{w}||_2}
+\end{equation}
+
+\subsubsection*{Giả định bài toán phân lớp nhị phân}
+Giả sử chúng ta có tập dữ liệu training: $\mathcal{D} = \{(\mathbf{x}_1, y_1), (\mathbf{x}_2, y_2), \dots, (\mathbf{x}_N, y_N)\}$, với $y_i \in \{ -1, 1 \}$.
+Mục tiêu là tìm $\mathbf{w}$ và $b$ sao cho:
+\begin{itemize}
+    \item $\mathbf{w}^T\mathbf{x}_i + b \geq 1$ nếu $y_i = 1$
+    \item $\mathbf{w}^T\mathbf{x}_i + b \leq -1$ nếu $y_i = -1$
+\end{itemize}
+Điều kiện này có thể viết gọn lại thành:
+\begin{equation}
+    y_i(\mathbf{w}^T\mathbf{x}_i + b) \geq 1, \quad \forall i = 1, \dots, N
+\end{equation}
+
+\subsubsection*{Tính toán Margin}
+Các điểm nằm gần siêu mặt phẳng nhất (gọi là \textit{Support Vectors}) sẽ thỏa mãn $y_i(\mathbf{w}^T\mathbf{x}_i + b) = 1$.
+Khoảng cách từ các điểm này tới siêu mặt phẳng phân chia là:
+\begin{equation}
+    \frac{1}{||\mathbf{w}||_2}
+\end{equation}
+Do đó, độ rộng của lề (tổng khoảng cách từ 2 phía) là:
+\begin{equation}
+    \text{Margin} = \frac{2}{||\mathbf{w}||_2}
+\end{equation}
+
+\subsubsection*{Thiết lập hàm mục tiêu}
+Để tối đa hóa Margin, ta cần tối đa hóa $\frac{2}{||\mathbf{w}||_2}$, điều này tương đương với việc tối thiểu hóa $||\mathbf{w}||_2$. Để thuận tiện cho việc đạo hàm, ta tối thiểu hóa $\frac{1}{2}||\mathbf{w}||_2^2$.
+
+Bài toán tối ưu (Primal Problem) trở thành:
+\begin{equation}
+    \begin{aligned}
+    & \underset{\mathbf{w}, b}{\text{minimize}}
+    & & \frac{1}{2} ||\mathbf{w}||_2^2 \\
+    & \text{subject to}
+    & & y_i(\mathbf{w}^T\mathbf{x}_i + b) \geq 1, \; \forall i = 1, \dots, N
+    \end{aligned}
+\end{equation}
+
+\subsection{ Soft Margin Support Vector Machine}
+
+\subsubsection*{Giới hạn của Hard Margin SVM}
+Trong thực tế, dữ liệu thường bị nhiễu (noise) hoặc chứa các điểm ngoại lai (outliers), khiến cho hai lớp dữ liệu không thể phân biệt tuyến tính hoàn toàn (not linearly separable). Khi đó, bài toán Hard Margin SVM sẽ vô nghiệm. Để giải quyết vấn đề này, Soft Margin SVM \cite{SVM_Soft} được đề xuất nhằm nới lỏng các ràng buộc, chấp nhận một số điểm dữ liệu có thể bị phân lớp sai hoặc nằm trong vùng an toàn (margin).
+
+\subsubsection*{Biến bù (Slack Variables)}
+Để cho phép các vi phạm xảy ra, ta đưa vào các biến bù không âm $\xi_i \geq 0$ (slack variables) cho từng điểm dữ liệu $\mathbf{x}_i$. Ràng buộc của bài toán thay đổi thành:
+\begin{equation}
+    y_i(\mathbf{w}^T\mathbf{x}_i + b) \geq 1 - \xi_i, \quad \forall i = 1, \dots, N
+\end{equation}
+Trong đó:
+\begin{itemize}
+    \item Nếu $\xi_i = 0$: Điểm dữ liệu được phân loại đúng và nằm an toàn phía ngoài margin (hoặc trên biên).
+    \item Nếu $0 < \xi_i < 1$: Điểm nằm trong vùng margin nhưng vẫn được phân loại đúng.
+    \item Nếu $\xi_i \geq 1$: Điểm bị phân loại sai.
+\end{itemize}
+
+\subsubsection*{Bài toán tối ưu (Primal Problem)}
+Mục tiêu mới là vừa tối đa hóa độ rộng lề (tối thiểu $||\mathbf{w}||$), vừa tối thiểu hóa sai số phân lớp (tổng các $\xi_i$). Hàm mục tiêu trở thành:
+\begin{equation}
+    \underset{\mathbf{w}, b, \xi}{\text{minimize}} \quad \frac{1}{2}||\mathbf{w}||_2^2 + C \sum_{i=1}^N \xi_i
+\end{equation}
+\begin{center}
+    Thỏa mãn: $y_i(\mathbf{w}^T\mathbf{x}_i + b) \geq 1 - \xi_i$ và $\xi_i \geq 0$.
+\end{center}
+
+\subsubsection*{Vai trò của tham số C}
+$C$ là một hằng số dương do người dùng thiết lập, đóng vai trò cân bằng (trade-off) giữa độ rộng của margin và sai số huấn luyện:
+\begin{itemize}
+    \item {$C$ lớn:} Phạt nặng các sai số. Mô hình cố gắng phân loại đúng tất cả các điểm, dẫn đến margin hẹp (Narrow Margin). Dễ bị Overfitting.
+    \item {$C$ nhỏ:} Chấp nhận nhiều sai số hơn để có margin rộng hơn (Wide Margin). Dữ liệu tổng quát hóa tốt hơn nhưng có thể bị Underfitting.
+\end{itemize}
+
+\subsubsection*{Bài toán đối ngẫu (Dual Problem)}
+Sử dụng phương pháp nhân tử Lagrange, bài toán gốc được chuyển về bài toán đối ngẫu để loại bỏ $\mathbf{w}, b$ và $\xi$. Mục tiêu là tìm các nhân tử Lagrange $\lambda$:
+\begin{equation}
+    \begin{aligned}
+    & \underset{\lambda}{\text{maximize}}
+    & & \sum_{i=1}^N \lambda_i - \frac{1}{2} \sum_{i=1}^N \sum_{j=1}^N \lambda_i \lambda_j y_i y_j \mathbf{x}_i^T \mathbf{x}_j \\
+    & \text{subject to}
+    & & \sum_{i=1}^N \lambda_i y_i = 0 \\
+    & & & 0 \leq \lambda_i \leq C, \quad \forall i = 1, \dots, N
+    \end{aligned}
+\end{equation}
+
+\textbf{Nhận xét quan trọng:} 
+Sự khác biệt duy nhất giữa bài toán đối ngẫu của Soft Margin và Hard Margin nằm ở ràng buộc của $\lambda_i$. 
+\begin{itemize}
+    \item Hard Margin: $0 \leq \lambda_i$
+    \item Soft Margin: $0 \leq \lambda_i \leq C$ (chặn trên bởi $C$).
+\end{itemize}
+Biểu thức xuất hiện tích vô hướng $\mathbf{x}_i^T \mathbf{x}_j$ chính là cơ sở để áp dụng {Kernel Trick} cho các bài toán phi tuyến sau này.
+
+\subsubsection*{Góc nhìn qua hàm Hinge Loss}
+Bài toán Soft Margin SVM cũng có thể được coi là bài toán tối thiểu hóa hàm mất mát dạng Hinge Loss kèm theo Regularization:
+\begin{equation}
+    \mathcal{L} = \sum_{i=1}^N \max(0, 1 - y_i(\mathbf{w}^T\mathbf{x}_i + b)) + \frac{\lambda}{2}||\mathbf{w}||_2^2
+\end{equation}
+Trong đó $\lambda = \frac{1}{C}$. Cách nhìn này cho thấy mối liên hệ giữa SVM và các thuật toán Machine Learning khác như Neural Networks.
+
+\subsection{ Kernel Support Vector Machine}
+
+\subsubsection*{Giới hạn của SVM tuyến tính}
+Các phương pháp Hard Margin và Soft Margin SVM chỉ làm việc hiệu quả khi dữ liệu phân biệt tuyến tính (linearly separable) hoặc gần phân biệt tuyến tính. Đối với các bài toán mà dữ liệu phân bố phức tạp (ví dụ: bài toán XOR), ta không thể tìm được một siêu mặt phẳng phân chia trong không gian ban đầu.
+
+\subsubsection*{Ý tưởng: Không gian đặc trưng (Feature Space)}
+Ý tưởng cốt lõi của Kernel SVM \cite{SVM_Kernel} là ánh xạ dữ liệu từ không gian ban đầu (Input Space) sang một không gian mới có số chiều cao hơn (Feature Space), thậm chí là vô hạn chiều. Tại không gian này, dữ liệu hy vọng sẽ trở nên phân biệt tuyến tính.
+
+Gọi hàm ánh xạ là $\Phi: \mathbf{x} \rightarrow \Phi(\mathbf{x})$. Bài toán tối ưu đối ngẫu (Dual Problem) thay đổi từ việc sử dụng tích vô hướng $\mathbf{x}_i^T\mathbf{x}_j$ sang:
+\begin{equation}
+    \Phi(\mathbf{x}_i)^T \Phi(\mathbf{x}_j)
+\end{equation}
+
+\subsubsection*{Kernel Trick (Thủ thuật Kernel)}
+Việc tính toán trực tiếp $\Phi(\mathbf{x})$ và tích vô hướng trong không gian cao chiều tốn kém chi phí tính toán và bộ nhớ. Kernel Trick cho phép ta tính tích vô hướng trong không gian mới ngay tại không gian ban đầu thông qua hàm Kernel $k(\cdot, \cdot)$:
+\begin{equation}
+    k(\mathbf{x}, \mathbf{z}) = \Phi(\mathbf{x})^T \Phi(\mathbf{z})
+\end{equation}
+Nhờ đó, ta không cần xác định cụ thể hàm $\Phi(\mathbf{x})$ mà chỉ cần biết hàm $k(\mathbf{x}, \mathbf{z})$.
+
+Bài toán tối ưu trở thành:
+\begin{equation}
+    \begin{aligned}
+    & \underset{\lambda}{\text{maximize}}
+    & & \sum_{i=1}^N \lambda_i - \frac{1}{2} \sum_{i=1}^N \sum_{j=1}^N \lambda_i \lambda_j y_i y_j k(\mathbf{x}_i, \mathbf{x}_j) \\
+    & \text{subject to}
+    & & \sum_{i=1}^N \lambda_i y_i = 0, \quad 0 \leq \lambda_i \leq C
+    \end{aligned}
+\end{equation}
+
+\subsubsection*{Điều kiện Mercer}
+Để một hàm $k(\mathbf{x}, \mathbf{z})$ là một Kernel hợp lệ, nó cần thỏa mãn điều kiện Mercer (đảm bảo ma trận Kernel là nửa xác định dương), giúp bài toán tối ưu lồi và có nghiệm duy nhất.
+
+\subsubsection*{Các loại Kernel phổ biến}
+\begin{itemize}
+    \item \textbf{Linear Kernel:} Dành cho dữ liệu gần phân biệt tuyến tính.
+    \begin{equation}
+        k(\mathbf{x}, \mathbf{z}) = \mathbf{x}^T \mathbf{z}
+    \end{equation}
+    
+    \item \textbf{Polynomial Kernel:} Phù hợp cho dữ liệu có biên giới hạn cong đa thức.
+    \begin{equation}
+        k(\mathbf{x}, \mathbf{z}) = (\gamma \mathbf{x}^T \mathbf{z} + r)^d
+    \end{equation}
+    Trong đó $d$ là bậc của đa thức.
+    
+    \item \textbf{Radial Basis Function (RBF) Kernel (Gaussian):} Đây là kernel phổ biến nhất, hoạt động tốt trên hầu hết các loại dữ liệu, tương ứng với không gian vô hạn chiều.
+    \begin{equation}
+        k(\mathbf{x}, \mathbf{z}) = \exp(-\gamma ||\mathbf{x} - \mathbf{z}||^2), \quad \gamma > 0 
+    \end{equation}
+    
+    \item \textbf{Sigmoid Kernel:} Tương tự như mạng Neural Network hai lớp.
+    \begin{equation}
+        k(\mathbf{x}, \mathbf{z}) = \tanh(\gamma \mathbf{x}^T \mathbf{z} + r)
+    \end{equation}
+\end{itemize}
+
+\section{ Kỹ thuật phân cụm dữ liệu}
+
+\subsection{ K-Means Clustering}
+
+\subsubsection*{Giới thiệu chung}
+K-Means là một thuật toán thuộc nhóm {Học không giám sát (Unsupervised Learning)} và cụ thể là bài toán \textbf{Phân cụm (Clustering)} \cite{k-means}. Mục tiêu của thuật toán là phân chia tập dữ liệu thành $K$ cụm (cluster) khác nhau, sao cho các điểm dữ liệu trong cùng một cụm có tính chất tương đồng nhau nhất, và các điểm khác cụm có sự khác biệt lớn nhất.
+
+\subsubsection*{Cơ sở toán học và hàm mục tiêu}
+Giả sử tập dữ liệu là $\mathbf{X} = \{\mathbf{x}_1, \mathbf{x}_2, \dots, \mathbf{x}_N\}$ và chúng ta muốn chia thành $K$ cụm. Gọi $\mathbf{m}_k$ là tâm (centroid) của cụm thứ $k$.
+
+Hàm mục tiêu (Objective Function) của K-Means là tối thiểu hóa tổng bình phương khoảng cách từ mỗi điểm dữ liệu đến tâm cụm gần nhất của nó:
+\begin{equation}
+    J = \sum_{n=1}^N \sum_{k=1}^K r_{nk} ||\mathbf{x}_n - \mathbf{m}_k||_2^2
+\end{equation}
+Trong đó:
+\begin{itemize}
+    \item $r_{nk} = 1$ nếu điểm $\mathbf{x}_n$ thuộc cụm $k$, ngược lại $r_{nk} = 0$.
+    \item $||\cdot||_2$ là khoảng cách Euclid (Norm 2).
+\end{itemize}
+
+\subsubsection*{Quy trình thuật toán}
+Thuật toán K-Means hoạt động theo phương pháp lặp (iterative) gồm các bước sau:
+\begin{enumerate}
+    \item \textbf{Khởi tạo:} Chọn ngẫu nhiên $K$ điểm làm tâm các cụm ban đầu $\mathbf{m}_1, \dots, \mathbf{m}_K$.
+    \item \textbf{Phân nhóm (Assignment Step):} Với mỗi điểm dữ liệu $\mathbf{x}_i$, gán nó vào cụm có tâm gần nhất:
+    \begin{equation}
+        y_i = \arg\min_{k} ||\mathbf{x}_i - \mathbf{m}_k||_2^2
+    \end{equation}
+    \item \textbf{Cập nhật tâm (Update Step):} Tính lại vị trí tâm cụm mới bằng cách lấy trung bình cộng (mean) tọa độ của tất cả các điểm thuộc cụm đó:
+    \begin{equation}
+        \mathbf{m}_k = \frac{\sum_{i=1}^N r_{ik}\mathbf{x}_i}{\sum_{i=1}^N r_{ik}}
+    \end{equation}
+    \item \textbf{Điều kiện dừng:} Lặp lại bước 2 và 3 cho đến khi vị trí các tâm cụm không thay đổi (hội tụ) hoặc đạt số vòng lặp tối đa.
+\end{enumerate}
+
+\subsubsection*{Đánh giá K-Means bằng Adjusted Rand Index (ARI)}
+Để kiểm tra chất lượng phân cụm của K-Means khi đã có nhãn thực tế (Ground Truth), ta sử dụng chỉ số Adjusted Rand Index (ARI).
+\begin{itemize}
+    \item \textbf{Ý nghĩa:} ARI đo lường sự tương đồng giữa kết quả phân chia của K-Means và nhãn thật của dữ liệu, bỏ qua yếu tố ngẫu nhiên.
+    \item \textbf{Giá trị:} ARI có giá trị từ -1 đến 1.
+    \begin{itemize}
+        \item $ARI = 1$: K-Means phân cụm hoàn hảo (trùng khớp với nhãn thật).
+        \item $ARI \approx 0$: Kết quả tương đương với việc gán nhãn ngẫu nhiên.
+    \end{itemize}
+    \item \textbf{Lợi ích:} Giúp xác định xem số lượng cụm $K$ và hàm khoảng cách Euclid có phù hợp với cấu trúc dữ liệu thực tế hay không.
+\end{itemize}
+
+\subsection{ DBSCAN Clustering}
+
+\subsubsection*{Giới thiệu}
+DBSCAN là thuật toán phân cụm dựa trên mật độ (density-based) \cite{dbscan}. Khác với K-Means (dựa trên khoảng cách và hình cầu), DBSCAN định nghĩa cụm là các vùng có mật độ điểm dữ liệu cao, được ngăn cách bởi các vùng có mật độ thấp.
+
+\subsubsection*{Hai tham số chính}
+Thuật toán yêu cầu 2 tham số đầu vào:
+\begin{itemize}
+    \item $\varepsilon$ (Epsilon): Bán kính dùng để xác định vùng lân cận của một điểm.
+    \item $\text{minPts}$: Số lượng điểm tối thiểu nằm trong bán kính $\varepsilon$ để tạo thành một vùng đặc (dense region).
+\end{itemize}
+
+\subsubsection*{Phân loại điểm dữ liệu}
+Dựa trên $\varepsilon$ và $\text{minPts}$, một điểm $p$ được phân thành 3 loại:
+\begin{enumerate}
+    \item \textbf{Core Point (Điểm lõi):} Là điểm có ít nhất $\text{minPts}$ điểm lân cận trong bán kính $\varepsilon$ (bao gồm cả chính nó).
+    \item \textbf{Border Point (Điểm biên):} Là điểm có ít hơn $\text{minPts}$ điểm lân cận, nhưng nằm trong vùng lân cận của một Core Point.
+    \item \textbf{Noise Point (Điểm nhiễu):} Là điểm không phải Core Point cũng không phải Border Point (còn gọi là Outlier).
+\end{enumerate}
+
+\subsubsection*{Đánh giá DBSCAN bằng Adjusted Rand Index (ARI)}
+Đối với DBSCAN, chỉ số ARI được dùng để đánh giá khả năng phát hiện đúng các cụm có hình dạng bất kỳ và xử lý nhiễu.
+\begin{itemize}
+    \item \textbf{Tương thích với nhiễu:} ARI đánh giá xem DBSCAN có tách biệt đúng các vùng mật độ cao và gán đúng các điểm nhiễu (outliers) so với nhãn thực tế hay không.
+    \item \textbf{Không phụ thuộc số lượng cụm:} Do DBSCAN tự động xác định số lượng cụm (có thể khác với số lượng lớp thực tế), ARI là thước đo phù hợp vì nó chỉ quan tâm đến quan hệ cặp (pairwise) giữa các điểm dữ liệu mà không yêu cầu số lượng cụm tìm được phải khớp chính xác với số lượng lớp ban đầu.
+    \item \textbf{Kết quả:} Giá trị ARI càng cao chứng tỏ bộ tham số $\varepsilon$ và $\text{minPts}$ đã được chọn tối ưu cho việc tách mật độ.
+\end{itemize}
+
+\subsubsection*{Các khái niệm kết nối}
+\begin{itemize}
+    \item \textbf{Directly Density-Reachable (Tiếp cận mật độ trực tiếp):} Điểm $q$ được gọi là tiếp cận trực tiếp từ $p$ nếu $p$ là Core Point và $q$ nằm trong bán kính $\varepsilon$ của $p$.
+    \item \textbf{Density-Connected (Liên thông mật độ):} Hai điểm $p$ và $q$ được gọi là liên thông mật độ nếu tồn tại một điểm $o$ sao cho cả $p$ và $q$ đều được tiếp cận mật độ từ $o$. Đây là cơ sở để gộp các Core Point lại thành một cụm.
+\end{itemize}
+
+\subsubsection*{Quy trình thuật toán}
+\begin{enumerate}
+    \item Chọn một điểm $p$ bất kỳ chưa được thăm.
+    \item Kiểm tra vùng lân cận $\varepsilon$ của $p$.
+    \item Nếu $|N_\varepsilon(p)| \geq \text{minPts}$, tạo một cụm mới và mở rộng cụm đó bằng cách thêm tất cả các điểm tiếp cận mật độ từ $p$.
+    \item Nếu $|N_\varepsilon(p)| < \text{minPts}$, đánh dấu $p$ là Noise (tuy nhiên $p$ có thể được xác định lại là Border Point sau này nếu nó nằm trong vùng lân cận của một Core Point khác).
+    \item Lặp lại quy trình cho đến khi tất cả các điểm đều đã được thăm.
+\end{enumerate}
+
+\section{ Kỹ thuật tiền xử lý dữ liệu}
+\subsection{ Ép kiểu dữ liệu}
+
+Ép kiểu dữ liệu là quá trình chuyển đổi dữ liệu từ kiểu có độ chính xác cao hoặc kích thước bộ nhớ lớn sang kiểu nhỏ hơn, nhằm mục đích tối ưu hóa hiệu suất tính toán và dung lượng lưu trữ.
+
+\subsubsection{Ép về kiểu \texttt{float32}}
+
+Ở đây việc ép kiểu từ \texttt{float64} về \texttt{float32} cho các trường dữ liệu thực, số thập phân đã giảm đi đáng kể trong việc lưu trữ bộ nhớ, các trường dữ liệu sau khi được one hot thường sẽ tự động được đưa về kiểu \texttt{float64}, đi kèm với đó là các trường số thực không quá lớn, vậy nên ép kiểu về \texttt{float32} vừa tăng được tốc độ tính toán, vừa có thể tiết kiệm bộ nhớ lưu trữ với bộ dữ liệu lớn.
+
+\subsubsection{Ép về kiểu \texttt{int16}}
+Đối với dữ liệu kiểu số nguyên như: tuổi (Age), số năm thâm niên (Year at company), và các trường dữ liệu phân loại có thứ tự (1, 2, 3, 4...) ban đầu ở kiểu dữ liệu \texttt{int64} tuy nhiên điều này là rất thừa thãi và lãng phí, vậy nên ở đây, chúng tôi đã chuyển đổi kiểu dữ liệu của nó về \texttt{int16} là vừa đủ. 
+
+
+
+
+\subsection{ Mã hóa tiền xử lý}
+\subsubsection*{Label Encoding}
+
+Chúng ta sử dụng kỹ thuật mã hóa dữ liệu phân loại này khi đặc trưng phân loại là thứ tự. Trong trường hợp này, việc duy trì thứ tự là rất quan trọng. Do đó, mã hóa phải phản ánh trình tự.
+
+Trong mã hóa nhãn, mỗi nhãn (Category) được chuyển đổi thành một giá trị số nguyên. 
+% Trong ví dụ dưới đây, chúng ta sẽ tạo một biến chứa các danh mục đại diện cho trình độ học vấn của một người.
+
+% \begin{verbatim}
+% import category_encoders as ce
+% import pandas as pd
+% train_df = pd.DataFrame({'Degree':['High school','Masters','Diploma',
+% 'Bachelors','Bachelors','Masters','Phd','High school','High school']})
+
+% # create object of Ordinalencoding
+% encoder = ce.OrdinalEncoder(cols=['Degree'],return_df=True,
+%                           mapping=[{'col':'Degree',
+% 'mapping':{'None':0,'High school':1,'Diploma':2,'Bachelors':3,'Masters':4,
+% 'phd':5}}])
+
+% #Original data
+% print(train_df)
+% \end{verbatim}
+
+% Học và Biến đổi dữ liệu
+
+% \begin{verbatim}
+% df_train_transformed = encoder.fit_transform(train_df)
+% \end{verbatim}
+
+% \begin{center}
+% \begin{tabular}{lc} 
+%      & \textbf{Degree} \\
+% \textbf{0} & 1 \\
+% \textbf{1} & 4 \\
+% \textbf{2} & 2 \\
+% \textbf{3} & 3 \\
+% \textbf{4} & 3 \\
+% \textbf{5} & 4 \\
+% \textbf{6} & 5 \\
+% \textbf{7} & 1 \\
+% \textbf{8} & 1 \\
+% \end{tabular}
+% \end{center}
+
+\subsubsection*{One Hot Encoding}
+
+Chúng ta sử dụng kỹ thuật mã hóa dữ liệu phân loại này khi các đặc trưng không có thứ tự. Trong mã hóa one-hot, với mỗi cấp độ (level) của một đặc trưng phân loại, chúng ta tạo ra một biến mới. Mỗi danh mục được ánh xạ với một biến nhị phân chứa 0 hoặc 1. Ở đây, 0 đại diện cho sự vắng mặt, và 1 đại diện cho sự hiện diện của danh mục đó.
+
+Các đặc trưng nhị phân mới được tạo ra này được gọi là {Biến giả (Dummy variables)}. Số lượng biến giả phụ thuộc vào các cấp độ có trong biến phân loại. Điều này nghe có vẻ phức tạp. Chúng ta hãy lấy một ví dụ để hiểu rõ hơn. Giả sử chúng ta có một tập dữ liệu với một danh mục là \texttt{animal} (động vật), có các loài động vật khác nhau như Chó, Mèo, Cừu, Bò, Sư tử. Bây giờ chúng ta phải mã hóa one-hot dữ liệu này.
+
+% % ----- Đây là phần hình ảnh (sơ đồ) -----
+% \begin{center}
+% % Bảng trên
+% \begin{tabular}{|l|l|}
+% \hline
+% \textbf{Chỉ số} & \textbf{Động vật} \\ \hline
+% 0 & Dog \\ \hline
+% 1 & Cat \\ \hline
+% 2 & Sheep \\ \hline
+% 3 & Horse \\ \hline
+% 4 & Lion \\ \hline
+% \end{tabular}
+% \end{center}
+
+% % Thêm một chút khoảng cách dọc giữa hai bảng
+% \vspace{5mm} 
+
+% \begin{center}
+% % Bảng dưới (bao gồm cả mũi tên)
+% % Chúng ta dùng một bảng lớn để chứa mũi tên và bảng con
+% \begin{tabular}{c c}
+% % Cột 1: Mũi tên và văn bản
+% \parbox{4cm}{\centering Mã hóa One Hot \\ $\longrightarrow$} &
+
+% % Cột 2: Bảng dữ liệu đã mã hóa
+% \begin{tabular}{|l|l|l|l|l|l|}
+% \hline
+% \textbf{Chỉ số} & \textbf{Dog} & \textbf{Cat} & \textbf{Sheep} & \textbf{Lion} & \textbf{Horse} \\ \hline
+% 0 & 1 & 0 & 0 & 0 & 0 \\ \hline
+% 1 & 0 & 1 & 0 & 0 & 0 \\ \hline
+% 2 & 0 & 0 & 1 & 0 & 0 \\ \hline
+% 3 & 0 & 0 & 0 & 0 & 1 \\ \hline
+% 4 & 0 & 0 & 0 & 1 & 0 \\ \hline
+% \end{tabular} \\
+% \end{tabular}
+% \end{center}
+
+% Sau khi mã hóa, trong bảng thứ hai, chúng ta có các biến giả, mỗi biến đại diện cho một danh mục trong đặc trưng \texttt{Animal}. Bây giờ, với mỗi danh mục hiện diện, chúng ta có 1 ở cột của danh mục đó và 0 cho các cột khác. Hãy xem cách triển khai mã hóa one-hot trong python.
+% % Khối code 1: Khởi tạo dữ liệu
+% \begin{verbatim}
+% import category_encoders as ce
+% import pandas as pd
+% data=pd.DataFrame({'City':[
+%     'Delhi','Mumbai','Hydrabad','Chennai','Bangalore','Delhi','Hydrabad','Bangalore','Delhi'
+% ]})
+
+% #Create object for one-hot encoding
+% encoder=ce.OneHotEncoder(cols='City',handle_unknown='return_nan',
+% return_df=True,use_cat_names=True)
+
+% #Original Data
+% data
+% \end{verbatim}
+
+% % Bảng 1: Dữ liệu gốc
+% \begin{center}
+% \begin{tabular}{ll}
+%      & \textbf{city} \\
+% \textbf{0} & Delhi \\
+% \textbf{1} & Mumbai \\
+% \textbf{2} & Hydrabad \\
+% \textbf{3} & Chennai \\
+% \textbf{4} & Bangalore \\
+% \textbf{5} & Delhi \\
+% \textbf{6} & Hydrabad \\
+% \textbf{7} & Bangalore \\
+% \textbf{8} & Delhi \\
+% \end{tabular}
+% \end{center}
+
+% \begin{verbatim}
+% #fit and transform Data
+% data_encoded = encoder.fit_transform(data)
+% data_encoded
+% \end{verbatim}
+
+
+\subsection{ Chuẩn hóa dữ liệu}
+Chuẩn hóa dữ liệu (còn gọi là Data Scaling) là một bước thiết yếu trong tiền xử lý dữ liệu. Mục đích chính là đưa tất cả các cột dữ liệu (các đặc trưng) về một thang đo chung mà không làm mất đi thông tin về sự khác biệt tương đối giữa chúng.
+
+Vậy tại sao phải chuẩn hóa? Hãy tưởng tượng bạn có một tập dữ liệu về bệnh nhân với hai đặc trưng:
+\begin{itemize}
+    \item \textbf{Tuổi:} (ví dụ: từ 20 đến 70 tuổi)
+    \item \textbf{Huyết áp:} (ví dụ: từ 110 đến 180)
+\end{itemize}
+
+Nếu bạn đưa thẳng vào mô hình, các thuật toán máy học có thể lầm tưởng rằng "Huyết áp" quan trọng hơn "Tuổi" chỉ vì các con số của nó (110, 180) lớn hơn (20, 70).
+
+Chuẩn hóa dữ liệu giải quyết vấn đề này bằng cách đặt tất cả các đặc trưng vào "sân chơi" bình đẳng (ví dụ: đưa cả hai về thang đo từ 0 đến 1). Bằng cách này, mô hình có thể so sánh và đánh giá tầm quan trọng của chúng một cách công bằng.
+
+\subsubsection*{Các phương pháp chuẩn hóa phổ biến}
+Có hai kỹ thuật chính thường sẽ gặp:
+\begin{enumerate}
+    \item \textbf{Normalization (Chuẩn hóa Min-Max):}
+    \begin{itemize}
+        \item \textbf{Cách làm:} "Co" hoặc "giãn" dữ liệu để tất cả các giá trị nằm gọn trong một phạm vi cụ thể, thường là [0, 1].
+        \item \textbf{Công thức:} $X_{\text{scaled}} = \frac{X - X_{\text{min}}}{X_{\text{max}} - X_{\text{min}}}$
+        \item \textbf{Kết quả:} Giá trị nhỏ nhất trong cột sẽ trở thành 0, giá trị lớn nhất sẽ trở thành 1.
+    \end{itemize}
+    
+    \item \textbf{Standardization (Chuẩn hóa Z-score):}
+    \begin{itemize}
+        \item \textbf{Cách làm:} Biến đổi dữ liệu sao cho nó có giá trị trung bình (mean) = 0 và độ lệch chuẩn (std) = 1.
+        \item \textbf{Công thức:} $X_{\text{scaled}} = \frac{X - \mu}{\sigma}$ (với $\mu$ là trung bình và $\sigma$ là độ lệch chuẩn)
+        \item \textbf{Kết quả:} Dữ liệu sau khi chuẩn hóa sẽ phân bố xung quanh số 0. Đây là phương pháp rất phổ biến và hoạt động tốt với nhiều thuật toán.
+    \end{itemize}
+\end{enumerate}
+
+\subsubsection*{Khi nào thì cần dùng?}
+Chuẩn hóa là rất quan trọng (thường là bắt buộc) đối với các thuật toán nhạy cảm với "độ lớn" hoặc "khoảng cách"   của giá trị:
+\begin{itemize}
+    \item \textbf{Thuật toán dựa trên khoảng cách:}
+    \begin{itemize}
+        \item K-Nearest Neighbors (KNN)
+        \item K-Means Clustering
+        \item Support Vector Machines (SVM)
+    \end{itemize}
+    
+    \item \textbf{Thuật toán tối ưu (Gradient Descent):}
+    \begin{itemize}
+        \item Hồi quy tuyến tính (Linear Regression)
+        \item Hồi quy Logistic (Logistic Regression)
+        \item Mạng nơ-ron (Neural Networks)
+    \end{itemize}
+    
+    \item \textbf{Phân tích thành phần chính (PCA):} PCA tìm cách tối đa hóa phương sai, nên các đặc trưng có thang đo lớn sẽ thống trị.
+\end{itemize}
+
+Không nhất thiết phải chuẩn hóa cho các thuật toán dựa trên cây (như Decision Tree, Random Forest) vì chúng chỉ quan tâm đến cách chia dữ liệu (ví dụ: \texttt{tuổi > 50?}) chứ không quan tâm giá trị đó lớn đến mức nào.
+
+\section{ Kỹ thuật giảm chiều dữ liệu}
+\subsection{ Principal Component Analysis (PCA)}
+\subsubsection*{Giới thiệu}
+
+\textbf{Dimensionality Reduction} (Giảm chiều dữ liệu) là một kỹ thuật nén dữ liệu quan trọng trong Machine Learning, nhằm giải quyết vấn đề chi phí lưu trữ và tốc độ tính toán khi làm việc với các vector đặc trưng có số chiều lớn.
+
+Về mặt toán học, mục tiêu của kỹ thuật này là tìm một hàm ánh xạ biến đổi điểm dữ liệu từ không gian gốc $\mathbf{x} \in \mathbb{R}^D$ sang một không gian mới $\mathbf{z} \in \mathbb{R}^K$ với số chiều thấp hơn ($K < D$).
+
+\textbf{Principal Component Analysis (PCA)} là thuật toán giảm chiều đơn giản và phổ biến nhất dựa trên mô hình tuyến tính. PCA hoạt động dựa trên giả định rằng dữ liệu thực tế thường phân bố tập trung xung quanh các cấu trúc tuyến tính (không gian con - subspace) thay vì rải rác ngẫu nhiên trong toàn bộ không gian.
+
+% \paragraph{Principal Component Analysis}\mbox{}\\
+% Cách đơn giản nhất để giảm chiều dữ liệu từ $D$ về $K < D$ là chỉ giữ lại $K$ phần tử quan trọng nhất. Tuy nhiên, việc làm này chắc chắn chưa phải tốt nhất vì chúng ta chưa biết xác định thành phần nào là quan trọng. Hoặc trong trường hợp xấu nhất, lượng thông tin mà mỗi thành phần mang là như nhau, bỏ đi thành phần nào cũng dẫn đến việc mất một lượng thông tin lớn.
+
+% Tuy nhiên, nếu chúng ta có thể biểu diễn các vector dữ liệu ban đầu trong một hệ cơ sở mới mà trong hệ cơ sở mới đó, tầm quan trọng giữa các thành phần là khác nhau rõ rệt, thì chúng ta có thể bỏ qua những thành phần ít quan trọng nhất.
+
+% Lấy một ví dụ về việc có hai camera đặt dùng để chụp một con người, một camera đặt phía trước người và một camera đặt trên đầu. Rõ ràng là hình ảnh thu được từ camera đặt phía trước người mang nhiều thông tin hơn so với hình ảnh nhìn từ phía trên đầu. Vì vậy, bức ảnh chụp từ phía trên đầu có thể được bỏ qua mà không có quá nhiều thông tin về hình dáng của người đó bị mất.
+
+% PCA chính là phương pháp đi tìm một hệ cơ sở mới sao cho thông tin của dữ liệu chủ yếu tập trung ở một vài toạ độ, phần còn lại chỉ mang một lượng nhỏ thông tin. Và để cho đơn giản trong tính toán, PCA sẽ tìm một \textit{hệ trục chuẩn} để làm cơ sở mới.
+
+% Giả sử hệ cơ sở trục chuẩn mới là $\mathbf{U}$ và chúng ta muốn giữ lại $K$ toạ độ trong hệ cơ sở mới này. Không mất tính tổng quát, giả sử đó là $K$ thành phần đầu tiên. Quan sát Hình 2.4 dưới đây:
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{pca_idea.png}
+%     \caption{Ý tưởng chính của PCA: Tìm một hệ trục chuẩn mới sao cho trong hệ này, các thành phần quan trọng nhất nằm trong $K$ thành phần đầu tiên.}
+% \end{figure}
+
+% Quan sát hình vẽ trên với cơ sở mới $\mathbf{U} = [\mathbf{U}_K, \bar{\mathbf{U}}_K]$ là một hệ trực chuẩn với $\mathbf{U}_K$ là ma trận con tạo bởi $K$ cột đầu tiên của $\mathbf{U}$. Với cơ sở mới này, ma trận dữ liệu có thể được viết thành:
+% \begin{equation}
+% \mathbf{X} = \mathbf{U}_K \mathbf{Z}_K + \bar{\mathbf{U}}_K \mathbf{Y} \label{eq:2.17}
+% \end{equation}
+
+% Từ đây ta cũng suy ra:
+% \begin{equation}
+% \begin{bmatrix} \mathbf{Z} \\ \mathbf{Y} \end{bmatrix} = \begin{bmatrix} \mathbf{U}_K^T \\ \bar{\mathbf{U}}_K^T \end{bmatrix} \mathbf{X} \Rightarrow \begin{matrix} \mathbf{Z} = \mathbf{U}_K^T \mathbf{X} \\ \mathbf{Y} = \bar{\mathbf{U}}_K^T \mathbf{X} \end{matrix} \label{eq:2.18}
+% \end{equation}
+
+% Mục đích của PCA là đi tìm ma trận trực giao $\mathbf{U}$ sao cho phần lớn thông tin được giữ lại ở phần màu xanh $\mathbf{U}_K \mathbf{Z}_K$ và phần màu đỏ $\bar{\mathbf{U}}_K \mathbf{Y}$ sẽ được lược bỏ và thay bằng một ma trận không phụ thuộc vào từng điểm dữ liệu. Nói cách khác, ta sẽ xấp xỉ $\mathbf{Y}$ bởi một ma trận có toàn bộ các cột là như nhau. Chú ý rằng các cột này có thể phụ thuộc vào dữ liệu training nhưng không phụ thuộc vào dữ liệu test, các bạn sẽ thấy rõ hơn khi lập trình mà tôi sẽ trình bày trong bài tiếp theo. Gọi mỗi cột đó là $\mathbf{b}$ và có thể coi nó là bias, khi đó, ta sẽ xấp xỉ:
+
+% $$
+% \mathbf{Y} \approx \mathbf{b}\mathbf{1}^T
+% $$
+
+% Trong đó $\mathbf{1}^T \in \mathbb{R}^{1 \times N}$ là vector hàng có toàn bộ các phần tử bằng 1. Giả sử đã tìm được $\mathbf{U}$, ta cần tìm $\mathbf{b}$ thoả mãn:
+
+% $$
+% \mathbf{b} = \text{argmin}_{\mathbf{b}} ||\mathbf{Y} - \mathbf{b}\mathbf{1}^T||_F^2 = \text{argmin}_{\mathbf{b}} ||\bar{\mathbf{U}}_K^T \mathbf{X} - \mathbf{b}\mathbf{1}^T||_F^2
+% $$
+
+% Giải phương trình đạo hàm theo $\mathbf{b}$ của hàm mục tiêu bằng 0:
+
+% $$
+% (\mathbf{b}\mathbf{1}^T - \bar{\mathbf{U}}_K^T \mathbf{X})\mathbf{1} = \mathbf{0} \Rightarrow N\mathbf{b} = \bar{\mathbf{U}}_K^T \mathbf{X}\mathbf{1} \Rightarrow \mathbf{b} = \bar{\mathbf{U}}_K^T \bar{\mathbf{x}}
+% $$
+
+% Như vậy, \textbf{việc tính toán sẽ thuận tiện hơn nhiều nếu vector kỳ vọng $\bar{\mathbf{x}} = \mathbf{0}$}. Việc này có thể đạt được nếu ngay từ đầu, chúng ta trừ mỗi vector dữ liệu đi vector kỳ vọng của toàn bộ dữ liệu. Đây chính là các bước đầu tiên của PCA.
+
+% % Với giá trị $\mathbf{b}$ tìm được này, dữ liệu ban đầu sẽ được xấp xỉ với:
+% % \begin{equation} \label{eq:22}
+% % \mathbf{X} \approx \hat{\mathbf{X}} = \mathbf{U}_K\mathbf{Z} + \overline{\mathbf{U}}_{\bar{K}}\overline{\mathbf{U}}_K^T\overline{\mathbf{x}}\mathbf{1}^T 
+% % \end{equation}
+% % Kết hợp \eqref{eq:20}, \eqref{eq:21}, \eqref{eq:22} ta định nghĩa hàm mất mát chính như sau:
+% % \begin{equation} \label{eq:23}
+% % J = \frac{1}{N} \|\mathbf{X} - \hat{\mathbf{X}}\|_F^2 = \frac{1}{N} \|\overline{\mathbf{U}}_K\overline{\mathbf{U}}_K^T\mathbf{X} - \overline{\mathbf{U}}_K\overline{\mathbf{U}}_K^T\overline{\mathbf{x}}\mathbf{1}^T\|_F^2
+% % \end{equation}
+% % Chú ý rằng, nếu các cột của một ma trận $\mathbf{V}$ tạo thành một hệ trực chuẩn thì với một ma trận $\mathbf{W}$ bất kỳ, ta luôn có:
+% % $$
+% % \|\mathbf{V}\mathbf{W}\|_F^2 = \text{trace}(\mathbf{W}^T\mathbf{V}^T\mathbf{V}\mathbf{W}) = \text{trace}(\mathbf{W}^T\mathbf{W}) = \|\mathbf{W}\|_F^2
+% % $$
+% % Vì vậy hàm mất mát trong \eqref{eq:23} có thể viết lại thành:
+% % \begin{align} \label{eq:24}
+% % J &= \frac{1}{N} \| \overline{\mathbf{U}}_{\bar{K}}^T (\mathbf{X} - \overline{\mathbf{x}}\mathbf{1}^T) \|_F^2 = \frac{1}{N} \| \overline{\mathbf{U}}_{\bar{K}}^T \hat{\mathbf{X}} \|_F^2 \notag \\
+% %  &= \frac{1}{N} \| \hat{\mathbf{X}}^T \overline{\mathbf{U}}_{K} \|_F^2 \notag \\
+% %   &= \frac{1}{N} \sum_{i=K+1}^D \| \hat{\mathbf{X}}^T \mathbf{u}_i \|_2^2 \notag \\
+% %   &= \frac{1}{N} \sum_{i=K+1}^D \mathbf{u}_i^T \hat{\mathbf{X}} \hat{\mathbf{X}}^T \mathbf{u}_i \notag \\
+% %   &= \sum_{i=K+1}^D \mathbf{u}_i^T \mathbf{S} \mathbf{u}_i
+% % \end{align}
+% % Với $\hat{\mathbf{X}} = \mathbf{X} - \bar{\mathbf{x}}\mathbf{1}^T$ là dữ liệu đã chuẩn hoá và với $\mathbf{S}$ là ma trận hiệp phương sai của dữ liệu. Ta gọi ma trận này là \textit{zero-corrected data} hoặc \textit{dữ liệu đã được chuẩn hoá}. Có thể nhận thấy $\hat{\mathbf{X}}_n = \mathbf{x}_n - \bar{\mathbf{x}}$.
+
+% Với giá trị $\mathbf{b}$ tìm được này, dữ liệu ban đầu sẽ được xấp xỉ với:
+% \begin{equation} 
+% \mathbf{X} \approx \tilde{\mathbf{X}} = \mathbf{U}_K \mathbf{Z} + \bar{\mathbf{U}}_K \bar{\mathbf{U}}_K^T \bar{\mathbf{x}} \mathbf{1}^T \label{eq:2.19}
+% \end{equation}
+% Kết hợp \eqref{eq:2.17}, \eqref{eq:2.18}, \eqref{eq:2.19} ta định nghĩa hàm mất mát chính như sau:
+% \begin{equation}  
+% J = \frac{1}{N} \| \mathbf{X} - \tilde{\mathbf{X}} \|_F^2 = \frac{1}{N} \| \bar{\mathbf{U}}_K \bar{\mathbf{U}}_K^T \mathbf{X} - \bar{\mathbf{U}}_K \bar{\mathbf{U}}_K^T \bar{\mathbf{x}} \mathbf{1}^T \|_F^2 \label{eq:2.20}
+% \end{equation}
+
+% Chú ý rằng, nếu các cột của một ma trận $\mathbf{V}$ tạo thành một hệ trực chuẩn thì với một ma trận $\mathbf{W}$ bất kỳ, ta luôn có:
+% $$
+% ||\mathbf{V}\mathbf{W}||_F^2 = \text{trace}(\mathbf{W}^T \mathbf{V}^T \mathbf{V}\mathbf{W}) = \text{trace}(\mathbf{W}^T \mathbf{W}) = ||\mathbf{W}||_F^2
+% $$
+
+% Vì vậy hàm mất mát trong \eqref{eq:2.20} có thể viết lại thành:
+% \begin{align}
+% J &= \frac{1}{N} \| \bar{\mathbf{U}}_K^T (\mathbf{X} - \bar{\mathbf{x}}\mathbf{1}^T)^T \|_F^2 = \frac{1}{N} \| \bar{\mathbf{U}}_K^T \hat{\mathbf{X}} \|_F^2 \notag\\
+% &= \frac{1}{N} \| \hat{\mathbf{X}}^T \bar{\mathbf{U}}_K \|_F^2 = \frac{1}{N} \sum_{i=K+1}^D \| \hat{\mathbf{X}}^T \mathbf{u}_i \|_2^2 \notag\\
+% &= \frac{1}{N} \sum_{i=K+1}^D \mathbf{u}_i^T \hat{\mathbf{X}} \hat{\mathbf{X}}^T \mathbf{u}_i \notag\\
+% &= \sum_{i=K+1}^D \mathbf{u}_i^T \mathbf{S} \mathbf{u}_i \label{eq:2.21}
+% \end{align}
+
+% Với $\hat{\mathbf{X}} = \mathbf{X} - \bar{\mathbf{x}}\mathbf{1}^T$ là dữ liệu đã chuẩn hoá và với $\mathbf{S}$ là ma trận hiệp phương sai của
+% dữ liệu. Ta gọi ma trận này $\hat{\mathbf{X}}$ là \textit{zero-corrected data} hoặc \textit{dữ liệu đã được chuẩn hoá}.
+% Có thể nhận thấy $\hat{\mathbf{x}}_n = \mathbf{x}_n - \bar{\mathbf{x}}$.
+
+% Công việc còn lại là tìm các $\mathbf{u}_i$ để mất mát là nhỏ nhất. Trước hết, chúng ta có một
+% nhận xét thú vị. Nhắc lại định nghĩa ma trận hiệp phương sai $\mathbf{S} = \frac{1}{N}\hat{\mathbf{X}}^T\hat{\mathbf{X}}$. Với ma
+% trận $\mathbf{U}$ trực giao bất kỳ, thay $K = 0$ vào \eqref{eq:2.21} ta có:
+% \begin{align}
+% L &= \sum_{i=1}^D \mathbf{u}_i^T \mathbf{S} \mathbf{u}_i = \frac{1}{N} \| \hat{\mathbf{X}}^T \mathbf{U} \|_F^2 \notag\\
+% &= \frac{1}{N} \text{trace}(\hat{\mathbf{X}}^T \mathbf{U} \mathbf{U}^T \hat{\mathbf{X}}) \\
+% &= \frac{1}{N} \text{trace}(\hat{\mathbf{X}}^T \hat{\mathbf{X}}) \label{eq:2.23}\\
+% &= \frac{1}{N} \text{trace}(\hat{\mathbf{X}} \hat{\mathbf{X}}^T) \\
+% &= \text{trace}(\mathbf{S}) = \sum_{i=1}^D \lambda_i
+% \end{align}
+% Với $\lambda_1 \ge \lambda_2 \ge \dots \ge \lambda_D \ge 0$ là các trị riêng của ma trận nửa xác định dương $\mathbf{S}$. Chú ý rằng các trị riêng này là thực và không âm.
+
+% Như vậy $L$ không phụ thuộc vào cách chọn ma trận trực giao $\mathbf{U}$ và bằng tổng các phần tử trên đường chéo của $\mathbf{S}$. Nói cách khác, $L$ chính là tổng của các phương sai theo từng thành phần của dữ liệu ban đầu.
+
+% Vì vậy, việc tối thiểu hàm mất mát $J$ được cho bởi\eqref{eq:2.23} tương đương với việc tối đa:
+% $$
+% F = L - J = \sum_{i=1}^K \mathbf{u}_i \mathbf{S} \mathbf{u}_i^T
+% $$
+% \textbf{Định lý 1:} $F$ đạt giá trị lớn nhất bằng $\sum_{i=1}^K \lambda_i$ khi $\mathbf{u}_i$ là các vector riêng có norm 2 bằng 1 ứng với các trị riêng này. Tất nhiên, chúng ta không quên điều kiện trực giao giữa các $\mathbf{u}_i$.
+
+% Chú ý rằng $\lambda_i, i=1, \dots, K$ chính là $K$ trị riêng lớn nhất của ma trận hiệp phương sai $\mathbf{S}$. Trị riêng lớn nhất $\lambda_1$ của ma trận này còn được gọi là \textit{Thành phần chính thứ nhất} (First Principal Component), trị riêng thứ hai $\lambda_2$ còn được gọi là \textit{Thành phần chính thứ hai}, etc. Chính vì vậy, phương pháp này có tên gọi là \textit{Phân tích thành phần chính - Principal Component Analysis}. Ta chỉ giữ lại $K$ thành phần chính của dữ liệu khi muốn giảm số chiều dữ liệu. Để có cái nhìn trực quan hơn, chúng ta cùng theo dõi Hình dưới đây:
+
+% \begin{figure}[htbp] % Sử dụng [H] với gói 'float' nếu muốn "ép" nó đứng yên
+%     \centering % Căn giữa toàn bộ
+    
+%     % HỘP BÊN TRÁI (HÌNH ẢNH)
+%     \begin{minipage}[c]{0.6\textwidth}
+%         \centering
+%         \includegraphics[width=0.7\linewidth]{pca_var.png}
+%     \end{minipage}
+%     \hfill % Tạo một khoảng cách co giãn ở giữa
+%     % HỘP BÊN PHẢI (VĂN BẢN CHÚ THÍCH)
+%     \begin{minipage}[c]{0.38\textwidth}
+%         \textbf{Hình 4:} PCA dưới góc nhìn Thống kê. PCA có thể 
+%         được coi là phương pháp đi tìm một hệ cơ sở trực 
+%         chuẩn đóng vai trò một phép xoay, sao cho trong 
+%         hệ cơ sở mới này, phương sai theo một số chiều 
+%         nào đó là rất nhỏ, và ta có thể bỏ qua.
+%     \end{minipage}
+%     \label{fig:pca_side_by_side}
+% \end{figure}
+
+% Trong không gian ban đầu với các vector cơ sở màu đỏ $\mathbf{e}_1, \mathbf{e}_2$, phương sai theo mỗi chiều dữ liệu đều lớn. Trong không gian mới với các vector cơ sở màu đỏ $\mathbf{u}_1, \mathbf{u}_2$, phương sai theo chiều thứ hai $\sigma_2$ rất nhỏ so với $\sigma_1$. Điều này nghĩa là khi chiếu dữ liệu lên $\mathbf{u}_2$ ta được các điểm rất gần nhau và gần với kỳ vọng theo chiều đó.
+
+\subsubsection*{Các bước thực hiện PCA}
+\begin{enumerate}
+    \item Tính vector kỳ vọng của toàn bộ dữ liệu:
+    $$ \bar{\mathbf{x}} = \frac{1}{N} \sum_{n=1}^{N} \mathbf{x}_n $$
+
+    \item Trừ mỗi điểm dữ liệu đi vector kỳ vọng của toàn bộ dữ liệu:
+    $$ \hat{\mathbf{x}}_n = \mathbf{x}_n - \bar{\mathbf{x}} $$
+
+    \item Tính ma trận hiệp phương sai:
+    $$ \mathbf{S} = \frac{1}{N} \hat{\mathbf{X}}\hat{\mathbf{X}}^T $$
+
+    \item Tính các trị riêng và vector riêng có norm bằng 1 của ma trận này, sắp xếp chúng theo thứ tự giảm dần của trị riêng.
+
+    \item Chọn $K$ vector riêng ứng với $K$ trị riêng lớn nhất để xây dựng ma trận $\mathbf{U}_K$ có các cột tạo thành một hệ trực giao. $K$ vectors này, còn được gọi là các thành phần chính, tạo thành một không gian con \textbf{gần} với phân bố của dữ liệu ban đầu đã chuẩn hoá.
+
+    \item Chiếu dữ liệu ban đầu đã chuẩn hoá $\hat{\mathbf{X}}$ xuống không gian con tìm được.
+
+    \item Dữ liệu mới chính là toạ độ của các điểm dữ liệu trên không gian mới.
+    $$ \mathbf{Z} = \mathbf{U}_K^T \hat{\mathbf{X}} $$
+\end{enumerate}
+Dữ liệu ban đầu có thể tính được xấp xỉ theo dữ liệu mới như sau:
+$$ \mathbf{x} \approx \mathbf{U}_K \mathbf{Z} + \bar{\mathbf{x}} $$
+Các bước thực hiện PCA có thể được xem trong hình dưới đây:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{pca_procedure.png}
+    \caption{Các bước thực hiện PCA.}
+\end{figure}
+
+\subsection{ Linear Discriminant Analysis (LDA)}
+
+\subsubsection{Động lực và So sánh với PCA}
+Trong khi PCA (Học không giám sát) cố gắng giữ lại phương sai lớn nhất của dữ liệu, điều này không đảm bảo khả năng phân loại tốt vì các lớp có thể bị chồng lấn. LDA (Học có giám sát) khắc phục điều này bằng cách tìm chiều không gian chiếu sao cho khả năng \textbf{phân biệt giữa các lớp (discriminant)} là cao nhất.
+
+\subsubsection{Ý tưởng cốt lõi (Tiêu chí Fisher)}
+Để phân tách tốt hai lớp dữ liệu sau khi chiếu, LDA tối ưu hóa đồng thời hai tiêu chí:
+\begin{enumerate}
+    \item \textbf{Maximize Between-class variance:} Khoảng cách giữa các kỳ vọng (mean) của các lớp phải lớn nhất.
+    \item \textbf{Minimize Within-class variance:} Phương sai nội bộ (độ phân tán) của mỗi lớp phải nhỏ nhất (dữ liệu co cụm lại).
+\end{enumerate}
+Mục tiêu là tìm vector hệ số $\mathbf{w}$ để tối đa hóa tỉ số:
+\begin{equation}
+    \mathbf{w} = \arg\max_{\mathbf{w}} J(\mathbf{w}) = \frac{\text{Between-class variance}}{\text{Within-class variance}}
+\end{equation}
+
+
+
+\subsubsection{Công thức toán học}
+Hàm mục tiêu được cụ thể hóa thông qua hai ma trận hiệp phương sai:
+\begin{equation}
+    J(\mathbf{w}) = \frac{\mathbf{w}^T \mathbf{S}_B \mathbf{w}}{\mathbf{w}^T \mathbf{S}_W \mathbf{w}}
+\end{equation}
+Trong đó:
+\begin{itemize}
+    \item $\mathbf{S}_B = (\mathbf{m}_1 - \mathbf{m}_2)(\mathbf{m}_1 - \mathbf{m}_2)^T$: Ma trận hiệp phương sai liên lớp (Between-class).
+    \item $\mathbf{S}_W$: Tổng các ma trận hiệp phương sai nội lớp (Within-class).
+\end{itemize}
+
+\subsubsection{Nghiệm của bài toán}
+Việc tối đa hóa hàm $J(\mathbf{w})$ quy về bài toán tìm trị riêng lớn nhất của ma trận $\mathbf{S}_W^{-1} \mathbf{S}_B$.
+Nghiệm tối ưu (hướng chiếu) $\mathbf{w}$ tỉ lệ thuận với:
+\begin{equation}
+    \mathbf{w} \propto \mathbf{S}_W^{-1} (\mathbf{m}_1 - \mathbf{m}_2)
+\end{equation}
+Đây là kết quả quan trọng nhất của LDA cho bài toán 2 lớp, cho phép tính toán trực tiếp vector $\mathbf{w}$ mà không cần lặp.
+
+\subsection{ Feature Selection}
+Feature Selection (Lựa chọn đặc trưng) là một quá trình quan trọng trong {học máy} và {khai phá dữ liệu}, nhằm mục đích chọn ra một tập hợp con tối ưu các đặc trưng (features) từ tập dữ liệu ban đầu.
+
+Mục tiêu chính là giữ lại những {đặc trưng quan trọng nhất}, có liên quan và có khả năng dự đoán cao nhất, đồng thời loại bỏ các đặc trưng thừa thãi, không liên quan, hoặc nhiễu.
+
+\textbf{Tại sao cần Feature Selection?}
+
+Lựa chọn đặc trưng giúp giải quyết ba vấn đề chính khi làm việc với dữ liệu có chiều (dimension) cao:
+
+\begin{enumerate}
+    \item \textbf{Giảm Chiều Dữ liệu (Dimensionality Reduction):} Giảm số lượng đặc trưng, giúp {tăng tốc độ huấn luyện mô hình} và giảm yêu cầu về bộ nhớ.
+    \item \textbf{Cải thiện Hiệu suất Mô hình:} Các đặc trưng nhiễu hoặc không liên quan có thể làm giảm độ chính xác của mô hình. Loại bỏ chúng giúp mô hình tập trung vào thông tin cốt lõi, từ đó cải thiện {độ chính xác (Accuracy)} và {khả năng khái quát hóa (Generalization)}.
+    \item \textbf{Tăng Khả năng Giải thích (Interpretability):} Mô hình chỉ sử dụng một số lượng đặc trưng nhỏ, quan trọng sẽ {dễ hiểu} và {dễ giải thích} hơn.
+\end{enumerate}
+% \paragraph{Linear Discriminant Analysis cho bài toán phân loại nhiều lớp}
+% \subparagraph{Xây dựng hàm mất mát}\mbox{}\\
+% Trong phần này, chúng ta sẽ xem xét trường hợp tổng quát khi có nhiều hơn 2 classes. Giả sử rằng chiều của dữ liệu $D$ lớn hơn số lượng classes $C$.
+
+% Giả sử rằng chiều mà chúng ta muốn giảm về là $D' < D$ và dữ liệu mới ứng với mỗi điểm dữ liệu $\mathbf{x}$ là:
+% $$
+% \mathbf{y} = \mathbf{W}^T \mathbf{x}
+% $$
+% với $\mathbf{W} \in \mathbb{R}^{D \times D'}$.
+
+% Chú ý rằng LDA ở đây không sử dụng bias.
+
+% Một vài ký hiệu:
+% \begin{itemize}
+%     \item $\mathbf{X}_k, \mathbf{Y}_k = \mathbf{W}^T \mathbf{X}_k$ lần lượt là ma trận dữ liệu của class $k$ trong không gian ban đầu và không gian mới với số chiều nhỏ hơn.
+%     \item $\mathbf{m}_k = \frac{1}{N_k} \sum_{n \in C_k} \mathbf{x}_k \in \mathbb{R}^D$ là vector kỳ vọng của class $k$ trong không gian ban đầu.
+%     \item $\mathbf{e}_k = \frac{1}{N_k} \sum_{n \in C_k} \mathbf{y}_n = \mathbf{W}^T \mathbf{m}_k \in \mathbb{R}^{D'}$ là vector kỳ vọng của class $k$ trong không gian mới.
+%     \item $\mathbf{m}$ là vector kỳ vọng của toàn bộ dữ liệu trong không gian ban đầu và $\mathbf{e}$ là vector kỳ vọng trong không gian mới.
+% \end{itemize}
+
+% Một trong những cách xây dựng hàm mục tiêu cho multi-class LDA được minh họa trong Hình \ref{fig:hinh_2.7}.
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{multi_LDA.png}
+%     \caption{LDA cho multi-class classification problem. Mục đích cũng là sự khác nhau giữa các thành phần trong 1 class (within-class) là nhỏ và sự khác nhau giữa các classes là lớn. Các điểm dữ liệu có màu khác nhau thể hiện các class khác nhau.}
+%     \label{fig:hinh_2.7}
+% \end{figure}
+
+% Độ phân tán của một tập hợp dữ liệu có thể được coi như tổng bình phương khoảng cách từ mỗi điểm tới vector kỳ vọng của chúng. Nếu tất cả các điểm đều gần vector kỳ vọng của chúng thì độ phân tán của tập dữ liệu đó được coi là nhỏ. Ngược lại, nếu tổng này là lớn, tức trung bình các điểm đều xa trung tâm, tập hợp này có thể được coi là có độ phân tán cao.
+
+% Dựa vào nhận xét này, ta có thể xây dựng các đại lượng:
+% \subparagraph{Within-class nhỏ}\mbox{}\\
+
+% Within-class variance của class $k$ có thể được tính như sau:
+% \begin{align}
+% \sigma_k^2 &= \sum_{n \in C_k} \|\mathbf{y}_n - \mathbf{e}_k\|_F^2 = \|\mathbf{Y}_k - \mathbf{E}_k\|_F^2 \label{eq:2.28} \\
+% &= \|\mathbf{W}^T (\mathbf{X}_k - \mathbf{M}_k)\|_F^2 \label{eq:2.29} \\
+% &= \text{trace} \left( \mathbf{W}^T (\mathbf{X}_k - \mathbf{M}_k) (\mathbf{X}_k - \mathbf{M}_k)^T \mathbf{W} \right) \nonumber
+% \end{align}
+
+% Với $\mathbf{E}_k$ một ma trận có các cột giống hệt nhau và bằng với vector kỳ vọng $\mathbf{e}_k$. Có thể nhận thấy $\mathbf{E}_k = \mathbf{W}^T \mathbf{M}_k$ với $\mathbf{M}_k$ là ma trận có các cột giống hệt nhau và bằng với vector kỳ vọng $\mathbf{m}_k$ trong không gian ban đầu.
+
+% Vậy đại lượng đo within-class trong multi-class LDA có thể được đo bằng:
+% \begin{align}
+% sw &= \sum_{k=1}^C \sigma_k^2 = \sum_{k=1}^C \text{trace} \left( \mathbf{W}^T (\mathbf{X}_k - \mathbf{M}_k) (\mathbf{X}_k - \mathbf{M}_k)^T \mathbf{W} \right) \label{eq:2.30} \\
+% &= \text{trace} \left( \mathbf{W}^T \mathbf{S}_W \mathbf{W} \right) \label{eq:2.31}
+% \end{align}
+
+% với:
+% \begin{equation} \label{eq:2.32}
+% \mathbf{S}_W = \sum_{k=1}^C \|\mathbf{X}_k - \mathbf{M}_k\|_F^2 = \sum_{k=1}^C \sum_{n \in C_k} (\mathbf{x}_n - \mathbf{m}_k)(\mathbf{x}_n - \mathbf{m}_k)^T
+% \end{equation}
+
+% và nó có thể được coi là \textbf{within-class covariance matrix} của multi-class LDA. Ma trận $\mathbf{S}_W$ này là một ma trận nửa xác định dương theo định nghĩa.
+% \subparagraph{Between-class lớn}
+
+% Việc between-class lớn, như đã đề cập, có thể đạt được nếu tất cả các điểm trong không gian mới đều xa vector kỳ vọng chung $\mathbf{e}$. Việc này cũng có thể đạt được nếu các vector kỳ vọng của mỗi class xa các vector kỳ vọng chung (trong không gian mới). Vậy ta có thể định nghĩa đại lượng between-class như sau:
+% \begin{equation} \label{eq:2.33}
+% s_B = \sum_{k=1}^C N_k \|\mathbf{e}_k - \mathbf{e}\|_F^2 = \sum_{k=1}^C \|\mathbf{E}_k - \mathbf{E}\|_F^2
+% \end{equation}
+
+% Ta lấy $N_k$ làm trọng số vì có thể có những class có nhiều phần tử so với các classes còn lại.
+
+% Chú ý rằng ma trận $\mathbf{E}$ có thể có số cột \textit{linh động}, phụ thuộc vào số cột của ma trận $\mathbf{E}_k$ mà nó đi cùng (và bằng $N_k$).
+
+% \subparagraph{Hàm mất mát cho multi-class LDA}\mbox{}\\
+% Với cách định nghĩa và ý tưởng về within-class nhỏ và between-class lớn như trên, ta có thể xây dựng bài toán tối ưu:
+% $$
+% \mathbf{W} = \arg \max_{\mathbf{W}} J(\mathbf{W}) = \arg \max_{\mathbf{W}} \frac{\text{trace}(\mathbf{W}^T \mathbf{S}_B \mathbf{W})}{\text{trace}(\mathbf{W}^T \mathbf{S}_W \mathbf{W})}
+% $$
+
+% Nghiệm cũng được tìm bằng cách giải phương trình đạo hàm hàm mục tiêu bằng 0. Nhắc lại về đạo hàm của hàm \texttt{trace} theo ma trận:
+% $$
+% \nabla_{\mathbf{W}} \text{trace}(\mathbf{W}^T \mathbf{A} \mathbf{W}) = 2 \mathbf{A} \mathbf{W}
+% $$
+% với $\mathbf{A} \in \mathbb{R}^{D \times D}$ là một ma trận đối xứng. 
+% Với cách tính tương tự như \eqref{eq:2.24} – \eqref{eq:2.26}, ta có:
+% \begin{align}
+% \nabla_{\mathbf{W}} J(\mathbf{W}) &= \frac{2 \left( \mathbf{S}_B \mathbf{W} \text{trace}(\mathbf{W}^T \mathbf{S}_W \mathbf{W}) - \text{trace}(\mathbf{W}^T \mathbf{S}_B \mathbf{W}) \mathbf{S}_W \mathbf{W} \right)}{(\text{trace}(\mathbf{W}^T \mathbf{S}_W \mathbf{W}))^2} = \mathbf{0}  \\
+% &\Leftrightarrow \mathbf{S}_W^{-1} \mathbf{S}_B \mathbf{W} = J \mathbf{W} 
+% \end{align}
+
+% Từ đó suy ra mỗi cột của $\mathbf{W}$ là một vector riêng của $\mathbf{S}_W^{-1} \mathbf{S}_B$ ứng với trị riêng lớn nhất của ma trận này.
+
+% Nhận thấy rằng các cột của $\mathbf{W}$ cần phải độc lập tuyến tính. Vì nếu không, dữ liệu trong không gian mới $\mathbf{y} = \mathbf{W}^T \mathbf{x}$ sẽ phụ thuộc tuyến tính và có thể tiếp tục được giảm số chiều mà không ảnh hưởng gì.
+
+% Vậy các cột của $\mathbf{W}$ là các vector độc lập tuyến tính ứng với trị riêng cao nhất của $\mathbf{S}_W^{-1} \mathbf{S}_B$. Câu hỏi đặt ra là: Có nhiều nhất bao nhiêu vector riêng độc lập tuyến tính ứng với trị riêng lớn nhất của $\mathbf{S}_W^{-1} \mathbf{S}_B$?
+
+% Số lượng lớn nhất các vector riêng độc lập tuyến tính ứng với 1 trị riêng chính là rank của không gian riêng ứng với trị riêng đó, và không thể lớn hơn rank của ma trận.
+
+\section{ Xử lý dữ liệu mất cân bằng và SMOTE}
+
+\subsection{ Vấn đề mất cân bằng dữ liệu}
+Mất cân bằng dữ liệu xảy ra khi sự phân bố giữa các lớp có sự chênh lệch lớn (lớp đa số chiếm ưu thế so với lớp thiểu số), dẫn đến việc mô hình học máy bị thiên vị và dự đoán kém trên lớp thiểu số. Các phương pháp xử lý phổ biến bao gồm: Oversampling (lấy mẫu quá mức), Undersampling (lấy mẫu dưới mức) và tạo dữ liệu nhân tạo.
+
+\subsection{ Thuật toán SMOTE}
+SMOTE (Synthetic Minority Over-sampling Technique) là kỹ thuật lấy mẫu quá mức nâng cao. Thay vì chỉ nhân bản (duplicate) các điểm dữ liệu cũ gây ra hiện tượng quá khớp (overfitting), SMOTE tạo ra các điểm dữ liệu \textbf{tổng hợp mới} (synthetic samples) dựa trên cấu trúc không gian của lớp thiểu số.
+
+\subsubsection*{Cơ chế hoạt động}
+Quy trình sinh dữ liệu của SMOTE gồm 3 bước chính:
+\begin{enumerate}
+    \item \textbf{Chọn điểm gốc:} Chọn một điểm dữ liệu $\mathbf{x}$ thuộc lớp thiểu số.
+    \item \textbf{Tìm lân cận:} Xác định $k$ lân cận gần nhất ($k$-Nearest Neighbors) của $\mathbf{x}$ trong không gian đặc trưng.
+    \item \textbf{Nội suy tuyến tính:} Chọn ngẫu nhiên một lân cận $\mathbf{x}_{neighbor}$. Điểm dữ liệu mới $\mathbf{x}_{new}$ sẽ được tạo ra nằm ngẫu nhiên trên đoạn thẳng nối giữa $\mathbf{x}$ và $\mathbf{x}_{neighbor}$ theo công thức:
+    \begin{equation}
+        \mathbf{x}_{new} = \mathbf{x} + \text{rand}(0, 1) \times (\mathbf{x}_{neighbor} - \mathbf{x})
+    \end{equation}
+\end{enumerate}
+
+Quá trình này được lặp lại cho đến khi tỷ lệ giữa lớp thiểu số và đa số đạt mức cân bằng mong muốn.
+\section{Các thước đo đánh giá mô hình}
+
+Tùy theo từng loại bài toán học máy, các thước đo đánh giá được lựa chọn sao cho phản ánh đúng hiệu suất và đặc điểm của mô hình. Trong nghiên cứu này, các mô hình được đánh giá theo ba nhóm chính: phân loại, hồi quy và phân cụm.
+
+\subsection{Đánh giá mô hình phân loại}
+
+Để đánh giá hiệu suất của mô hình phân loại, ta sử dụng \textbf{Confusion Matrix} (Ma trận nhầm lẫn), bao gồm bốn thành phần cơ bản:
+\begin{itemize}
+    \item \textbf{TP (True Positive):} Dự đoán đúng lớp dương tính.
+    \item \textbf{TN (True Negative):} Dự đoán đúng lớp âm tính.
+    \item \textbf{FP (False Positive):} Dự đoán sai là dương tính (báo động giả).
+    \item \textbf{FN (False Negative):} Dự đoán sai là âm tính (bỏ sót).
+\end{itemize}
+
+Dựa trên các thành phần này, các chỉ số đánh giá chính được xác định như sau:
+
+\subsubsection{Accuracy}
+Là tỷ lệ tổng số dự đoán đúng trên toàn bộ tập dữ liệu:
+\begin{equation}
+    \text{Accuracy} = \frac{\text{TP} + \text{TN}}{\text{TP} + \text{TN} + \text{FP} + \text{FN}}
+\end{equation}
+Chỉ số này có thể gây hiểu lầm trong trường hợp dữ liệu bị mất cân bằng.
+
+\subsubsection{Precision}
+Đo lường độ tin cậy của các dự đoán dương tính, đặc biệt quan trọng khi chi phí cho báo động giả là cao:
+\begin{equation}
+    \text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}}
+\end{equation}
+
+\subsubsection{Recall}
+Đo lường khả năng phát hiện đầy đủ các mẫu dương tính thực tế của mô hình, thường được ưu tiên trong các bài toán y tế hoặc phát hiện lỗi:
+\begin{equation}
+    \text{Recall} = \frac{\text{TP}}{\text{TP} + \text{FN}}
+\end{equation}
+
+\subsubsection{F1-Score}
+Là trung bình điều hòa giữa Precision và Recall, được sử dụng khi cần sự cân bằng giữa độ chính xác và độ bao phủ:
+\begin{equation}
+    \text{F1-Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
+\end{equation}
+
+\subsection{Đánh giá mô hình hồi quy}
+
+Đối với các bài toán hồi quy, hiệu suất mô hình được đánh giá thông qua mức độ sai lệch giữa giá trị dự đoán và giá trị thực.
+
+\subsubsection{$R^2$ Score}
+Hệ số xác định $R^2$ đo lường mức độ mà mô hình giải thích được sự biến thiên của biến mục tiêu:
+\[
+R^2 = 1 - \frac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2},
+\]
+trong đó $y_i$ là giá trị thực, $\hat{y}_i$ là giá trị dự đoán, và $\bar{y}$ là giá trị trung bình của biến mục tiêu.
+
+Giá trị $R^2$ càng gần 1 thì mô hình càng phù hợp với dữ liệu; $R^2 < 0$ cho thấy mô hình dự đoán kém hơn mô hình cơ sở.
+
+\subsubsection{MAE -- Mean Absolute Error}
+MAE đo lường sai số tuyệt đối trung bình giữa giá trị dự đoán và giá trị thực:
+\[
+\mathrm{MAE} = \frac{1}{n} \sum_{i=1}^{n} \lvert y_i - \hat{y}_i \rvert.
+\]
+MAE có cùng đơn vị đo với biến mục tiêu và ít nhạy cảm với các giá trị ngoại lai.
+
+\subsubsection{RMSE -- Root Mean Squared Error}
+RMSE phản ánh sai số trung bình, trong đó các sai số lớn bị phạt mạnh hơn:
+\[
+\mathrm{RMSE} = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2}.
+\]
+RMSE nhạy cảm hơn với ngoại lai so với MAE và thường được sử dụng khi cần hạn chế các sai số lớn.
+
+\subsection{Đánh giá mô hình phân cụm}
+
+Đối với bài toán phân cụm, do không có nhãn lớp trong quá trình huấn luyện, việc đánh giá thường dựa trên các thước đo so sánh giữa nhãn phân cụm và nhãn chuẩn (nếu có).
+
+\subsubsection{ARI -- Adjusted Rand Index}
+Chỉ số Rand điều chỉnh (Adjusted Rand Index -- ARI) là thước đo được sử dụng phổ biến để đánh giá chất lượng của mô hình phân cụm khi tồn tại nhãn chuẩn (ground truth). 
+ARI đo lường mức độ tương đồng giữa kết quả phân cụm của mô hình và phân hoạch thực tế, đồng thời hiệu chỉnh ảnh hưởng của sự trùng khớp ngẫu nhiên.
+
+Giả sử $U = \{U_1, U_2, \dots, U_r\}$ là tập các cụm do mô hình tạo ra và $V = \{V_1, V_2, \dots, V_s\}$ là tập các lớp thực. 
+Xét mọi cặp điểm dữ liệu, ARI đánh giá mức độ nhất quán của việc hai điểm bất kỳ được xếp cùng cụm hoặc khác cụm trong hai phân hoạch $U$ và $V$.
+
+Chỉ số ARI được định nghĩa dựa trên chỉ số Rand (Rand Index -- RI) theo công thức:
+\[
+\mathrm{ARI} = \frac{\mathrm{RI} - \mathbb{E}[\mathrm{RI}]}{\max(\mathrm{RI}) - \mathbb{E}[\mathrm{RI}]},
+\]
+trong đó $\mathbb{E}[\mathrm{RI}]$ là giá trị kỳ vọng của RI trong trường hợp phân cụm ngẫu nhiên.
+
+Một cách biểu diễn tương đương của ARI dựa trên bảng liên hợp giữa các cụm và nhãn thực như sau:
+\[
+\mathrm{ARI} =
+\frac{
+\sum_{ij} \binom{n_{ij}}{2}
+-
+\frac{
+\sum_i \binom{a_i}{2}
+\sum_j \binom{b_j}{2}
+}{
+\binom{n}{2}
+}
+}{
+\frac{1}{2}
+\left[
+\sum_i \binom{a_i}{2}
++
+\sum_j \binom{b_j}{2}
+\right]
+-
+\frac{
+\sum_i \binom{a_i}{2}
+\sum_j \binom{b_j}{2}
+}{
+\binom{n}{2}
+}
+},
+\]
+trong đó $n_{ij}$ là số mẫu chung giữa cụm $U_i$ và lớp $V_j$, $a_i = \sum_j n_{ij}$, $b_j = \sum_i n_{ij}$, và $n$ là tổng số mẫu.
+
+Giá trị của ARI nằm trong khoảng $[-1, 1]$. 
+ARI đạt giá trị $1$ khi hai phân hoạch trùng khớp hoàn toàn; ARI xấp xỉ $0$ tương ứng với phân cụm ngẫu nhiên; trong khi ARI âm cho thấy kết quả phân cụm kém hơn so với ngẫu nhiên.
+
+Ưu điểm chính của ARI là không bị ảnh hưởng bởi số lượng cụm và cho phép so sánh công bằng giữa các mô hình phân cụm khác nhau. 
+Do đó, ARI thường được sử dụng để đánh giá hiệu suất của các thuật toán phân cụm như K-means, Agglomerative Clustering và Spectral Clustering khi có nhãn chuẩn.
+
+
+\chapter{ Phương pháp và Quy trình thực nghiệm}
+\section{ Mô tả bộ dữ liệu}
+\subsection{ Giới thiệu nguồn gốc (IBM)}
+\indent Để thực hiện bài nghiên cứu, chúng tôi đã sử dụng bộ dữ liệu ``IBM Employee Dataset'' \cite{ibm_dataset}.\\
+\indent Bộ dữ liệu bao gồm 1470 mẫu quan sát với 35 đặc tính khác nhau liên quan đến
+đời sống làm việc và đặc điểm cá nhân của nhân viên tại Hoa Kỳ bao gồm:
+
+\begin{longtable}{|c|p{3.5cm}|p{2cm}|p{4cm}|p{4.5cm}|}
+\caption{Mô tả biến}
+\label{tab:mo_ta_bien}\\
+\hline
+% Cột cuối "Mô tả thuộc tính" đã bỏ \centering
+\textbf{STT} & \centering \textbf{Thuộc tính} & \centering \textbf{Loại dữ liệu} & \centering \textbf{Định nghĩa thuộc tính} & \textbf{Mô tả thuộc tính} \\
+\hline
+\endfirsthead
+
+% Đây là header cho các trang tiếp theo
+\multicolumn{5}{c}%
+{} \\ 
+\hline
+\textbf{STT} & \centering \textbf{Thuộc tính} & \centering \textbf{Loại dữ liệu} & \centering \textbf{Định nghĩa thuộc tính} & \textbf{Mô tả thuộc tính} \\
+\hline
+\endhead
+
+% Đây là footer cho tất cả các trang trừ trang cuối
+\hline
+\endfoot
+
+% Đây là footer cho trang cuối cùng
+\hline
+\endlastfoot
+
+% --- Dữ liệu của bảng ---
+% Đã xóa \centering ở cột 5 và đổi tabular con về {l}
+1 & \centering Age & \centering Số nguyên & \centering Tuổi & \\
+\hline
+2 & \centering Attrition & \centering Phân loại & \centering Quyết định nghỉ việc & \\
+\hline
+3 & \centering Business travel & \centering Phân loại & \centering Mức độ đi công tác & 
+    \begin{tabular}{@{}l@{}} % Đã sửa
+        Non\_Travel \\ 
+        Travel\_Rarely \\ 
+        Travel\_Frequently 
+    \end{tabular} \\
+\hline
+4 & \centering Daily rate & \centering Số nguyên & \centering Mức lương theo ngày & \\
+\hline
+5 & \centering Department & \centering Phân loại & \centering Phòng ban làm việc & 
+    \begin{tabular}{@{}l@{}} % Đã sửa
+        Human Resources \\ 
+        Research \& \\
+        Development \\ 
+        Sales 
+    \end{tabular} \\
+\hline
+6 & \centering Distance from home & \centering Số nguyên & \centering Khoảng cách giữa nơi làm việc và nhà & \\
+\hline
+7 & \centering Education & \centering Phân loại & \centering Trình độ giáo dục &
+    \begin{tabular}{@{}l@{}} % Đã sửa
+        1. Below College \\ 
+        2. College \\ 
+        3. Bachelor \\ 
+        4. Master \\ 
+        5. Doctor 
+    \end{tabular} \\
+\hline
+8 & \centering Education field & \centering Phân loại & \centering Lĩnh vực giáo dục & 
+    \begin{tabular}{@{}l@{}} % Đã sửa
+        Human Resources \\ 
+        Life Sciences \\ 
+        Medical \\ 
+        Marketing \\ 
+        Technical Degree \\ 
+        Other 
+    \end{tabular} \\
+\hline
+9 & \centering Employee count & \centering Số nguyên & \centering Số lượng nhân viên & \\
+\hline
+10 & \centering Employee number & \centering Số nguyên & \centering Mã số nhân viên & \\
+\hline
+11 & \centering Environment satisfaction & \centering Phân loại & \centering Mức độ hài lòng về môi trường làm việc & 
+    \begin{tabular}{@{}l@{}} % Đã sửa
+        1. Low \\ 
+        2. Medium \\ 
+        3. High \\ 
+        4. Very High
+    \end{tabular} \\
+\hline
+12 & \centering Gender & \centering Phân loại & \centering Giới tính & 
+    \begin{tabular}{@{}l@{}} % Đã sửa
+        Male \\ 
+        Female 
+    \end{tabular} \\
+\hline
+13 & \centering Hourly rate & \centering Số nguyên & \centering Mức lương theo giờ & \\
+\hline
+14 & \centering Job involvement & \centering Phân loại & \centering Mức độ tham gia vào công việc & 
+    \begin{tabular}{@{}l@{}} % Đã sửa
+        1. Low \\ 
+        2. Medium \\ 
+        3. High \\ 
+        4. Very High
+    \end{tabular} \\
+\hline
+15 & \centering Job level & \centering Phân loại & \centering Cấp bậc công việc & \\
+\hline
+16 & \centering Job role & \centering Phân loại & \centering Lĩnh vực làm việc & 
+    \begin{tabular}{@{}l@{}} % Đã sửa
+        Sales Executive \\ 
+        Research Scientist \\ 
+        Others 
+    \end{tabular} \\
+\hline
+17 & \centering Job satisfaction & \centering Phân loại & \centering Mức độ hài lòng về công việc & 
+    \begin{tabular}{@{}l@{}} % Đã sửa
+        1. Low \\ 
+        2. Medium \\ 
+        3. High \\ 
+        4. Very High
+    \end{tabular} \\
+\hline
+18 & \centering Marital status & \centering Phân loại & \centering Tình trạng hôn nhân & 
+    \begin{tabular}{@{}l@{}} % Đã sửa
+        Divorced \\ 
+        Single \\ 
+        Married 
+    \end{tabular} \\
+\hline
+19 & \centering Monthly income & \centering Số nguyên & \centering Thu thập hàng tháng & \\
+\hline
+20 & \centering Monthly rate & \centering Số nguyên & \centering Mức lương theo tháng & \\
+\hline
+21 & \centering Number of company workers & \centering Số nguyên & \centering Số lượng công ty đã làm trước đây & \\
+\hline
+22 & \centering Over 18 & \centering Phân loại & \centering Trên 18 tuổi & \\
+\hline
+23 & \centering Overtime & \centering Phân loại & \centering Tăng ca & 
+    \begin{tabular}{@{}l@{}} % Đã sửa
+        No \\ 
+        Yes 
+    \end{tabular} \\
+\hline
+24 & \centering Percent salary hike & \centering Số nguyên & \centering Tỷ lệ thay đổi trong mức lương & \\
+\hline
+25 & \centering Performance rating & \centering Phân loại & \centering Mức độ hoàn thành công việc & 
+    \begin{tabular}{@{}l@{}} % Đã sửa
+        1. Low \\ 
+        2. Medium \\ 
+        3. High \\ 
+        4. Very High
+    \end{tabular} \\
+\hline
+26 & \centering Relationship satisfaction & \centering Phân loại & \centering Mức độ hài lòng về mối quan hệ & 
+    \begin{tabular}{@{}l@{}} % Đã sửa
+        1. Low \\ 
+        2. Medium \\ 
+        3. High \\ 
+        4. Very High
+    \end{tabular} \\
+\hline
+27 & \centering Standard hours & \centering Số nguyên & \centering Giờ làm việc tiêu chuẩn & \\
+\hline
+28 & \centering Stock option level & \centering Phân loại & \centering Mức cổ phần nhân viên nắm giữ & \\
+\hline
+29 & \centering Total working years & \centering Số nguyên & \centering Tổng số năm làm việc & \\
+\hline
+30 & \centering Training times last year & \centering Số nguyên & \centering Số lần đào tạo trong năm & \\
+\hline
+31 & \centering Work-life balance & \centering Phân loại & \centering Mức độ cân bằng giữa làm việc và cuộc sống & 
+    \begin{tabular}{@{}l@{}} % Đã sửa
+        1. Bad \\ 
+        2. Good \\ 
+        3. Better \\ 
+        4. Best
+    \end{tabular} \\
+\hline
+32 & \centering Years at company & \centering Số nguyên & \centering Số năm làm việc tại công ty & \\
+\hline
+33 & \centering Years in current role & \centering Số nguyên & \centering Số năm làm việc ở vị trí hiện tại & \\
+\hline
+34 & \centering Years since last promotion & \centering Số nguyên & \centering Số năm làm việc kể từ khi thăng chức & \\
+\hline
+35 & \centering Years with current manager & \centering Số nguyên & \centering Số năm làm việc với quản lý hiện tại & \\
+\end{longtable}
+Bộ dữ liệu có chứa đặc điểm để xác nhận nhân viên có nghỉ việc ở công ty hay không được xác định bởi biến ``Attrition'': ``No'' đại diện cho một nhân viên đã không nghỉ việc và ``Yes'' đại diện cho một nhân viên đã nghỉ việc tại công ty.
+\subsection{ Liệt kê một số thuộc tính quan trọng}
+
+- Phân tích Biểu đồ: Thống kê nghỉ việc theo áp lực tăng ca.
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=0.9\textwidth]{OverTime.png}}
+    \caption{Thống kê số lượng nhân viên nghỉ việc theo áp lực tăng ca}
+    \label{fig:hinh_3.1}
+\end{figure}
+\begin{itemize} 
+\item Biểu đồ này cho thấy \texttt{OverTime} (Làm thêm giờ) là một yếu tố dự đoán cực kỳ quan trọng. 
+\item {Nhóm không làm thêm giờ (No):} Có tổng cộng 1054 nhân viên, trong đó chỉ có 110 người nghỉ việc. Tỷ lệ nghỉ việc $\approx$ {10.4\%}. 
+\item {Nhóm có làm thêm giờ (Yes):} Có tổng cộng 416 nhân viên, nhưng có tới 127 người nghỉ việc. Tỷ lệ nghỉ việc $\approx$ {30.5\%}. 
+\item {Kết luận:} Một nhân viên phải làm thêm giờ có tỷ lệ nghỉ việc cao gần gấp 3 lần (30.5\% so với 10.4\%) so với người không làm thêm giờ. 
+\end{itemize} 
+\newpage
+- Phân tích Biểu đồ: Thống kê nghỉ việc theo hài lòng môi trường
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=0.9\textwidth]{EnvironmentSatisfaction.png}}
+    \caption{Thống kê số lượng nhân viên nghỉ việc theo mức độ hài lòng về môi trường làm việc ở công ty}
+    \label{fig:hinh_3.2}
+\end{figure}
+\begin{itemize} 
+\item Biểu đồ này cho thấy mối liên hệ rõ rệt giữa sự hài lòng về môi trường và tỷ lệ nghỉ việc. 
+\item {Mức 1 (Rất không hài lòng):} Tỷ lệ nghỉ việc cao nhất, với 72 trên 284 nhân viên $\approx$ {25.4\%}. 
+\item {Mức 2 (Không hài lòng):} Tỷ lệ nghỉ việc là 43 trên 287 nhân viên $\approx$ {15.0\%}. 
+\item {Mức 3 \& 4 (Hài lòng/Rất hài lòng):} Tỷ lệ nghỉ việc giảm xuống mức thấp nhất, chỉ khoảng {13.5\% - 13.7\%}. 
+\item {Kết luận:} Những nhân viên bất mãn nhất với môi trường làm việc (Mức 1) có khả năng rời đi cao gần gấp đôi so với những người hài lòng. 
+\end{itemize} 
+\newpage
+- Phân tích Biểu đồ: Thống kê nghỉ việc theo hài lòng công việc.
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=0.9\textwidth]{JobSatisfaction.png}}
+    \caption{ Thống kê số lượng nhân viên nghỉ việc theo mức độ hài lòng trong công
+việc ở công ty}
+    \label{fig:hinh_3.3}
+\end{figure}\begin{itemize} 
+\item Tương tự như môi trường, mức độ hài lòng với công việc có ảnh hưởng rõ rệt. 
+\item {Mức 1 (Rất không hài lòng):} Có tỷ lệ nghỉ việc cao nhất, với 66 trên 289 nhân viên $\approx$ {22.8\%}. 
+\item {Mức 4 (Rất hài lòng):} Có tỷ lệ nghỉ việc {thấp nhất}, với chỉ 52 trên 459 nhân viên $\approx$ {11.3\%}. 
+\item {Kết luận:} Có một xu hướng rõ ràng: sự hài lòng trong công việc càng tăng (từ 1 đến 4) thì tỷ lệ nghỉ việc càng giảm. 
+\end{itemize} 
+\newpage
+- Phân tích Biểu đồ: Phân bố Thu nhập theo tình trạng nghỉ việc
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=0.9\textwidth]{MonthlyIncome.png}}
+    \caption{Phân bố thu nhập theo tình trạng nghỉ việc}
+    \label{fig:hinh_3.4}
+\end{figure}
+\begin{itemize}
+    \item Biểu đồ hộp này cho thấy \texttt{MonthlyIncome} (Thu nhập) là một yếu tố then chốt.
+    \item {Nhóm Nghỉ việc (Yes):} Toàn bộ "thân hộp" (IQR) và đường trung vị (median) nằm ở mức thu nhập thấp hơn đáng kể so với nhóm "No".
+    \item {Nhóm Ở lại (No):} Có mức lương trung vị cao hơn rõ rệt và dải phân bố thu nhập cũng rộng hơn nhiều (bao gồm cả nhân viên mới và quản lý cấp cao).
+    \item {Kết luận:} Những người nghỉ việc có xu hướng tập trung ở nhóm có thu nhập thấp, cho thấy đây là một trong những yếu tố chính dẫn đến nghỉ việc.
+\end{itemize}
+
+\subsection{ Phân tích biến mục tiêu Attrition}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Attrition.png}
+    \caption{Thống kê số lượng nhân viên nghỉ việc tại IBM}
+    \label{fig:hinh_3.5}
+\end{figure}
+
+Có 237 nhân viên nghỉ việc trong tổng số 1470 nhân viên, chiếm 16,12\% tại công ty. Tuy là con số nhỏ nhưng phòng Nhân sự vẫn muốn biết được lý do dẫn đến sự nghỉ việc của nhân viên IBM.
+\section{ Quy trình tiền xử lý}
+
+\subsection{ Làm sạch dữ liệu}
+Tách các cột X (các trường dữ liệu), cột y (nhãn của dữ liệu). Xóa bỏ các cột thừa, không cần thiết, có dữ liệu bằng nhau trên các mẫu hoặc không chứa thông tin, bao gồm các trường: Over18, EmployeeNumber, EmployeeCount, StandardHours vì các trường này không mang ý nghĩa trong việc dự đoán, các trường EmployeeCount, StandarHours có giá trị bằng nhau, nếu thêm vào sẽ tạo thêm nhiễu, không mang thông tin (phương sai bằng 0) khiến mô hình dự đoán không tốt.
+
+\subsection{ Ép kiểu dữ liệu}
+Ép kiểu về các dạng float32 và int16 để tối ưu hiệu suất và bộ nhớ.
+\subsection{ Mã hóa nhãn}
+\subsubsection*{One Hot Coding}
+One Hot những cột category không thứ tự như:
+
+\begin{verbatim}
+    encode_cols = [
+        'BusinessTravel', 'Department', 'EducationField',
+        'Gender', 'JobRole', 'MaritalStatus', 'OverTime'
+    ]
+\end{verbatim}
+
+ Các trường dữ liệu có thứ tự được giữ nguyên. Có sử dụng drop='first' nhằm mục đích tránh dư thừa thông tin và đa cộng tuyến.
+
+Dữ liệu X ban đầu code shape là: (1470, 30). Sau khi encode thì X có dạng: (1470, 44).
+
+\subsubsection*{Label Encoding}
+Dữ liệu ban đầu chỉ có Yes và No thì sau khi mã hóa thì đã chuyển về tương ứng với 1 và 0 để dễ dàng trong việc tính toán.
+
+\subsection{ Áp dụng Chuẩn hóa}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{X_continuous.png}
+    \caption{Dữ liệu liên tục chưa chuẩn hóa}
+    \label{fig:hinh_3.6}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{array_X_continous.png}
+    \caption{Mảng dữ liệu liên tục đã chuẩn hóa}
+    \label{fig:hinh_3.7}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{df_X_continous.png}
+    \caption{DataFrame dữ liệu đã chuẩn hóa}
+    \label{fig:hinh_3.8}
+\end{figure}
+
+Mô tả dữ liệu sau khi chuẩn hóa
+
+Trước khi chuẩn hóa, dữ liệu của các trường \texttt{Age}, \texttt{DailyRate}, \dots có độ lớn rất khác nhau, điều này gây mất cân bằng thang đo cho các thuộc tính. Các biến giá trị lớn như \texttt{MonthlyIncome} hay \texttt{MonthlyRate} có thể sẽ chi phối mô hình.
+
+Sau khi chuẩn hóa bằng \texttt{StandardScaler}, các giá trị dao động quanh 0, thường nằm trong khoảng từ -3 đến 3. Các cột có trung bình $\approx 0$, độ lệch chuẩn $\approx 1$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{describe_X_continous_std.png}
+    \caption{File thống kê chi tiết dữ liệu đã chuẩn hóa}
+    \label{fig:hinh_3.9}
+\end{figure}
+
+\section{ Trực quan hóa dữ liệu}
+
+\subsection{ Biểu đồ phát hiện giá trị ngoại lai của dữ liệu}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{download (3).png}
+    \caption{Biểu đồ thống kê giá trị ngoại lai}
+    \label{fig:hinh_3.9}
+\end{figure}
+\textbf{Nhận xét:}
+
+Biểu đồ boxplot cho thấy nhiều giá trị ngoại lai, tập trung chủ yếu ở các biến liên quan đến thu nhập và thâm niên làm việc như \texttt{MonthlyIncome}, \texttt{MonthlyRate}, \texttt{TotalWorkingYears} và \texttt{YearsAtCompany}. 
+
+Các biến đánh giá theo thang điểm rời rạc hầu như không xuất hiện ngoại lai đáng kể do miền giá trị bị giới hạn. 
+Sự tồn tại của các ngoại lai này là hợp lý trong bối cảnh dữ liệu nhân sự và cần được xem xét khi huấn luyện mô hình.
+
+\subsection{ Biểu đồ thống kê dữ liệu}
+\subsubsection{Dữ liệu rời rạc}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{download (2).png}
+    \caption{Biểu đồ thống kê giá trị của dữ liệu rời rạc.}
+    \label{fig:hinh_3.9}
+\end{figure}
+
+Có thể thấy được là trường dữ liệu \texttt{Over18} có dữ liệu không đổi, đây cũng là lý do trường này sẽ được loại bỏ khi sử dụng dữ liệu để huấn luyện mô hình.
+
+\subsubsection{Dữ liệu liên tục}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{download (1).png}
+    \caption{Biểu đồ thống kê giá trị của dữ liệu liên tục.}
+    \label{fig:hinh_3.9}
+\end{figure}
+
+Trường dữ liệu \texttt{EmployeeCount}, \texttt{StandardHours} tương tự sẽ bị loại bỏ vì có dữ liệu không đổi.
+
+
+
+\textbf{Nhận xét tổng thể:}
+
+Các biểu đồ phân bố cho thấy dữ liệu gồm cả biến rời rạc và liên tục với đặc điểm phân bố không đồng đều. 
+Đối với các biến phân loại, dữ liệu có xu hướng mất cân bằng giữa các nhóm, chẳng hạn như 
+\texttt{BusinessTravel}, \texttt{Department}, \texttt{JobRole} và \texttt{Gender}, 
+trong đó một số nhóm chiếm tỷ lệ vượt trội so với phần còn lại.
+
+Đối với các biến số liên tục, nhiều biến như \texttt{MonthlyIncome}, \texttt{TotalWorkingYears}, 
+\texttt{YearsAtCompany} và \texttt{YearsInCurrentRole} có phân bố lệch phải, 
+phản ánh sự khác biệt lớn về thu nhập và thâm niên làm việc giữa các nhân viên. 
+Một số biến khác như \texttt{Age} và \texttt{DistanceFromHome} có phân bố tương đối tập trung, 
+trong khi các biến đánh giá theo thang điểm rời rạc có phân bố bị giới hạn trong miền giá trị nhỏ.
+
+
+\subsection{ Ma trận hệ số tương quan}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{download (4).png}
+    \caption{Ma trận hệ số tương quan.}
+    \label{fig:hinh_3.9}
+\end{figure}
+
+\textbf{Nhận xét:}
+
+Ma trận tương quan cho thấy cặp biến \texttt{MonthlyIncome} và \texttt{JobLevel} với hệ số $r=0.95$, phản ánh mối quan hệ tuyến tính gần như tuyệt đối giữa thu nhập và cấp bậc. Bên cạnh đó, thâm niên làm việc (\texttt{TotalWorkingYears}) đóng vai trò trung tâm khi có tương quan mạnh với cả cấp bậc ($0.78$) và thu nhập ($0.77$), đồng thời biến \texttt{PerformanceRating} cũng được xác định là yếu tố ảnh hưởng trực tiếp đến mức tăng lương (\texttt{PercentSalaryHike}) với $r=0.77$.
+
+
+Các trường \texttt{YearsAtCompany}, \texttt{YearsInCurrentRole} và \texttt{YearsWithCurrManager} có sự phụ thuộc lẫn nhau chặt chẽ (hệ số từ $0.71$ đến $0.77$), cho thấy sự ổn định về vị trí thường đi kèm với việc gắn bó lâu dài với một người quản lý. Ngược lại, các chỉ số về mức độ hài lòng (\textit{Satisfaction}) lại hoàn toàn độc lập và gần như không có tương quan với các yếu tố tài chính hay nhân khẩu học (hệ số xấp xỉ $0$), ngụ ý rằng thu nhập cao hay thâm niên lớn không đồng nghĩa với mức độ thỏa mãn công việc cao hơn.
+
+\subsection{ Giảm chiều dữ liệu}
+\subsubsection{Giảm chiều dữ liệu với PCA}
+Ở đây chúng tôi sử dụng phương pháp giảm chiều PCA để giảm chiều dữ liệu về còn 6 chiều, rồi trực quan hóa từng cặp dữ liệu với nhau.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{download (5).png}
+    \caption{Trực quan hóa từng cặp dữ liệu.}
+    \label{fig:hinh_3.9}
+\end{figure}
+
+Biểu đồ phương sai tích lũy của dữ liệu sau khi giảm chiều.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{download (6).png}
+    \caption{Biểu đồ phương sai tích lũy sau khi giảm chiều bằng PCA.}
+    \label{fig:hinh_3.9}
+\end{figure}
+
+\textbf{Nhận xét:}
+
+Phương sai tích lũy từ PC1 đến PC6 chỉ đạt ~46.36\% tức nó chỉ giữ lại khoảng hơn 40\% dữ liệu quan trọng. Dữ liệu bị phân tán một phần sau khi one hot encode, dữ liệu có nhiều chiều, dẫn đến phương sai bị pha loãng, không thể tập trung. Phần khác là do có nhiều nhiễu của việc dữ liệu nhiều categories nên làm cho PCA kém hiệu quả.
+
+\subsubsection{Giảm chiều dữ liệu với LDA }
+Do dữ liệu phân loại chỉ có 2 lớp (yes/no) nên ở đây chúng tôi chỉ có thể giảm về còn 1 chiều dữ liệu.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{download (7).png}
+    \caption{Biểu đồ thể hiện giảm chiều với LDA.}
+    \label{fig:hinh_3.9}
+\end{figure}
+
+\textbf{Nhận xét:}
+
+Biểu đồ cho thấy LDA đã bước đầu {tách biệt được tâm của hai lớp} (Class 0 (No) lệch trái, Class 1 (Yes) lệch phải), tuy nhiên phương sai lớn khiến vùng chồng lấn (overlap) vẫn còn rất rộng, gây khó khăn cho việc phân loại chính xác tuyệt đối. Ngoài ra, sự chênh lệch lớn về chiều cao cột giữa hai lớp phản ánh vấn đề {mất cân bằng dữ liệu} nghiêm trọng.
+
+\section{ Quy trình thực nghiệm phân cụm}
+\subsection{ Mô hình }
+
+Trong khuôn khổ thực nghiệm phân cụm lần này, chúng tôi sử dụng 2 phương pháp phân cụm:
+\begin{enumerate}
+    \item DBSCAN (Density-Based Spatial Clustering of Applications with Noise.)
+    \item K-Means 
+\end{enumerate}
+
+\subsection{ Kịch bản }
+\subsubsection{Kịch bản 1 }
+
+Thực hiện phân cụm với dữ liệu ban đầu với nhiều tham số khác nhau.
+
+\subsubsection{Kịch bản 2 }
+Thực hiện phân cụm trên dữ liệu đã được giảm chiều với các tham số khác nhau.
+
+\section{ Quy trình thực nghiệm phân loại}
+\subsection{ Mô hình}
+Với bài toán phân loại để kiểm tra xem nhân viên có nghỉ việc hay không (yes/no), chúng tôi sử dụng các mô hình: 
+
+\begin{enumerate}
+    \item Naive Bayes.
+    \item K-Nearest Neighbors.
+    \item Logistic Regression.
+    \item Decision Tree.
+    \item Support Vector Machine.
+\end{enumerate}
+
+\subsection{ Kịch bản}
+
+\subsubsection{Kịch bản 1}
+Thực hiện huấn luyện mô hình với dữ liệu đã được mã hóa bằng phương pháp One-Hot Encoding, 
+với các trường hợp chia tập huấn luyện và kiểm tra (train/test) theo yêu cầu.
+
+\subsubsection{Kịch bản 2}
+Thực hiện chạy mô hình với dữ liệu đã được chuẩn hóa và giảm chiều bằng phương pháp Feature Selection 
+(tùy theo từng mô hình), với các trường hợp chia train/test khác nhau theo yêu cầu.
+
+\subsubsection{Kịch bản 3}
+Thực hiện chạy mô hình với dữ liệu đã được chuẩn hóa và giảm chiều bằng phương pháp PCA 
+(tùy theo từng mô hình), với các trường hợp chia train/test khác nhau theo yêu cầu.
+
+\subsubsection{Kịch bản 4}
+Thực hiện chạy mô hình với dữ liệu đã được chuẩn hóa và giảm chiều bằng phương pháp LDA 
+(tùy theo từng mô hình), với các trường hợp chia train/test khác nhau theo yêu cầu.
+
+\subsubsection{Kịch bản 5}
+Thực hiện trực quan hóa kết quả mô hình đối với một hoặc hai kịch bản tiêu biểu ở trên.
+
+\subsubsection{Kịch bản 6}
+Thực hiện thực nghiệm lại các mô hình trong các kịch bản đã xây dựng, 
+với dữ liệu được cân bằng bằng phương pháp SMOTE.
+
+
+
+\section{ Quy trình thực nghiệm hồi quy}
+
+Với tập dữ liệu IBM HR Analytics Employee Attrition \& Performance chúng tôi lựa chọn xây dựng bài toán hồi quy với mục tiêu dự đoán thu nhập hàng tháng của nhân viên dựa trên các đặc trưng của tập dữ liệu.
+
+Trường \texttt{MonthlyIncome}  là một biến liên tục, do đó các mô hình hồi quy được lựa chọn thay vì các mô hình phân loại, nó đại diện cho thu nhập hàng tháng của nhân viên dựa vào các dữ liệu được thu thập trước đó, đây là biến liên tục và phù hợp với bài toán hồi quy.
+
+Ngoài ra biến \texttt{MonthlyIncome} có tương quan với nhiều biến khác trong dữ liệu, cụ thể:
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{img_2.png}
+    \caption{Ma trận hệ số tương quan các trường dữ liệu.}
+    \label{fig:hinh_3.10}
+\end{figure}
+
+Với các biến có mức độ tương quan cao với biến mục tiêu, ta có:
+\begin{itemize}
+    \item \texttt{Age} ($\approx 0.5$)
+    \item \texttt{JobLevel} ($\approx 0.95$)
+    \item \texttt{TotalWorkingYears} ($\approx 0.77$)
+    \item \texttt{YearAtCompany} ($\approx 0.51$)
+    \item \texttt{YearInCurrentRole} ($\approx 0.36$)
+\end{itemize}
+
+Ngoài ra, mô hình còn xem xét nhiều biến khác với mức độ ảnh hưởng khác nhau.
+
+Các biến này phản ánh trực tiếp cơ cấu lương của công ty như:
+\begin{itemize}
+    \item Thâm niên làm việc càng cao thì thu nhập của nhân viên càng lớn.
+    \item Trình độ và cấp bậc công việc càng cao thì mức lương tương ứng càng cao.
+    \item Thời gian gắn bó với công ty càng lâu thì khả năng đạt mức lương cao càng lớn.
+    \item Thời gian đảm nhiệm vai trò hiện tại càng dài thì mức lương càng ổn định và có xu hướng tăng.
+\end{itemize}
+
+\subsection{ Mô hình}
+
+Trong bài toán hồi quy thu nhập hàng tháng của nhân viên tại IBM, chúng tôi sử dụng các mô hình:
+\begin{enumerate}
+    \item Multilayer Perceptron.
+    \item SVM.
+\end{enumerate}
+
+
+\subsection{ Kịch bản}
+
+\subsubsection{Kịch bản 1}
+
+Thực hiện huấn luyện mô hình trên dữ liệu gốc, không được chuẩn hóa.
+
+
+\subsubsection{Kịch bản 2}
+
+Thực hiện huấn luyện mô hình trên dữ liệu gốc đã được chuẩn hóa.
+
+\subsubsection{Kịch bản 3}
+
+Thực hiện huấn luyện mô hình trên dữ liệu gốc đã được chuẩn hóa, giảm chiều với PCA và LDA.
+
+\chapter{ Kết quả và Thảo luận}
+
+\section{ Kết quả thực nghiệm phân cụm}
+\subsection{ Mô hình DBSCAN}
+
+\subsubsection{Thực nghiệm}
+
+Ở đây dữ liệu thực nghiệm được lấy theo kết quả tốt nhất của chỉ số ARI.
+\vspace{0.25cm}
+
+
+\begin{center}
+    
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Dữ liệu} 
+& $\boldsymbol{\varepsilon}$ 
+& \textbf{min\_samples} 
+& \textbf{Metric} 
+& \textbf{ARI} \\
+\hline
+Gốc 
+& 0.07 
+& 3 
+& cosine 
+& 0.0431 \\
+\hline
+PCA (2D) 
+& 0.30 
+& 30 
+& euclidean 
+& 0.1771 \\
+\hline
+PCA (3D) 
+& 0.50 
+& 20 
+& euclidean 
+& 0.0922 \\
+\hline
+PCA (5D) 
+& 0.07 
+& 44 
+& cosine 
+& 0.0443 \\
+\hline
+PCA (90\%) 
+& 0.20 
+& 5 
+& cosine 
+& 0.1740 \\
+\hline
+LDA 
+& 0.07 
+& 5 
+& euclidean 
+& 0.2325 \\
+\hline
+\end{tabular}
+
+\end{center}
+\subsubsection{Trực quan hóa dữ liệu sau phân cụm}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{download (11).png}
+    \caption{Trực quan dữ liệu phân cụm 1D sử dụng DBSCAN.}
+    \label{fig:hinh_3.10}
+\end{figure}
+
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{download (18).png}
+    \caption{Trực quan dữ liệu phân cụm 2D sử dụng DBSCAN.}
+    \label{fig:hinh_3.10}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Pasted image (9).png}
+    \caption{Trực quan dữ liệu phân cụm 3D sử dụng DBSCAN.}
+    \label{fig:hinh_3.10}
+\end{figure}
+
+\subsubsection{Nhận xét}
+
+Kết quả thực nghiệm cho thấy thuật toán DBSCAN hoạt động kém trên dữ liệu ban đầu, 
+khi chỉ số ARI đạt giá trị rất thấp hoặc xấp xỉ 0 đối với hầu hết các cấu hình tham số. 
+Việc giảm chiều dữ liệu bằng PCA giúp cải thiện chất lượng phân cụm trong một số trường hợp, 
+đặc biệt với dữ liệu giảm về 2 chiều hoặc giữ lại 90\% phương sai, tuy nhiên kết quả vẫn chưa ổn định.
+
+Ngược lại, phương pháp giảm chiều bằng LDA cho kết quả vượt trội rõ rệt, 
+với ARI đạt giá trị cao nhất trong tất cả các kịch bản. 
+Điều này cho thấy việc khai thác thông tin nhãn trong quá trình giảm chiều giúp dữ liệu trở nên phân tách hơn, 
+từ đó nâng cao hiệu quả của DBSCAN khi kết hợp với khoảng cách Euclidean.
+
+
+\subsection{ Mô hình K-Means}
+
+Thực hiện phân tích số cụm.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{download (8).png}
+    \caption{Phân tích số cụm sử dụng K-Means.}
+    \label{fig:hinh_3.10}
+\end{figure}
+\textbf{Nhận xét: }
+
+Qua biểu đồ, ta có thể thấy được WCSS giảm rất mạnh từ 1 đến 3, 4 cho thấy việc tăng số cụm trong khoảng này giúp mô hình cải thiện đáng kể.
+
+Trong khoảng 4 - 6 thì WCSS vẫn còn giảm tuy nhiên chậm hơn, biểu thị rằng cấu trúc các cụm trở nên ổn định dần.Từ khoảng 6 trở đi thì WCSS giảm tuy nhiên ít hơn ban đầu, điều này cho thấy tăng số cụm không mang lại nhiều ý nghĩa mà chỉ làm chia nhỏ cụm hiện có.
+
+=> Nên ở đây với dữ liệu đã được chuẩn hóa số cụm có thể ước trừng cho mô hình K-Means là khoảng 4 cụm.
+
+\subsubsection{Trực quan với dữ liệu đã giảm chiều }
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{download (9).png}
+    \caption{Trực quan hóa với dữ liệu 2 chiều sau khi giảm.}
+    \label{fig:hinh_3.10}
+\end{figure}
+
+\subsubsection{Thực nghiệm }
+Ở đây chúng tôi sử dụng độ đo ARI để đánh giá chất lượng phân cụm dữ liệu.
+
+
+\begin{center}
+    
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$k$ 
+& \textbf{Gốc} 
+& \textbf{PCA (2D)}
+& \textbf{PCA (3D)} 
+& \textbf{PCA (5D)} 
+& \textbf{PCA (90\%)} 
+& \textbf{LDA} \\
+\hline
+2 & -0.035594 & -0.034565 & -0.035594 & -0.035597 & -0.036636 & 0.119530 \\
+\hline
+3 & -0.042245 & -0.041807 & -0.041807 & -0.042057 & -0.041624 & 0.120366 \\
+\hline
+4 & -0.005583 & -0.025229 & -0.026613 & -0.027248 & -0.005259 & 0.093000 \\
+\hline
+5 & -0.009324 & -0.009569 & -0.007023 & -0.011444 & -0.009054 & 0.078202 \\
+\hline
+6 &  0.001449 & -0.013797 &  0.002151 & -0.001115 &  0.001021 & 0.062683 \\
+\hline
+7 &  0.005852 & -0.006845 & -0.003518 & -0.006104 &  0.004883 & 0.049959 \\
+\hline
+8 &  0.003432 & -0.010765 & -0.000261 & -0.002720 & -0.002164 & 0.042574 \\
+\hline
+\end{tabular}
+
+\end{center}
+\subsubsection{Trực quan dữ liệu phân cụm }
+Phần trực quan ở đây được lấy theo trường hợp tốt nhất theo chỉ số ARI.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{download (10).png}
+    \caption{Trực quan hóa phân cụm với dữ liệu 1D giảm chiều bằng LDA.}
+    \label{fig:hinh_3.10}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{download (11).png}
+    \caption{Trực quan hóa phân cụm với dữ liệu 1D giảm chiều bằng LDA.}
+    \label{fig:hinh_3.10}
+\end{figure}
+
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{download (12).png}
+    \caption{Trực quan hóa phân cụm với dữ liệu 2D giảm chiều bằng PCA.}
+    \label{fig:hinh_3.10}
+\end{figure}
+
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{download (13).png}
+    \caption{Trực quan hóa phân cụm với dữ liệu 3D giảm chiều bằng PCA.}
+    \label{fig:hinh_3.10}
+\end{figure}
+
+
+\subsubsection{Nhận xét}
+Kết quả trong bảng cho thấy phương pháp giảm chiều bằng PCA (với các số chiều khác nhau hoặc giữ lại 90\% phương sai) 
+không cải thiện đáng kể chất lượng phân cụm, khi chỉ số ARI chủ yếu mang giá trị âm hoặc xấp xỉ 0. 
+Ngược lại, phương pháp LDA cho kết quả vượt trội rõ rệt ở tất cả các giá trị $k$, với ARI dương và cao hơn nhiều so với các phương pháp còn lại. 
+Điều này cho thấy việc khai thác thông tin nhãn trong LDA giúp tăng khả năng phân tách dữ liệu hiệu quả hơn so với các phương pháp giảm chiều không giám sát.
+
+
+
+
+\section{ Kết quả thực nghiệm phân loại}
+\subsection*{Kết quả với dữ liệu gốc}
+
+% --- Bảng 1: Train/Test = 7/3 ---
+\begin{table}[H]
+    \centering
+    \caption{Kết quả với tỉ lệ Train / Test = 7 / 3}
+    \begin{tabular}{|l|c|c|c|c|}
+        \hline
+        \textbf{Mô hình} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\
+        \hline
+        Hồi quy Logistic & 0.8775 & 0.7179 & 0.3943 & 0.5090 \\
+        \hline
+        Naive Bayes (GNB) & 0.6576 & 0.2400 & 0.6900 & 0.3600 \\
+        \hline
+        KNN & 0.8639 & 0.5600 & 0.0800 & 0.1400 \\
+        \hline
+        Decision Tree & 0.7823 & 0.3655 & 0.4788 & 0.4146 \\
+        \hline
+        SVM & 0.8934 & 0.7200 & 0.3800 & 0.4900 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+% --- Bảng 2: Train/Test = 6/4 ---
+\begin{table}[H]
+    \centering
+    \caption{Kết quả với tỉ lệ lệ Train / Test = 6 / 4}
+    \begin{tabular}{|l|c|c|c|c|}
+        \hline
+        \textbf{Mô hình} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\
+        \hline
+        Hồi quy Logistic & 0.8775 & 0.6949 & 0.4315 & 0.5324 \\
+        \hline
+        Naive Bayes (GNB) & 0.6684 & 0.2500 & 0.6900 & 0.3600 \\
+        \hline
+        KNN & 0.8605 & 0.4800 & 0.1600 & 0.2400 \\
+        \hline
+        Decision Tree & 0.7823 & 0.3655 & 0.4788 & 0.4146 \\
+        \hline
+        SVM & 0.8878 & 0.6800 & 0.3500 & 0.4600 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection*{Kết quả với dữ liệu có sử dụng SMOTE}
+
+\begin{table}[H]
+    \centering
+    \caption{Kết quả với tỉ lệ Train / Test tỉ lệ tốt nhất khi sử dụng SMOTE}
+    \begin{tabular}{|l|c|c|c|c|}
+        \hline
+        \textbf{Mô hình} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\
+        \hline
+        Hồi quy Logistic & 0.7806 & 0.3988 & 0.7052 & 0.5095 \\
+        \hline
+        Naive Bayes (GNB) & 0.6973 & 0.2600 & 0.6300 & 0.3600 \\
+        \hline
+        KNN & 0.8520 & 0.4700 & 0.4900 & 0.4800 \\
+        \hline
+        Decision Tree & 0.8112 & 0.4148 & 0.4105 & 0.4126 \\
+        \hline
+        SVM & 0.8277 & 0.4100 & 0.5900 & 0.4900 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+
+
+\subsection*{Kết quả với dữ liệu giảm chiều}
+
+% --- Bảng 1: PCA (n=6) ---
+\begin{table}[H]
+    \centering
+    \caption{Giảm chiều với PCA (n=6) - Kết quả trên tập TEST}
+    \begin{tabular}{|l|c|c|c|c|}
+        \hline
+        \textbf{Mô hình} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\
+        \hline
+        Hồi quy Logistic & 0.8401 & 0.5714 & 0.0421 & 0.0784 \\
+        \hline
+        Naive Bayes (GNB) & 0.8673 & 0.0000 & 0.0000 & 0.0000 \\
+        \hline
+        KNN & 0.8350 & 0.3200 & 0.1700 & 0.2200 \\
+        \hline
+        SVM & 0.7976 & 0.2400 & 0.2100 & 0.2200 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+% --- Bảng 2: LDA ---
+\begin{table}[H]
+    \centering
+    \caption{Giảm chiều với LDA - Kết quả trên tập TEST}
+    \begin{tabular}{|l|c|c|c|c|}
+        \hline
+        \textbf{Mô hình} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\
+        \hline
+        Hồi quy Logistic & 0.8707 & 0.6610 & 0.4105 & 0.5064 \\
+        \hline
+        Naive Bayes (GNB) & 0.8776 & 0.5900 & 0.3800 & 0.4600 \\
+        \hline
+        KNN & 0.8690 & 0.5400 & 0.3600 & 0.4300 \\
+        \hline
+        SVM & 0.8844 & 0.6300 & 0.3100 & 0.4600 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Giảm chiều với Feature Selection - Kết quả trên tập TEST}
+    \begin{tabular}{|l|c|c|c|c|}
+        \hline
+        \textbf{Mô hình} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\
+        \hline
+        Decision Tree & 0.7993 & 0.4000 & 0.4842 & 0.4380 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=1\textwidth]{KNN_Pred_Real.png}
+%     \caption{So sánh dữ liệu dự đoán và thực tế với KNN}
+%     \label{fig:hinh_4.1}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=1\textwidth]{Logistic_Regression_Pred_Real.png}
+%     \caption{So sánh dữ liệu dự đoán và thực tế với Logistic Regression}
+%     \label{fig:hinh_4.2}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=1\textwidth]{Naive_Bayes_Pred_Real.png}
+%     \caption{So sánh dữ liệu dự đoán và thực tế với Naive Bayes}
+%     \label{fig:hinh_4.3}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{Decision_Tree_Pred_Real.png}
+%     \caption{So sánh dữ liệu dự đoán và thực tế với Decision Tree}
+%     \label{fig:hinh_4.4}
+% \end{figure}
+\section{ Kết quả thực nghiệm hồi quy}
+
+\begin{center}
+    \begin{table}[h!]
+\centering
+\caption{Kết quả thực nghiệm tốt nhất của Multi Layer Perceptron}
+\label{tab:best_mlp_results_optimized}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{|l|l|c|c|c|c|c|c|c|}
+\hline
+\textbf{Dataset} & \textbf{Solver} & \textbf{Layers} & \textbf{Test} &
+\textbf{LR} & \textbf{Alpha} & \textbf{MAE} & \textbf{RMSE} & \textbf{$R^2$} \\
+\hline
+Grad.Desc & sgd & (100,75,50) & 0.3 & 0.3 & .001 & 6627 & 8009 & -2.17 \\
+\hline
+Original & adam & (100,75) & 0.2 & .001 & .01 & 1885 & 2520 & 0.71 \\
+\hline
+{Normalized} & {adam} & {(50,25)} & {0.2} &
+{.001} & {.01} & {1150} & {1514} & {0.90} \\
+\hline
+Reduced Dim & adam & (100,75,50) & 0.3 & .001 & .01 & 1368 & 1803 & 0.84 \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{center}
+
+\begin{center}
+    \begin{table}[h!]
+\centering
+\caption{Kết quả thực nghiệm tốt nhất của mô hình SVM}
+\label{tab:best_svr_results}
+\small
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{|l|c|c|c|c|c|c|c|}
+\hline
+\textbf{Dataset} & \textbf{Kernel} & \textbf{C} & \textbf{Epsilon} &
+\textbf{Test Size} & \textbf{MAE} & \textbf{RMSE} & \textbf{$R^2$} \\
+\hline
+Onehot \& Norm & Linear & 1000 & 10.0 & 0.2 & 884.66 & 1181.51 & 0.9361 \\
+\hline
+PCA & Linear & 1000 & 10.0 & 0.3 & 2047.92 & 2737.43 & 0.6295 \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{center}
+% \section{ So sánh và thảo luận thực nghiệm phân loại}
+
+% \subsection*{Nhận xét kết quả với dữ liệu gốc (Tỉ lệ 7/3)}
+% Dựa trên Bảng 4.1, ta có các nhận xét sau về hiệu năng của các mô hình trên tập dữ liệu gốc 44 chiều:
+% \begin{itemize}
+%     \item \textbf{SVM và Hồi quy Logistic (Logistic Regression):} Đây là hai mô hình có hiệu suất tổng thể tốt nhất. SVM đạt Accuracy cao nhất ($0.8934$) và Precision tốt ($0.7200$). Hồi quy Logistic cũng bám sát với Accuracy $0.8775$ và Precision $0.7179$. Tuy nhiên, cả hai chỉ đạt mức Recall trung bình khoảng $0.38 - 0.39$, cho thấy mô hình vẫn bỏ sót một lượng đáng kể nhân viên thực sự nghỉ việc.
+%     \item \textbf{Naive Bayes (GNB):} Mô hình này có hành vi rất đặc thù. GNB có Accuracy thấp nhất ($0.6576$) và Precision rất thấp ($0.2400$), nhưng lại đạt {Recall cao nhất ($0.6900$)}. Điều này cho thấy GNB có xu hướng dự đoán ``Nghỉ việc'' rất nhạy, bắt được nhiều trường hợp nghỉ việc nhất nhưng đồng thời cũng gán nhầm rất nhiều nhân viên bình thường thành nghỉ việc (tỷ lệ False Positive cao).
+%     \item \textbf{K-Nearest Neighbors (KNN):} Mặc dù Accuracy trông có vẻ ổn định ($0.8639$) nhưng thực chất mô hình này hoạt động rất tệ đối với lớp thiểu số. Recall chỉ đạt {0.0800} (thấp nhất trong các mô hình), nghĩa là KNN gần như bỏ sót toàn bộ những người nghỉ việc và chỉ dự đoán tốt lớp đa số (Không nghỉ việc).
+%     \item \textbf{Decision Tree:} Mặc dù độ chính xác tổng thể thấp ($0.7823$), mô hình lại đạt mức Recall khá tốt ($0.4788$), cao hơn SVM và Logistic. Tuy nhiên, Precision thấp ($0.3655$) cho thấy mô hình chấp nhận tỷ lệ báo động giả cao để phát hiện được nhân viên nghỉ việc.
+% \end{itemize}
+
+% \subsection*{Nhận xét kết quả sau khi giảm chiều với PCA (n = 6)}
+% Dựa trên kết quả tại Bảng 4.4, khi thực hiện giảm chiều dữ liệu từ 44 chiều xuống còn 6 chiều bằng PCA, ta có những quan sát sau:
+
+% \begin{itemize}
+%     \item \textbf{Sự sụt giảm nghiêm trọng:} Hiệu suất của hầu hết các mô hình đều giảm mạnh so với dữ liệu gốc, đặc biệt là khả năng nhận diện lớp thiểu số (Recall và F1-Score đều rất thấp). Điều này cho thấy 6 thành phần chính (Principal Components) chưa giữ lại đủ thông tin quan trọng để phân lớp.
+
+%     \item \textbf{Naive Bayes (GNB):} Hoàn toàn mất khả năng dự đoán lớp 1 (Nghỉ việc) với Precision, Recall và F1-Score đều tụt xuống bằng $0.0000$.
+
+%     \item \textbf{Hồi quy Logistic:} Chịu ảnh hưởng nặng nề nhất về khả năng bao phủ, Recall tụt xuống chỉ còn $0.0421$. F1-Score đạt mức cực thấp ($0.0784$).
+
+%     \item \textbf{KNN:} Có hiện tượng lạ là Recall tăng nhẹ lên $0.1700$, nhưng độ chính xác tổng thể (Accuracy) giảm. F1-Score ($0.2200$) vẫn ở mức rất thấp, chưa đủ tin cậy để áp dụng thực tế.
+
+%     \item \textbf{SVM:} Mặc dù đạt F1-Score tương đương KNN ($0.2200$) và có Recall cao nhất trong 4 mô hình ($0.2100$), nhưng Accuracy lại thấp nhất ($79.76\%$). Điều này chứng tỏ việc giảm chiều dữ liệu đã làm mất đi các đặc trưng phi tuyến quan trọng, khiến SVM gặp khó khăn trong việc tìm kiếm siêu phẳng phân cách tối ưu.
+% \end{itemize}
+
+% \subsection*{Nhận xét kết quả sau khi giảm chiều với LDA}
+% Dựa trên kết quả tại Bảng 4.5, kỹ thuật Linear Discriminant Analysis (LDA) cho thấy hiệu quả vượt trội hơn hẳn so với PCA trong việc trích xuất đặc trưng phân lớp:
+
+% \begin{itemize}
+%     \item \textbf{Tính ổn định cao:} Tất cả các mô hình đều duy trì độ chính xác (Accuracy) rất tốt (đều trên $86\%$), chứng tỏ LDA đã tìm ra không gian chiếu giúp phân tách hai lớp dữ liệu hiệu quả hơn.
+
+%     \item \textbf{Hồi quy Logistic (Hiệu quả nhất):} Đây là mô hình hoạt động tốt nhất trên không gian LDA với F1-Score cao nhất ($0.5064$) và chỉ số Recall dẫn đầu ($41.05\%$). Điều này dễ hiểu vì LDA giúp tối đa hóa khả năng phân tách tuyến tính, rất phù hợp với bản chất của Hồi quy Logistic.
+
+%     \item \textbf{SVM (Accuracy cao nhất):} SVM đạt độ chính xác tổng thể cao nhất bảng ($88.44\%$) và Precision ấn tượng ($63.00\%$). Tuy nhiên, chỉ số Recall ($31.00\%$) lại thấp hơn so với Hồi quy Logistic, cho thấy SVM thiên về việc dự đoán chính xác (tránh báo động giả) hơn là bao phủ toàn bộ lớp thiểu số.
+
+%     \item \textbf{Cải thiện KNN và Naive Bayes:}
+%     \begin{itemize}
+%         \item \textbf{KNN:} LDA giúp khắc phục điểm yếu chí mạng của KNN trên dữ liệu gốc (do giảm bớt nhiễu và số chiều). Recall tăng vọt lên mức $36.00\%$ và F1-Score đạt $0.4300$.
+%         \item \textbf{Naive Bayes (GNB):} Mô hình trở nên cân bằng hơn hẳn với Accuracy đạt $87.76\%$ và Precision được cải thiện đáng kể lên mức $59.00\%$.
+%     \end{itemize}
+% \end{itemize}
+
+% \subsection*{Nhận xét kết quả sau khi sử dụng Smote}
+
+% Dựa trên kết quả thực nghiệm tại Bảng 4.3, nhóm có các nhận xét sau:
+
+% \begin{itemize}
+%     \item \textbf{Cải thiện khả năng bao phủ (Recall):} Việc áp dụng SMOTE đã giúp cải thiện chỉ số Recall, nổi bật nhất ở mô hình \textit{Hồi quy Logistic} (đạt $70.52\%$). Điều này cho thấy kỹ thuật SMOTE giúp mô hình nhận diện tốt hơn các mẫu thuộc lớp thiểu số.
+    
+%     \item \textbf{Sự đánh đổi về Precision:} Tuy nhiên, Precision của tất cả các mô hình đều ở mức thấp (dưới $50\%$), khiến F1-Score tổng thể không quá cao. Nguyên nhân là do dữ liệu nhân tạo sinh ra bởi SMOTE đã gây nhiễu, làm tăng tỷ lệ dương tính giả (False Positives).
+    
+%     \item \textbf{So sánh hiệu quả mô hình:}
+%     \begin{itemize}
+%         \item \textbf{Hồi quy Logistic} là mô hình hiệu quả nhất khi kết hợp với SMOTE, đạt F1-Score cao nhất ($0.5095$).
+%         \item \textbf{SVM} đứng thứ hai với F1-Score đạt $0.4900$ và Accuracy khá tốt ($82.77\%$), cho thấy sự ổn định hơn so với các mô hình phi tuyến khác.
+%         \item \textbf{KNN, Naive Bayes và Decision Tree} cho kết quả thấp hơn (F1-Score dưới $0.48$), chứng tỏ các thuật toán này nhạy cảm với nhiễu và chưa xử lý tốt dữ liệu sau khi cân bằng.
+%     \end{itemize}
+% \end{itemize}
+
+% \subsection*{Đánh giá chi tiết hiệu suất trên các mô hình}
+
+% \subsubsection{Hồi quy Logistic}
+% Đây là mô hình hoạt động ổn định nhất trong nhóm các thuật toán tuyến tính:
+% \begin{itemize}
+%     \item \textbf{Hiệu quả cao:} Đạt F1-Score tốt nhất trên dữ liệu gốc ($0.5324$) và duy trì phong độ tốt khi kết hợp với LDA ($0.5064$).
+%     \item \textbf{Tác động của SMOTE:} Kỹ thuật này biến đổi mô hình từ thiên hướng chính xác sang thiên hướng bao phủ (Recall tăng vọt lên $70.52\%$), phù hợp nếu ưu tiên phát hiện tối đa nhân viên nghỉ việc.
+%     \item \textbf{Hạn chế:} Rất nhạy cảm với PCA, hiệu suất giảm sâu khi các thành phần chính không giữ được thông tin phân lớp.
+% \end{itemize}
+
+% \subsubsection{Naive Bayes (GNB)}
+% Mô hình thể hiện sự thay đổi rõ rệt tùy thuộc vào kỹ thuật xử lý dữ liệu:
+% \begin{itemize}
+%     \item \textbf{Dữ liệu gốc và SMOTE:} Thiên về Recall cao nhưng Precision thấp (chấp nhận báo động giả để không bỏ sót).
+%     \item \textbf{Tác động của LDA:} LDA giúp chuẩn hóa phân phối dữ liệu, biến GNB thành một mô hình cân bằng với Accuracy rất cao ($87.76\%$).
+%     \item \textbf{Tác động của PCA:} Hoàn toàn không tương thích (F1-Score về $0$), do việc nén chiều làm mất đi tính chất độc lập mà thuật toán yêu cầu.
+% \end{itemize}
+
+% \subsubsection{K-Nearest Neighbors (KNN)}
+% Mô hình chịu tác động mạnh mẽ bởi cấu trúc không gian dữ liệu:
+% \begin{itemize}
+%     \item \textbf{Vấn đề số chiều:} Trên dữ liệu gốc (44 chiều), KNN hoạt động kém (Recall chỉ $8\%$) do nhiễu khoảng cách.
+%     \item \textbf{Giải pháp tối ưu:} LDA và SMOTE là những kỹ thuật cứu cánh, giúp gom cụm dữ liệu tốt hơn, đưa F1-Score tăng gấp 3 lần (lên mức $0.43 - 0.48$) so với ban đầu.
+% \end{itemize}
+
+% \subsubsection{Support Vector Machine (SVM)}
+% \begin{itemize}
+%     \item \textbf{Độ chính xác tổng thể:} SVM luôn duy trì Accuracy thuộc nhóm cao nhất ($>88\%$) trên dữ liệu gốc và LDA, cho thấy khả năng phân tách biên tốt.
+%     \item \textbf{Độ nhạy:} Tương tự Logistic Regression, SVM hoạt động tốt với LDA nhưng suy giảm hiệu suất nghiêm trọng khi dùng PCA.
+% \end{itemize}
+
+% \subsubsection{Decision Tree (với Feature Selection)}
+% Việc áp dụng Feature Selection (Bảng 4.6) giúp Decision Tree đạt F1-Score ($0.4380$) và Recall ($48.42\%$) cao hơn so với khi chạy trên toàn bộ dữ liệu gốc. Điều này chứng minh việc loại bỏ các đặc trưng nhiễu giúp cây quyết định xây dựng cấu trúc tổng quát hóa tốt hơn.
+
+% % \subsection*{Phân tích ảnh hưởng của Chuẩn hóa, PCA và LDA}
+
+% % \subsubsection{Vai trò của Chuẩn hóa (Standardization)}
+% % Việc chuẩn hóa dữ liệu trước khi thực hiện PCA và LDA là bắt buộc và tối quan trọng đối với bộ dữ liệu này.
+% % \begin{itemize}
+% %     \item \textbf{Lý do:} Dữ liệu sau One-Hot Encoding có sự chênh lệch thang đo cực lớn. Biến \textit{MonthlyIncome} có giá trị hàng nghìn (phương sai lớn), trong khi biến \textit{OverTime} chỉ có giá trị 0/1 (phương sai nhỏ $< 0.25$).
+% %     \item \textbf{Tác động:} Nếu không chuẩn hóa, PCA sẽ nhầm lẫn rằng \textit{MonthlyIncome} chứa nhiều thông tin nhất và bỏ qua \textit{OverTime}. Trong thực tế, \textit{OverTime} mới là yếu tố quan trọng ảnh hưởng đến việc nghỉ việc. Việc chuẩn hóa đưa mọi biến về cùng phương sai bằng 1, giúp thuật toán đánh giá công bằng dựa trên cấu trúc dữ liệu.
+% % \end{itemize}
+
+% % \subsubsection{So sánh cơ chế PCA và LDA}
+% % \begin{itemize}
+% %     \item \textbf{PCA (Unsupervised):} PCA thất bại trong việc cải thiện mô hình (ngoại trừ tăng nhẹ Recall cho KNN) vì nó cố gắng giữ lại phương sai tổng thể của dữ liệu mà không quan tâm đến nhãn lớp. Trong quá trình nén từ 44 xuống 6 chiều, các thông tin tinh tế giúp phân biệt hai lớp đã bị loại bỏ vì chúng đóng góp ít vào phương sai tổng.
+% %     \item \textbf{LDA (Supervised):} LDA chiến thắng áp đảo vì nó là thuật toán có giám sát. Nó chủ động tìm kiếm trục không gian mới giúp {tối đa hóa khoảng cách giữa hai lớp} (Nghỉ việc và Không nghỉ việc) và tối thiểu hóa phương sai trong nội bộ mỗi lớp. Do đó, dù chỉ giữ lại 1 chiều ($n=1$), LDA vẫn bảo toàn được thông tin quan trọng nhất để phân loại.
+% % \end{itemize}
+
+% \subsection*{Kết luận chung} 
+% Chiến lược tối ưu nhất cho bộ dữ liệu này là sử dụng {hồi quy Logistic}, vì mô hình này đạt hiệu suất tổng thể (F1-Score) cao nhất trên dữ liệu gốc và đạt độ bao phủ (Recall) tốt nhất khi kết hợp với SMOTE. Ngoài ra, nếu cần giảm chiều dữ liệu, {LDA} là kỹ thuật vượt trội hoàn toàn so với PCA.
+
+\section{ So sánh và thảo luận thực nghiệm phân loại}
+\subsection*{Bảng so sánh}
+
+Từ kết quả của các mô hình trên tập dữ liệu ban đầu, ta có bảng sau.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{download (24).png}
+    \caption{Bảng thống kê kết quả thực nghiệm phân loại.}
+    \label{fig:hinh_3.10}
+\end{figure}
+
+
+\subsection*{Kết quả trên dữ liệu gốc (Tỉ lệ 7/3)}
+Dựa trên Bảng 4.1, hiệu năng các mô hình trên 44 chiều dữ liệu được tóm tắt như sau:
+\begin{itemize}
+    \item \textbf{Hiệu suất tổng thể tốt nhất:} {SVM} và {Hồi quy Logistic} dẫn đầu với Accuracy cao ($0.89$ và $0.88$) cùng Precision tốt ($>0.71$). Tuy nhiên, cả hai đều có hạn chế lớn ở chỉ số Recall ($0.38 - 0.39$), tức là bỏ sót nhiều nhân viên thực sự nghỉ việc.
+    \item \textbf{Độ nhạy cao nhất:} {Naive Bayes (GNB)} đạt Recall cao nhất ($0.6900$) nhưng Precision lại thấp nhất ($0.2400$), cho thấy mô hình chấp nhận tỉ lệ báo động giả cao để phát hiện tối đa các ca nghỉ việc.
+    \item \textbf{Hiệu suất kém nhất:} {KNN} gần như thất bại trong việc nhận diện lớp thiểu số (Recall chỉ đạt $0.0800$), trong khi {Decision Tree} cho kết quả trung bình và không vượt trội ở chỉ số nào.
+\end{itemize}
+
+\subsection*{Tác động của giảm chiều dữ liệu (PCA vs. LDA)}
+Biểu đồ so sánh.
+
+\begin{figure}[H]
+    \centering  
+    \includegraphics[width=0.9\textwidth]{download (26).png}
+    \caption{Bảng thống kê kết quả thực nghiệm phân loại với dữ liệu đã giảm chiều.}
+    \label{fig:hinh_3.10}
+\end{figure}
+
+
+So sánh kết quả giữa Bảng 4.4 (PCA, n=6) và Bảng 4.5 (LDA):
+\begin{itemize}
+    \item \textbf{PCA (Không hiệu quả):} Việc nén xuống 6 thành phần chính làm suy giảm nghiêm trọng hiệu suất của mọi mô hình. Đặc biệt, GNB và Logistic Regression gần như mất hoàn toàn khả năng dự đoán lớp "Nghỉ việc" (Recall $\approx 0$). Điều này cho thấy PCA đã làm mất thông tin phân lớp quan trọng.
+    \item \textbf{LDA (Hiệu quả vượt trội):} Ngược lại, LDA giúp duy trì Accuracy ổn định trên $86\%$ cho tất cả mô hình. {Hồi quy Logistic} hoạt động tốt nhất trên không gian LDA với F1-Score cao nhất ($0.5064$). LDA cũng giúp khắc phục điểm yếu chí mạng của KNN và GNB, biến chúng thành các mô hình cân bằng hơn.
+\end{itemize}
+
+\subsection*{Tác động của cân bằng dữ liệu (SMOTE)}
+Dựa trên Bảng 4.3, kỹ thuật SMOTE mang lại sự đánh đổi rõ rệt:
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{download (25).png}
+    \caption{Bảng thống kê kết quả thực nghiệm trên dữ liệu đã sử dụng SMOTE.}
+    \label{fig:hinh_3.10}
+\end{figure}
+
+\begin{itemize}
+    \item \textbf{Cải thiện Recall:} SMOTE giúp giải quyết vấn đề mất cân bằng dữ liệu, đẩy Recall của \textbf{Hồi quy Logistic} lên tới $70.52\%$.
+    \item \textbf{Giảm Precision:} Do nhiễu từ dữ liệu nhân tạo, Precision của các mô hình đều giảm xuống dưới $50\%$.
+    \item \textbf{Kết luận:} {Hồi quy Logistic} và {SVM} là hai thuật toán xử lý tốt nhất với dữ liệu sau khi sinh mẫu, trong khi các mô hình phi tuyến như KNN hay Tree nhạy cảm với nhiễu và cho kết quả kém hơn.
+\end{itemize}
+\subsection*{Hiệu quả của lựa chọn đặc trưng (Feature Selection)}
+Dựa trên Bảng 4.6, việc áp dụng kỹ thuật lựa chọn đặc trưng cho mô hình Decision Tree mang lại cải thiện rõ rệt:
+
+
+\begin{itemize}
+    \item \textbf{Tăng cường hiệu suất:} So với việc sử dụng toàn bộ 44 đặc trưng gốc (Bảng 4.1), mô hình sau khi chọn lọc đặc trưng đạt F1-Score cao hơn ($0.4380$) và cải thiện đáng kể chỉ số Recall ($48.42\%$).
+    \item \textbf{Ý nghĩa:} Điều này chứng minh rằng bộ dữ liệu ban đầu chứa nhiều đặc trưng nhiễu hoặc ít quan trọng. Việc loại bỏ chúng giúp Decision Tree giảm bớt độ phức tạp, tránh hiện tượng quá khớp (overfitting) và xây dựng được cấu trúc phân loại tổng quát hóa tốt hơn.
+\end{itemize}
+\subsection*{Kết luận chung}
+\begin{itemize}
+    \item \textbf{Mô hình tối ưu nhất:} {Hồi quy Logistic} là lựa chọn tốt nhất cho bài toán này. Nó đạt F1-Score cao nhất trên dữ liệu gốc và khả năng bao phủ (Recall) tốt nhất khi kết hợp với SMOTE.
+    \item \textbf{Kỹ thuật giảm chiều:} {LDA} chứng minh sự vượt trội hoàn toàn so với PCA trong việc trích xuất đặc trưng phân lớp cho bộ dữ liệu nhân sự này.
+    \item \textbf{Chiến lược đề xuất:} Nếu ưu tiên độ chính xác tổng thể, nên dùng Hồi quy Logistic trên dữ liệu gốc hoặc LDA. Nếu ưu tiên phát hiện người nghỉ việc (chấp nhận báo động giả), nên kết hợp Hồi quy Logistic với SMOTE.
+\end{itemize}
+
+\section{ So sánh và thảo luận thực nghiệm hồi quy}
+
+Dựa trên kết quả thực nghiệm từ Bảng \ref{tab:best_mlp_results_optimized} và Bảng \ref{tab:best_svr_results}, ta có bảng thống kê sau:
+
+
+\begin{figure}[H]
+    \centering  
+    \includegraphics[width=0.9\textwidth]{download (23).png}
+    \caption{Bảng thống kê kết quả thực nghiệm hồi quy.}
+    \label{fig:hinh_3.10}
+\end{figure}
+
+
+\begin{itemize}
+    \item Mô hình \textbf{SVM} (Linear Kernel, $C=1000$) trên dữ liệu Onehot \& Normalized đạt kết quả cao nhất toàn cục với $R^2 \approx 0.936$ và sai số RMSE thấp nhất ($1181.51$). Kết quả này vượt trội hơn so với cấu hình tốt nhất của MLP ($R^2 \approx 0.90$). Điều này gợi ý rằng dữ liệu có mối quan hệ tuyến tính mạnh mà SVM khai thác hiệu quả hơn.
+
+    \item  Đối với MLP, việc chuẩn hóa là yếu tố quyết định, giúp cải thiện $R^2$ từ $0.71$ (dữ liệu gốc) lên $0.90$. Bộ giải \textit{Adam} cũng chứng minh sự vượt trội hoàn toàn so với \textit{SGD} (không hội tụ, $R^2 < 0$).
+
+    \item \textbf{Độ nhạy với giảm chiều dữ liệu (PCA):}
+    \begin{itemize}
+        \item {MLP} duy trì độ ổn định khá tốt khi giảm chiều ($R^2$ giảm nhẹ từ $0.90$ xuống $0.84$), cho thấy khả năng học đặc trưng tốt của mạng nơ-ron ngay cả khi thông tin bị nén.
+        \item Ngược lại, {SVM} bị suy giảm hiệu suất nghiêm trọng trên dữ liệu PCA ($R^2$ giảm sâu xuống $0.63$). Điều này cho thấy SVM Linear phụ thuộc lớn vào không gian đặc trưng gốc để tìm ra siêu phẳng tối ưu.
+    \end{itemize}
+    
+\end{itemize}
+
+Với tập dữ liệu này, {SVM trên dữ liệu chuẩn hóa đầy đủ} là lựa chọn tối ưu. Tuy nhiên, nếu buộc phải giảm chiều dữ liệu để tiết kiệm tài nguyên tính toán, MLP là lựa chọn phù hợp hơn.
+
+\chapter{ Kết luận}
+\section{ Kết luận}
+Đề tài đã hoàn thành mục tiêu cốt lõi là xây dựng mô hình dự đoán khả năng nghỉ việc của nhân viên tại công ty IBM. Quá trình nghiên cứu cơ sở lý thuyết và phân tích thực nghiệm đã cung cấp câu trả lời rõ ràng cho các câu hỏi nghiên cứu được đặt ra ban đầu.
+
+
+\section{ Hạn chế của đề tài}
+\subsection{Về phạm vi đặc trưng}
+Trong quá trình tiền xử lý, một số biến không cần thiết như Over18, EmployeeNumber, EmployeeCount, StandardHours sẽ bị loại bỏ do không mang lại lợi ích trong quá trình train mô hình. Hơn nữa, mô hình dự đoán chắc chắn còn bị ảnh hưởng bởi nhiều yếu tố phức tạp khác ngoài phạm vi bộ dữ liệu (ví dụ: yếu tố tâm lý cá nhân, văn hóa công ty, hoặc điều kiện thị trường lao động) mà nghiên cứu này chưa thể đo lường.
+
+
+\subsection{Về phạm vi khảo sát mô hình}
+Nghiên cứu này chủ yếu tập trung vào việc so sánh các phương pháp tiền xử lý dữ liệu và được thực nghiệm trên năm mô hình học máy (Naive Bayes, K Neighbors Nearest, và Logistic Regression, Decision Tree, SVM). Do đó, việc đánh giá hiệu suất chưa mang tính toàn diện. Kết quả so sánh có thể chưa phản ánh đầy đủ hiệu quả của các thuật toán phức tạp và mạnh mẽ hơn (như các mô hình Ensemble,...) khi áp dụng trên cùng bộ dữ liệu.
+
+\subsection{Về vấn đề mất cân bằng dữ liệu}
+Bộ dữ liệu IBM HR Attrition là một bộ dữ liệu mất cân bằng (imbalanced) điển hình, với tỷ lệ nhân viên 'Nghỉ việc' (Yes) thấp hơn đáng kể so với 'Không nghỉ việc' (No). Nghiên cứu này chưa áp dụng các kỹ thuật chuyên biệt để xử lý vấn đề này. Điều này có thể khiến các mô hình dự đoán bị thiên vị (biased), có xu hướng dự đoán tốt cho lớp đa số (Không nghỉ việc) nhưng lại dự đoán kém chính xác ở lớp thiểu số (Nghỉ việc) – vốn là lớp quan trọng nhất cần được nhận diện.
+
+
+% --- \chapter* để tạo tiêu đề không đánh số (vì bạn dùng class 'report') ---
+% --- Thêm dòng này vào Mục lục (Table of Contents) ---
+\addcontentsline{toc}{chapter}{Tài liệu tham khảo}
+
+% --- Môi trường danh sách tài liệu tham khảo ---
+% Số 9 trong {} nghĩa là bạn dự định có dưới 10 tài liệu (nhãn [1]...[9])
+% Nếu có 10-99, dùng {99}
+\begin{thebibliography}{9}
+
+% --- CÁCH THÊM MỘT TÀI LIỆU ---
+% \bibitem{key}
+% 'key' là từ khóa bí danh bạn dùng để trích dẫn trong bài
+%---------------------------------------------------
+
+\bibitem{NB}
+Naive-Bayes-Classifier. 
+\url{https://machinelearningcoban.com/2017/08/08/nbc/}
+
+\bibitem{KNN}
+KNN. \url{https://machinelearningcoban.com/2017/01/08/knn/}
+
+\bibitem{LR}
+Logistic Regression. \url{https://machinelearningcoban.com/2017/01/27/logisticregression/}
+
+\bibitem{DT}
+Decision-Tree. \url{https://scikit-learn.org/stable/modules/tree.html}
+
+\bibitem{MLP}
+Multi-layer Perceptron. \url{https://machinelearningcoban.com/2017/02/24/mlp/}
+
+\bibitem{SVM}
+Support Vector Machine. \url{https://machinelearningcoban.com/2017/04/09/smv/}
+
+\bibitem{SVM_Soft}
+Soft Margin Support Vector Machine. \url{https://machinelearningcoban.com/2017/04/13/softmarginsmv/}
+
+\bibitem{SVM_Kernel}
+Kernel Support Vector Machine. \url{https://machinelearningcoban.com/2017/04/22/kernelsmv/}
+
+\bibitem{K-means}
+K-means. \url{https://machinelearningcoban.com/2017/01/01/kmeans/}
+
+\bibitem{dbscan}
+DBSCAN. \url{https://phamdinhkhanh.github.io/deepai-book/ch_ml/DBSCAN.html}
+
+\bibitem{Smote}
+SMOTE for Imbalanced Classification with Python.\\
+\url{https://www.geeksforgeeks.org/machine-learning/smote-for-imbalanced-classification-with-python/}
+
+\bibitem{ibm_dataset}
+\textit{IBM HR Analytics Employee Attrition \& Performance}\\
+\url{https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset}
+
+% \bibitem{d2l}
+% Andrew Ng (2020). \textit{Giáo trình Học máy} (Tên sách giả định). 
+% NXB Đại học Quốc gia Hà Nội. https://machinelearningcoban.com/
+
+
+% Thêm các tài liệu khác của bạn ở đây...
+% \bibitem{ten_key_khac}
+% ...
+
+\end{thebibliography}
+
+% --- KẾT THÚC TÀI LIỆU ---
+\end{document}
