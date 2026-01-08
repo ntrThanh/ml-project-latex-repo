@@ -4,39 +4,39 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Minh họa KNN với K=1 cho bài toán 3 lớp. Các vùng nhỏ xen kẽ (như vùng Lục) có thể là nhiễu, dễ gây dự đoán sai.}}{16}{figure.caption.13}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Các activation function khác nhau.}}{17}{figure.caption.16}%
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Tại sao Linear Regression không phù hợp?}}{17}{figure.caption.17}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Sơ đồ cây quyết định với dữ liệu Titanic}}{21}{figure.caption.23}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces MLP với hai hidden layers (các biases đã bị ẩn)}}{24}{figure.caption.30}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Sơ đồ cây quyết định với dữ liệu Titanic.}}{21}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces MLP với hai hidden layers (các biases đã bị ẩn).}}{24}{figure.caption.30}%
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Các bước thực hiện PCA.}}{39}{figure.caption.67}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Thống kê số lượng nhân viên nghỉ việc theo áp lực tăng ca}}{50}{figure.caption.81}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Thống kê số lượng nhân viên nghỉ việc theo mức độ hài lòng về môi trường làm việc ở công ty}}{52}{figure.caption.82}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Thống kê số lượng nhân viên nghỉ việc theo mức độ hài lòng trong công việc ở công ty}}{53}{figure.caption.83}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Phân bố thu nhập theo tình trạng nghỉ việc}}{54}{figure.caption.84}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Thống kê số lượng nhân viên nghỉ việc tại IBM}}{55}{figure.caption.85}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Dữ liệu liên tục chưa chuẩn hóa}}{57}{figure.caption.88}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Mảng dữ liệu liên tục đã chuẩn hóa}}{57}{figure.caption.89}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces DataFrame dữ liệu đã chuẩn hóa}}{58}{figure.caption.90}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces File thống kê chi tiết dữ liệu đã chuẩn hóa}}{58}{figure.caption.91}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Biểu đồ thống kê giá trị ngoại lai}}{59}{figure.caption.92}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Biểu đồ thống kê giá trị của dữ liệu rời rạc.}}{60}{figure.caption.94}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Biểu đồ thống kê giá trị của dữ liệu liên tục.}}{61}{figure.caption.96}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Ma trận hệ số tương quan.}}{63}{figure.caption.97}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Trực quan hóa từng cặp dữ liệu.}}{65}{figure.caption.99}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Biểu đồ phương sai tích lũy sau khi giảm chiều bằng PCA.}}{66}{figure.caption.100}%
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Biểu đồ thể hiện giảm chiều với LDA.}}{67}{figure.caption.102}%
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Ma trận hệ số tương quan các trường dữ liệu.}}{70}{figure.caption.111}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Thống kê số lượng nhân viên nghỉ việc theo áp lực tăng ca.}}{50}{figure.caption.81}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Thống kê số lượng nhân viên nghỉ việc theo mức độ hài lòng về môi trường làm việc ở công ty.}}{51}{figure.caption.82}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Thống kê số lượng nhân viên nghỉ việc theo mức độ hài lòng trong công việc ở công ty.}}{52}{figure.caption.83}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Phân bố thu nhập theo tình trạng nghỉ việc.}}{53}{figure.caption.84}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Thống kê số lượng nhân viên nghỉ việc tại IBM.}}{54}{figure.caption.85}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Dữ liệu liên tục chưa chuẩn hóa.}}{56}{figure.caption.88}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Mảng dữ liệu liên tục đã chuẩn hóa.}}{56}{figure.caption.89}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces DataFrame dữ liệu đã chuẩn hóa.}}{57}{figure.caption.90}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces File thống kê chi tiết dữ liệu đã chuẩn hóa.}}{57}{figure.caption.91}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Biểu đồ thống kê giá trị ngoại lai.}}{58}{figure.caption.92}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Biểu đồ thống kê giá trị của dữ liệu rời rạc.}}{59}{figure.caption.94}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Biểu đồ thống kê giá trị của dữ liệu liên tục.}}{60}{figure.caption.96}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Ma trận hệ số tương quan.}}{62}{figure.caption.97}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Trực quan hóa từng cặp dữ liệu.}}{63}{figure.caption.99}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Biểu đồ phương sai tích lũy sau khi giảm chiều bằng PCA.}}{64}{figure.caption.100}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Biểu đồ thể hiện giảm chiều với LDA.}}{65}{figure.caption.102}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Ma trận hệ số tương quan các trường dữ liệu.}}{68}{figure.caption.111}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Trực quan dữ liệu phân cụm 1D sử dụng DBSCAN.}}{73}{figure.caption.117}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Trực quan dữ liệu phân cụm 2D sử dụng DBSCAN.}}{73}{figure.caption.118}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Trực quan dữ liệu phân cụm 3D sử dụng DBSCAN.}}{74}{figure.caption.119}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Phân tích số cụm sử dụng K-Means.}}{75}{figure.caption.121}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Trực quan hóa với dữ liệu 2 chiều sau khi giảm.}}{76}{figure.caption.123}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Trực quan hóa phân cụm với dữ liệu 1D giảm chiều bằng LDA.}}{77}{figure.caption.126}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Trực quan hóa phân cụm với dữ liệu 1D giảm chiều bằng LDA.}}{77}{figure.caption.127}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Trực quan hóa phân cụm với dữ liệu 2D giảm chiều bằng PCA.}}{78}{figure.caption.128}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Trực quan hóa phân cụm với dữ liệu 3D giảm chiều bằng PCA.}}{79}{figure.caption.129}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Bảng thống kê kết quả thực nghiệm phân loại.}}{83}{figure.caption.143}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Bảng thống kê kết quả thực nghiệm phân loại với dữ liệu đã giảm chiều.}}{85}{figure.caption.146}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Bảng thống kê kết quả thực nghiệm trên dữ liệu đã sử dụng SMOTE.}}{86}{figure.caption.148}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Bảng thống kê kết quả thực nghiệm hồi quy.}}{88}{figure.caption.151}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Trực quan dữ liệu phân cụm 1D sử dụng DBSCAN.}}{70}{figure.caption.117}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Trực quan dữ liệu phân cụm 2D sử dụng DBSCAN.}}{71}{figure.caption.118}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Trực quan dữ liệu phân cụm 3D sử dụng DBSCAN.}}{71}{figure.caption.119}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Phân tích số cụm sử dụng K-Means.}}{72}{figure.caption.121}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Trực quan hóa với dữ liệu 2 chiều sau khi giảm.}}{73}{figure.caption.123}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Trực quan hóa phân cụm với dữ liệu 1D giảm chiều bằng LDA.}}{74}{figure.caption.126}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Trực quan hóa phân cụm với dữ liệu 1D giảm chiều bằng LDA.}}{74}{figure.caption.127}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Trực quan hóa phân cụm với dữ liệu 2D giảm chiều bằng PCA.}}{75}{figure.caption.128}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Trực quan hóa phân cụm với dữ liệu 3D giảm chiều bằng PCA.}}{75}{figure.caption.129}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Bảng thống kê kết quả thực nghiệm phân loại.}}{79}{figure.caption.143}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Bảng thống kê kết quả thực nghiệm phân loại với dữ liệu đã giảm chiều.}}{81}{figure.caption.146}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Bảng thống kê kết quả thực nghiệm trên dữ liệu đã sử dụng SMOTE.}}{82}{figure.caption.148}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Bảng thống kê kết quả thực nghiệm hồi quy.}}{84}{figure.caption.151}%
 \addvspace {10\p@ }
