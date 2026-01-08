@@ -41,7 +41,7 @@
 \contentsline {section}{\numberline {2.6} Xử lý dữ liệu mất cân bằng và SMOTE}{41}{section.2.6}%
 \contentsline {subsection}{\numberline {2.6.1} Vấn đề mất cân bằng dữ liệu}{41}{subsection.2.6.1}%
 \contentsline {subsection}{\numberline {2.6.2} Thuật toán SMOTE}{41}{subsection.2.6.2}%
-\contentsline {section}{\numberline {2.7}Các thước đo đánh giá mô hình}{42}{section.2.7}%
+\contentsline {section}{\numberline {2.7} Các thước đo đánh giá mô hình}{42}{section.2.7}%
 \contentsline {subsection}{\numberline {2.7.1} Đánh giá mô hình phân loại}{42}{subsection.2.7.1}%
 \contentsline {subsubsection}{Accuracy}{43}{section*.73}%
 \contentsline {subsubsection}{Precision}{43}{section*.74}%
@@ -57,60 +57,60 @@
 \contentsline {section}{\numberline {3.1} Mô tả bộ dữ liệu}{46}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1} Giới thiệu nguồn gốc (IBM)}{46}{subsection.3.1.1}%
 \contentsline {subsection}{\numberline {3.1.2} Liệt kê một số thuộc tính quan trọng}{50}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3} Phân tích biến mục tiêu Attrition}{55}{subsection.3.1.3}%
-\contentsline {section}{\numberline {3.2} Quy trình tiền xử lý}{55}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1} Làm sạch dữ liệu}{55}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2} Ép kiểu dữ liệu}{56}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3} Mã hóa nhãn}{56}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4} Áp dụng Chuẩn hóa}{57}{subsection.3.2.4}%
-\contentsline {section}{\numberline {3.3} Trực quan hóa dữ liệu}{59}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1} Biểu đồ phát hiện giá trị ngoại lai của dữ liệu}{59}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2} Biểu đồ thống kê dữ liệu}{60}{subsection.3.3.2}%
-\contentsline {subsubsection}{Dữ liệu rời rạc}{60}{section*.93}%
-\contentsline {subsubsection}{Dữ liệu liên tục}{61}{section*.95}%
-\contentsline {subsection}{\numberline {3.3.3} Ma trận hệ số tương quan}{63}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4} Giảm chiều dữ liệu}{64}{subsection.3.3.4}%
-\contentsline {subsubsection}{Giảm chiều dữ liệu với PCA}{64}{section*.98}%
-\contentsline {subsubsection}{Giảm chiều dữ liệu với LDA }{66}{section*.101}%
-\contentsline {section}{\numberline {3.4} Quy trình thực nghiệm phân cụm}{67}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1} Mô hình }{67}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2} Kịch bản }{68}{subsection.3.4.2}%
-\contentsline {subsubsection}{Kịch bản 1 }{68}{section*.103}%
-\contentsline {subsubsection}{Kịch bản 2 }{68}{section*.104}%
-\contentsline {section}{\numberline {3.5} Quy trình thực nghiệm phân loại}{68}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1} Mô hình}{68}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2} Kịch bản}{68}{subsection.3.5.2}%
-\contentsline {subsubsection}{Kịch bản 1}{68}{section*.105}%
-\contentsline {subsubsection}{Kịch bản 2}{69}{section*.106}%
-\contentsline {subsubsection}{Kịch bản 3}{69}{section*.107}%
-\contentsline {subsubsection}{Kịch bản 4}{69}{section*.108}%
-\contentsline {subsubsection}{Kịch bản 5}{69}{section*.109}%
-\contentsline {subsubsection}{Kịch bản 6}{69}{section*.110}%
-\contentsline {section}{\numberline {3.6} Quy trình thực nghiệm hồi quy}{69}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1} Mô hình}{71}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2} Kịch bản}{71}{subsection.3.6.2}%
-\contentsline {subsubsection}{Kịch bản 1}{71}{section*.112}%
-\contentsline {subsubsection}{Kịch bản 2}{71}{section*.113}%
-\contentsline {subsubsection}{Kịch bản 3}{71}{section*.114}%
-\contentsline {chapter}{\numberline {4} Kết quả và thảo luận}{72}{chapter.4}%
-\contentsline {section}{\numberline {4.1} Kết quả thực nghiệm phân cụm}{72}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1} Mô hình DBSCAN}{72}{subsection.4.1.1}%
-\contentsline {subsubsection}{Thực nghiệm}{72}{section*.115}%
-\contentsline {subsubsection}{Trực quan hóa dữ liệu sau phân cụm}{73}{section*.116}%
-\contentsline {subsubsection}{Nhận xét}{74}{section*.120}%
-\contentsline {subsection}{\numberline {4.1.2} Mô hình K-Means}{74}{subsection.4.1.2}%
-\contentsline {subsubsection}{Trực quan với dữ liệu đã giảm chiều }{76}{section*.122}%
-\contentsline {subsubsection}{Thực nghiệm }{76}{section*.124}%
-\contentsline {subsubsection}{Trực quan dữ liệu phân cụm }{76}{section*.125}%
-\contentsline {subsubsection}{Nhận xét}{79}{section*.130}%
-\contentsline {section}{\numberline {4.2} Kết quả thực nghiệm phân loại}{80}{section.4.2}%
-\contentsline {section}{\numberline {4.3} Kết quả thực nghiệm hồi quy}{81}{section.4.3}%
-\contentsline {section}{\numberline {4.4} So sánh và thảo luận thực nghiệm phân loại}{82}{section.4.4}%
-\contentsline {section}{\numberline {4.5} So sánh và thảo luận thực nghiệm hồi quy}{87}{section.4.5}%
-\contentsline {chapter}{\numberline {5} Tổng kết}{90}{chapter.5}%
-\contentsline {section}{\numberline {5.1} Kết luận}{90}{section.5.1}%
-\contentsline {section}{\numberline {5.2} Hạn chế của đề tài}{90}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Về phạm vi đặc trưng}{90}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Về phạm vi khảo sát mô hình}{90}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Về vấn đề mất cân bằng dữ liệu}{91}{subsection.5.2.3}%
-\contentsline {chapter}{Tài liệu tham khảo}{91}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {3.1.3} Phân tích biến mục tiêu Attrition}{54}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2} Quy trình tiền xử lý}{54}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1} Làm sạch dữ liệu}{54}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2} Ép kiểu dữ liệu}{55}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3} Mã hóa nhãn}{55}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4} Áp dụng Chuẩn hóa}{56}{subsection.3.2.4}%
+\contentsline {section}{\numberline {3.3} Trực quan hóa dữ liệu}{58}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1} Biểu đồ phát hiện giá trị ngoại lai của dữ liệu}{58}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2} Biểu đồ thống kê dữ liệu}{59}{subsection.3.3.2}%
+\contentsline {subsubsection}{Dữ liệu rời rạc}{59}{section*.93}%
+\contentsline {subsubsection}{Dữ liệu liên tục}{60}{section*.95}%
+\contentsline {subsection}{\numberline {3.3.3} Ma trận hệ số tương quan}{62}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4} Giảm chiều dữ liệu}{63}{subsection.3.3.4}%
+\contentsline {subsubsection}{Giảm chiều dữ liệu với PCA}{63}{section*.98}%
+\contentsline {subsubsection}{Giảm chiều dữ liệu với LDA }{64}{section*.101}%
+\contentsline {section}{\numberline {3.4} Quy trình thực nghiệm phân cụm}{65}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1} Mô hình }{65}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2} Kịch bản }{66}{subsection.3.4.2}%
+\contentsline {subsubsection}{Kịch bản 1 }{66}{section*.103}%
+\contentsline {subsubsection}{Kịch bản 2 }{66}{section*.104}%
+\contentsline {section}{\numberline {3.5} Quy trình thực nghiệm phân loại}{66}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1} Mô hình}{66}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2} Kịch bản}{66}{subsection.3.5.2}%
+\contentsline {subsubsection}{Kịch bản 1}{66}{section*.105}%
+\contentsline {subsubsection}{Kịch bản 2}{67}{section*.106}%
+\contentsline {subsubsection}{Kịch bản 3}{67}{section*.107}%
+\contentsline {subsubsection}{Kịch bản 4}{67}{section*.108}%
+\contentsline {subsubsection}{Kịch bản 5}{67}{section*.109}%
+\contentsline {subsubsection}{Kịch bản 6}{67}{section*.110}%
+\contentsline {section}{\numberline {3.6} Quy trình thực nghiệm hồi quy}{67}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1} Mô hình}{69}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2} Kịch bản}{69}{subsection.3.6.2}%
+\contentsline {subsubsection}{Kịch bản 1}{69}{section*.112}%
+\contentsline {subsubsection}{Kịch bản 2}{69}{section*.113}%
+\contentsline {subsubsection}{Kịch bản 3}{69}{section*.114}%
+\contentsline {chapter}{\numberline {4} Kết quả và thảo luận}{70}{chapter.4}%
+\contentsline {section}{\numberline {4.1} Kết quả thực nghiệm phân cụm}{70}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1} Mô hình DBSCAN}{70}{subsection.4.1.1}%
+\contentsline {subsubsection}{Thực nghiệm}{70}{section*.115}%
+\contentsline {subsubsection}{Trực quan hóa dữ liệu sau phân cụm}{70}{section*.116}%
+\contentsline {subsubsection}{Nhận xét}{71}{section*.120}%
+\contentsline {subsection}{\numberline {4.1.2} Mô hình K-Means}{72}{subsection.4.1.2}%
+\contentsline {subsubsection}{Trực quan với dữ liệu đã giảm chiều }{73}{section*.122}%
+\contentsline {subsubsection}{Thực nghiệm }{73}{section*.124}%
+\contentsline {subsubsection}{Trực quan dữ liệu phân cụm }{74}{section*.125}%
+\contentsline {subsubsection}{Nhận xét}{76}{section*.130}%
+\contentsline {section}{\numberline {4.2} Kết quả thực nghiệm phân loại}{76}{section.4.2}%
+\contentsline {section}{\numberline {4.3} Kết quả thực nghiệm hồi quy}{78}{section.4.3}%
+\contentsline {section}{\numberline {4.4} So sánh và thảo luận thực nghiệm phân loại}{78}{section.4.4}%
+\contentsline {section}{\numberline {4.5} So sánh và thảo luận thực nghiệm hồi quy}{83}{section.4.5}%
+\contentsline {chapter}{\numberline {5} Tổng kết}{86}{chapter.5}%
+\contentsline {section}{\numberline {5.1} Kết luận}{86}{section.5.1}%
+\contentsline {section}{\numberline {5.2} Hạn chế của đề tài}{86}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Về phạm vi đặc trưng}{86}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Về phạm vi khảo sát mô hình}{86}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Về vấn đề mất cân bằng dữ liệu}{87}{subsection.5.2.3}%
+\contentsline {chapter}{Tài liệu tham khảo}{87}{subsection.5.2.3}%
