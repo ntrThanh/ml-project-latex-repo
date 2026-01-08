@@ -14,7 +14,7 @@
 \contentsline {subsection}{\numberline {2.1.3} Các thuật toán phân loại phổ biến}{13}{subsection.2.1.3}%
 \contentsline {section}{\numberline {2.2} Các mô hình học máy được sử dụng}{14}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1} Naive Bayes}{14}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2} K Nearest Neighbors (KNN)}{15}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.2} K-Nearest Neighbors (KNN)}{15}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3} Logistic Regression}{16}{subsection.2.2.3}%
 \contentsline {subsection}{\numberline {2.2.4} Decision Tree}{20}{subsection.2.2.4}%
 \contentsline {subsection}{\numberline {2.2.5} Multi-Layer Perceptron (MLP)}{22}{subsection.2.2.5}%
@@ -22,8 +22,8 @@
 \contentsline {subsection}{\numberline {2.2.7} Soft Margin Support Vector Machine}{26}{subsection.2.2.7}%
 \contentsline {subsection}{\numberline {2.2.8} Kernel Support Vector Machine}{28}{subsection.2.2.8}%
 \contentsline {section}{\numberline {2.3} Kỹ thuật phân cụm dữ liệu}{30}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1} K-Means Clustering}{30}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2} DBSCAN Clustering}{32}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.1} K-Means}{30}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2} DBSCAN }{32}{subsection.2.3.2}%
 \contentsline {section}{\numberline {2.4} Kỹ thuật tiền xử lý dữ liệu}{34}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1} Ép kiểu dữ liệu}{34}{subsection.2.4.1}%
 \contentsline {subsubsection}{Ép về kiểu \texttt {float32}}{34}{section*.59}%
@@ -42,16 +42,16 @@
 \contentsline {subsection}{\numberline {2.6.1} Vấn đề mất cân bằng dữ liệu}{41}{subsection.2.6.1}%
 \contentsline {subsection}{\numberline {2.6.2} Thuật toán SMOTE}{41}{subsection.2.6.2}%
 \contentsline {section}{\numberline {2.7}Các thước đo đánh giá mô hình}{42}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}Đánh giá mô hình phân loại}{42}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.1} Đánh giá mô hình phân loại}{42}{subsection.2.7.1}%
 \contentsline {subsubsection}{Accuracy}{43}{section*.73}%
 \contentsline {subsubsection}{Precision}{43}{section*.74}%
 \contentsline {subsubsection}{Recall}{43}{section*.75}%
 \contentsline {subsubsection}{F1-Score}{43}{section*.76}%
-\contentsline {subsection}{\numberline {2.7.2}Đánh giá mô hình hồi quy}{43}{subsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.7.2} Đánh giá mô hình hồi quy}{43}{subsection.2.7.2}%
 \contentsline {subsubsection}{$R^2$ Score}{44}{section*.77}%
 \contentsline {subsubsection}{MAE -- Mean Absolute Error}{44}{section*.78}%
 \contentsline {subsubsection}{RMSE -- Root Mean Squared Error}{44}{section*.79}%
-\contentsline {subsection}{\numberline {2.7.3}Đánh giá mô hình phân cụm}{44}{subsection.2.7.3}%
+\contentsline {subsection}{\numberline {2.7.3} Đánh giá mô hình phân cụm}{44}{subsection.2.7.3}%
 \contentsline {subsubsection}{ARI -- Adjusted Rand Index}{45}{section*.80}%
 \contentsline {chapter}{\numberline {3} Phương pháp và Quy trình thực nghiệm}{46}{chapter.3}%
 \contentsline {section}{\numberline {3.1} Mô tả bộ dữ liệu}{46}{section.3.1}%
@@ -92,7 +92,7 @@
 \contentsline {subsubsection}{Kịch bản 1}{71}{section*.112}%
 \contentsline {subsubsection}{Kịch bản 2}{71}{section*.113}%
 \contentsline {subsubsection}{Kịch bản 3}{71}{section*.114}%
-\contentsline {chapter}{\numberline {4} Kết quả và Thảo luận}{72}{chapter.4}%
+\contentsline {chapter}{\numberline {4} Kết quả và thảo luận}{72}{chapter.4}%
 \contentsline {section}{\numberline {4.1} Kết quả thực nghiệm phân cụm}{72}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1} Mô hình DBSCAN}{72}{subsection.4.1.1}%
 \contentsline {subsubsection}{Thực nghiệm}{72}{section*.115}%
@@ -106,11 +106,11 @@
 \contentsline {section}{\numberline {4.2} Kết quả thực nghiệm phân loại}{80}{section.4.2}%
 \contentsline {section}{\numberline {4.3} Kết quả thực nghiệm hồi quy}{81}{section.4.3}%
 \contentsline {section}{\numberline {4.4} So sánh và thảo luận thực nghiệm phân loại}{82}{section.4.4}%
-\contentsline {section}{\numberline {4.5} So sánh và thảo luận thực nghiệm hồi quy}{86}{section.4.5}%
-\contentsline {chapter}{\numberline {5} Kết luận}{89}{chapter.5}%
-\contentsline {section}{\numberline {5.1} Kết luận}{89}{section.5.1}%
-\contentsline {section}{\numberline {5.2} Hạn chế của đề tài}{89}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Về phạm vi đặc trưng}{89}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Về phạm vi khảo sát mô hình}{89}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Về vấn đề mất cân bằng dữ liệu}{90}{subsection.5.2.3}%
-\contentsline {chapter}{Tài liệu tham khảo}{90}{subsection.5.2.3}%
+\contentsline {section}{\numberline {4.5} So sánh và thảo luận thực nghiệm hồi quy}{87}{section.4.5}%
+\contentsline {chapter}{\numberline {5} Tổng kết}{90}{chapter.5}%
+\contentsline {section}{\numberline {5.1} Kết luận}{90}{section.5.1}%
+\contentsline {section}{\numberline {5.2} Hạn chế của đề tài}{90}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Về phạm vi đặc trưng}{90}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Về phạm vi khảo sát mô hình}{90}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Về vấn đề mất cân bằng dữ liệu}{91}{subsection.5.2.3}%
+\contentsline {chapter}{Tài liệu tham khảo}{91}{subsection.5.2.3}%

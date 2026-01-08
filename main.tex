@@ -196,7 +196,7 @@ Với sự bùng nổ của khoa học dữ liệu, các kỹ thuật Học máy
 
 Chính vì lý do đó, chúng tôi đã chọn đề tài: \textbf{"Dự báo về khả năng nghỉ việc của nhân viên công ty IBM tại Mỹ bằng mô hình Học máy"} cho bài tiểu luận/dự án môn Học máy.
 
-Mục tiêu của bài làm là áp dụng các kiến thức đã học để xây dựng, huấn luyện và đánh giá các mô hình phân loại khác nhau (như Logistic Regression, Naive Bayes, KNN, Decision Tree, SVM...). Đồng thời, bài làm cũng tập trung vào việc tiền xử lý dữ liệu, bao gồm các kỹ thuật {chuẩn hóa}, xử lý {mất cân bằng} và {giảm chiều dữ liệu (PCA/LDA/Feature Selection)}, để tìm ra mô hình dự báo tối ưu nhất. Quan trọng hơn, nghiên cứu này mong muốn xác định được những yếu tố then chốt (như mức lương, số năm kinh nghiệm, sự hài lòng công việc...) có ảnh hưởng lớn nhất đến khả năng nghỉ việc tại IBM.
+Mục tiêu của bài làm là áp dụng các kiến thức đã học để xây dựng, huấn luyện và đánh giá các mô hình phân loại khác nhau (như Logistic Regression, Naive Bayes, K-Nearest Neighbors, Decision Tree, Support Vector Machine...). Đồng thời, bài làm cũng tập trung vào việc tiền xử lý dữ liệu, bao gồm các kỹ thuật {chuẩn hóa}, xử lý {mất cân bằng} và {giảm chiều dữ liệu (Principal Component Analysis/Linear Discriminant Analysis/Feature Selection)}, để tìm ra mô hình dự báo tối ưu nhất. Quan trọng hơn, nghiên cứu này mong muốn xác định được những yếu tố then chốt (như mức lương, số năm kinh nghiệm, sự hài lòng công việc...) có ảnh hưởng lớn nhất đến khả năng nghỉ việc tại IBM.
 
 Để hoàn thành bài tiểu luận này, chúng tôi xin gửi lời cảm ơn chân thành và sâu sắc nhất đến giảng viên – \textbf{Thầy Cao Văn Chung}. Thầy đã tận tình giảng dạy, định hướng và cung cấp những kiến thức quý báu trong suốt học phần, giúp chúng tôi có đủ nền tảng để thực hiện chủ đề này.
 
@@ -227,7 +227,7 @@ Việc một nhân viên rời đi không chỉ tạo ra một khoảng trống 
 
 Trước đây, các doanh nghiệp thường chỉ can thiệp "bị động" khi nhân viên đã nộp đơn xin nghỉ. Tuy nhiên, với sự phát triển của khoa học dữ liệu, một hướng tiếp cận mới, "chủ động"\  hơn đã ra đời. Bằng cách áp dụng các mô hình Học Máy (Machine Learning), chúng ta hiện có khả năng phân tích các dữ liệu nhân sự (như mức lương, thâm niên, sự hài lòng, số dự án...) để dự báo sớm những trường hợp có nguy cơ nghỉ việc cao.
 
-Chính vì vậy, đề tài này thực hiện việc "Dự báo về khả năng nghỉ việc của nhân viên Công ty IBM tại Mỹ"\  nhằm mục tiêu xây dựng một mô hình dự báo hiệu quả. Mô hình này có thể giúp bộ phận HR của IBM xác định đúng các yếu tố then chốt dẫn đến việc nghỉ việc, từ đó đưa ra các chính sách can thiệp và giữ chân nhân tài kịp thời, giảm thiểu chi phí và ổn định tổ chức.
+Chính vì vậy, đề tài này thực hiện việc "Dự báo về khả năng nghỉ việc của nhân viên công ty IBM tại Mỹ"\  nhằm mục tiêu xây dựng một mô hình dự báo hiệu quả. Mô hình này có thể giúp bộ phận HR của IBM xác định đúng các yếu tố then chốt dẫn đến việc nghỉ việc, từ đó đưa ra các chính sách can thiệp và giữ chân nhân tài kịp thời, giảm thiểu chi phí và ổn định tổ chức.
 
 \section{ Mục tiêu nghiên cứu}
 
@@ -242,13 +242,13 @@ Bài tiểu luận được tổ chức gồm năm chương chính như sau:
 
  \textbf{Chương 1 – Mở đầu}: Trình bày bối cảnh, đặt vấn đề, mục tiêu nghiên cứu và phạm vi của đề tài, đồng thời phác thảo hướng tiếp cận tổng quan.
     
-    \textbf{Chương 2 – Cơ sở lý thuyết}: Giới thiệu các khái niệm và kiến thức nền tảng bao gồm bài toán phân loại, các mô hình học máy sử dụng (Naive Bayes, KNN, Logistic Regression, Decision Tree, SVM), các kỹ thuật tiền xử lý dữ liệu, giảm chiều (PCA, LDA, Feature Selection), xử lý mất cân bằng dữ liệu và các thước đo đánh giá mô hình.
+    \textbf{Chương 2 – Cơ sở lý thuyết}: Giới thiệu các khái niệm và kiến thức nền tảng bao gồm bài toán phân loại, các mô hình học máy sử dụng (Naive Bayes, KNN, Logistic Regression, Decision Tree, SVM, MLP), các kỹ thuật tiền xử lý dữ liệu, giảm chiều (PCA, LDA, Feature Selection), xử lý mất cân bằng dữ liệu, các thuật toán phân cụm (K-Means, DBSCAN) và các thước đo đánh giá mô hình
     
      \textbf{Chương 3 – Phương pháp và Quy trình thực nghiệm}: Trình bày bộ dữ liệu, quy trình tiền xử lý, quy trình thực nghiệm và phương pháp đánh giá mô hình.
     
-    \textbf{Chương 4 – Kết quả và Thảo luận}: Cung cấp kết quả thử nghiệm của các mô hình, so sánh ưu nhược điểm, phân tích và lý giải hiệu suất của từng mô hình.
+    \textbf{Chương 4 – Kết quả và thảo luận}: Cung cấp kết quả thử nghiệm của các mô hình, so sánh ưu nhược điểm, phân tích và lý giải hiệu suất của từng mô hình.
     
-   \textbf{Chương 5 – Kết luận}: Tổng kết lại toàn bộ nội dung nghiên cứu, nêu các hạn chế của đề tài và đề xuất các hướng phát triển trong tương lai.
+   \textbf{Chương 5 – Tổng kết}: Tổng kết lại toàn bộ nội dung nghiên cứu, nêu các hạn chế của đề tài và đề xuất các hướng phát triển trong tương lai.
 
 
 \chapter{ Cơ sở lý thuyết}
@@ -282,7 +282,7 @@ Bài toán phân loại được chia thành ba dạng chính dựa trên số l
   \textbf{Ví dụ 2:} Phân loại chủ đề cho một tài liệu khoa học (có thể thuộc cả \{Học máy\} và \{Y sinh\}).
 
 \subsection{ Các thuật toán phân loại phổ biến}
-\begin{enumerate}
+\begin{enumerate}                                                           
     \item Naive Bayes
     \item K-Nearest Neighbors
     \item Hồi quy Logistic (Logistic Regression)
@@ -293,7 +293,7 @@ Bài toán phân loại được chia thành ba dạng chính dựa trên số l
     \item Và một số thuật toán khác ...
 \end{enumerate}
 
-\section{ Các mô hình học máy được sử dụng}
+\section{ Các mô hình học máy được sử dụng}                                                                                                                                             
 
 
 \subsection{ Naive Bayes}
@@ -338,7 +338,7 @@ Các tham số trung bình $\mu_{ci}$ và phương sai $\sigma^2_{ci}$ được 
 
 NBC có tốc độ huấn luyện và kiểm thử cực nhanh, hoạt động hiệu quả trên dữ liệu lớn (large-scale) và đặc biệt tốt trong các bài toán phân loại văn bản (spam filtering), mặc dù giả thuyết độc lập hiếm khi đúng trong thực tế.
 
-\subsection{ K Nearest Neighbors (KNN)}
+\subsection{ K-Nearest Neighbors (KNN)}
 
 \subsubsection*{Giới thiệu}
 \textbf{K-Nearest Neighbors (KNN)} là một trong những thuật toán \textbf{Supervised Learning} đơn giản nhất \cite{KNN}.
@@ -775,10 +775,10 @@ Bài toán tối ưu trở thành:
 
 \section{ Kỹ thuật phân cụm dữ liệu}
 
-\subsection{ K-Means Clustering}
+\subsection{ K-Means}
 
 \subsubsection*{Giới thiệu chung}
-K-Means là một thuật toán thuộc nhóm {Học không giám sát (Unsupervised Learning)} và cụ thể là bài toán \textbf{Phân cụm (Clustering)} \cite{k-means}. Mục tiêu của thuật toán là phân chia tập dữ liệu thành $K$ cụm (cluster) khác nhau, sao cho các điểm dữ liệu trong cùng một cụm có tính chất tương đồng nhau nhất, và các điểm khác cụm có sự khác biệt lớn nhất.
+K-Means là một thuật toán thuộc nhóm {Học không giám sát (Unsupervised Learning)} và cụ thể là bài toán \textbf{Phân cụm (Clustering)} \cite{k-Means}. Mục tiêu của thuật toán là phân chia tập dữ liệu thành $K$ cụm (cluster) khác nhau, sao cho các điểm dữ liệu trong cùng một cụm có tính chất tương đồng nhau nhất, và các điểm khác cụm có sự khác biệt lớn nhất.
 
 \subsubsection*{Cơ sở toán học và hàm mục tiêu}
 Giả sử tập dữ liệu là $\mathbf{X} = \{\mathbf{x}_1, \mathbf{x}_2, \dots, \mathbf{x}_N\}$ và chúng ta muốn chia thành $K$ cụm. Gọi $\mathbf{m}_k$ là tâm (centroid) của cụm thứ $k$.
@@ -820,7 +820,7 @@ Thuật toán K-Means hoạt động theo phương pháp lặp (iterative) gồm
     \item \textbf{Lợi ích:} Giúp xác định xem số lượng cụm $K$ và hàm khoảng cách Euclid có phù hợp với cấu trúc dữ liệu thực tế hay không.
 \end{itemize}
 
-\subsection{ DBSCAN Clustering}
+\subsection{ DBSCAN }
 
 \subsubsection*{Giới thiệu}
 DBSCAN là thuật toán phân cụm dựa trên mật độ (density-based) \cite{dbscan}. Khác với K-Means (dựa trên khoảng cách và hình cầu), DBSCAN định nghĩa cụm là các vùng có mật độ điểm dữ liệu cao, được ngăn cách bởi các vùng có mật độ thấp.
@@ -1403,7 +1403,7 @@ Quá trình này được lặp lại cho đến khi tỷ lệ giữa lớp thi�
 
 Tùy theo từng loại bài toán học máy, các thước đo đánh giá được lựa chọn sao cho phản ánh đúng hiệu suất và đặc điểm của mô hình. Trong nghiên cứu này, các mô hình được đánh giá theo ba nhóm chính: phân loại, hồi quy và phân cụm.
 
-\subsection{Đánh giá mô hình phân loại}
+\subsection{ Đánh giá mô hình phân loại}
 
 Để đánh giá hiệu suất của mô hình phân loại, ta sử dụng \textbf{Confusion Matrix} (Ma trận nhầm lẫn), bao gồm bốn thành phần cơ bản:
 \begin{itemize}
@@ -1440,7 +1440,7 @@ Là trung bình điều hòa giữa Precision và Recall, được sử dụng k
     \text{F1-Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
 \end{equation}
 
-\subsection{Đánh giá mô hình hồi quy}
+\subsection{ Đánh giá mô hình hồi quy}
 
 Đối với các bài toán hồi quy, hiệu suất mô hình được đánh giá thông qua mức độ sai lệch giữa giá trị dự đoán và giá trị thực.
 
@@ -1467,7 +1467,7 @@ RMSE phản ánh sai số trung bình, trong đó các sai số lớn bị phạ
 \]
 RMSE nhạy cảm hơn với ngoại lai so với MAE và thường được sử dụng khi cần hạn chế các sai số lớn.
 
-\subsection{Đánh giá mô hình phân cụm}
+\subsection{ Đánh giá mô hình phân cụm}
 
 Đối với bài toán phân cụm, do không có nhãn lớp trong quá trình huấn luyện, việc đánh giá thường dựa trên các thước đo so sánh giữa nhãn phân cụm và nhãn chuẩn (nếu có).
 
@@ -2058,7 +2058,7 @@ Thực hiện huấn luyện mô hình trên dữ liệu gốc đã được chu
 
 Thực hiện huấn luyện mô hình trên dữ liệu gốc đã được chuẩn hóa, giảm chiều với PCA và LDA.
 
-\chapter{ Kết quả và Thảo luận}
+\chapter{ Kết quả và thảo luận}
 
 \section{ Kết quả thực nghiệm phân cụm}
 \subsection{ Mô hình DBSCAN}
@@ -2280,6 +2280,8 @@ Ngược lại, phương pháp LDA cho kết quả vượt trội rõ rệt ở 
         \hline
         Naive Bayes (GNB) & 0.6576 & 0.2400 & 0.6900 & 0.3600 \\
         \hline
+        Naive Bayes (GNB + BNB) & 0.8526 & 0.4600 & 0.4300 & 0.4400 \\
+        \hline
         KNN & 0.8639 & 0.5600 & 0.0800 & 0.1400 \\
         \hline
         Decision Tree & 0.7823 & 0.3655 & 0.4788 & 0.4146 \\
@@ -2300,6 +2302,8 @@ Ngược lại, phương pháp LDA cho kết quả vượt trội rõ rệt ở 
         Hồi quy Logistic & 0.8775 & 0.6949 & 0.4315 & 0.5324 \\
         \hline
         Naive Bayes (GNB) & 0.6684 & 0.2500 & 0.6900 & 0.3600 \\
+        \hline
+        Naive Bayes (GNB + BNB) & 0.8605 & 0.4900 & 0.3600 & 0.4100 \\
         \hline
         KNN & 0.8605 & 0.4800 & 0.1600 & 0.2400 \\
         \hline
@@ -2581,7 +2585,7 @@ Từ kết quả của các mô hình trên tập dữ liệu ban đầu, ta có
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{download (24).png}
+    \includegraphics[width=0.9\textwidth]{download (28).png}
     \caption{Bảng thống kê kết quả thực nghiệm phân loại.}
     \label{fig:hinh_3.10}
 \end{figure}
@@ -2671,7 +2675,7 @@ Dựa trên kết quả thực nghiệm từ Bảng \ref{tab:best_mlp_results_op
 
 Với tập dữ liệu này, {SVM trên dữ liệu chuẩn hóa đầy đủ} là lựa chọn tối ưu. Tuy nhiên, nếu buộc phải giảm chiều dữ liệu để tiết kiệm tài nguyên tính toán, MLP là lựa chọn phù hợp hơn.
 
-\chapter{ Kết luận}
+\chapter{ Tổng kết}
 \section{ Kết luận}
 Đề tài đã hoàn thành mục tiêu cốt lõi là xây dựng mô hình dự đoán khả năng nghỉ việc của nhân viên tại công ty IBM. Quá trình nghiên cứu cơ sở lý thuyết và phân tích thực nghiệm đã cung cấp câu trả lời rõ ràng cho các câu hỏi nghiên cứu được đặt ra ban đầu.
 

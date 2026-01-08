@@ -1,6 +1,6 @@
-PWD /home/trong-thanh/Downloads/Project_Machine_Learning
+PWD /home/trong-thanh/Documents/Project_Machine_Learning
 INPUT /home/trong-thanh/.miktex/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt
-INPUT /home/trong-thanh/Downloads/Project_Machine_Learning/main.tex
+INPUT /home/trong-thanh/Documents/Project_Machine_Learning/main.tex
 OUTPUT main.log
 INPUT /home/trong-thanh/.miktex/texmfs/install/tex/latex/base/report.cls
 INPUT /home/trong-thanh/.miktex/texmfs/install/tex/latex/base/report.cls
@@ -619,13 +619,13 @@ INPUT /home/trong-thanh/.miktex/texmfs/install/fonts/tfm/public/amsfonts/symbols
 INPUT /home/trong-thanh/.miktex/texmfs/install/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /home/trong-thanh/.miktex/texmfs/install/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /home/trong-thanh/.miktex/texmfs/install/fonts/tfm/vntex/vnr/vnbx12.tfm
-INPUT ./download (24).png
-INPUT ./download (24).png
-INPUT ./download (24).png
-INPUT ./download (24).png
-INPUT ./download (24).png
-INPUT ./download (24).png
-INPUT ./download (24).png
+INPUT ./download (28).png
+INPUT ./download (28).png
+INPUT ./download (28).png
+INPUT ./download (28).png
+INPUT ./download (28).png
+INPUT ./download (28).png
+INPUT ./download (28).png
 INPUT ./download (26).png
 INPUT ./download (26).png
 INPUT ./download (26).png
